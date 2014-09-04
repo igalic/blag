@@ -2,7 +2,8 @@
 view: none
 ---
 
-Esotericsystems is Igor's non-technical, sometimes even <em>creative</em> out-let.<br />
-For his technical musings look at <a href="http://brainsware.org/">Brainsware</a>
+esotericsystems is igor's non-technical, sometimes even *creative* out-let.
 
-For [comments](/comments.html) you can use mail, or else [twitter](https://twitter.com/hirojin).
+for technical musings look at [Brainsware](http://brainsware.org/).
+
+for [comments](/comments.html) you can use mail, or else [twitter](https://twitter.com/hirojin).
