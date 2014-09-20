@@ -16,7 +16,7 @@ stream with personal observations.
 <blockquote class="twitter-tweet" lang="en"><p>i gained new followers today.<br/>
 <br />wonder how long until they notice that all i do is rant about
 computers, capitalism &amp; retweet feminists.</p>&mdash; The Wrath of K&amp;R™ (@hirojin)
-<a href="https://twitter.com/hirojin/status/506865168480227328">September 2,2014</a></blockquote>
+<a href="https://twitter.com/hirojin/status/506865168480227328">September 2, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
