@@ -1,3 +1,9 @@
+---
+author: igor
+title: late night thoughts on foss
+template: article.jade
+date: 29-09-2014
+---
 open source has been stressing me out recently. or rather: it's been unable to provide a counter-weight to balance my other two jobs.
 and the reason is, of course, that it's a huge amount of *work* (at times).
 work that for various reasons no one pays me (one of them being that i don't want to be paid by a company to primarily serve their interest, rather than a broader community's; the other that i don't really have interest in working on a piece of software i don't use myself to solve interesting problems).
