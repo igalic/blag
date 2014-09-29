@@ -1,6 +1,8 @@
 {
   "locals": {
     "url": "http://blag.esotericsystems.at",
+    "base": "http://blag.esotericsystems.at",
+    "ownurl": "http://blag.esotericsystems.at",
     "name": "esoteric systems",
     "owner": "igor",
     "description": "disappointing expectations since 1894."
