@@ -34,7 +34,7 @@ number of reasons:
   to go looking for your jira, or IRC, or twitter
 
 i can't quite grasp the "why". why is the Github generation so uncomfortable
-with properly iand mailing lists? and how have we not been able to invent
+with properly using mailing lists? and how have we not been able to invent
 something to replace them?
 
 ---
