@@ -16,6 +16,8 @@ I am self-employed - and I love it. I (mostly) work from home (and then without 
 * or you want my brilliance/insight as consultant over a longer period of time or for training your employees
 * I don't have to move (permanently) to a country which is politically much worse off then the one I live in right now (say: Ireland, the USA, or Libya)
 * I can remain self-employed
-* You are not Amazon, Apple, Google, Sony, etc…: I don't use your products/services[^1], and I don't want to work for you.
+* You are not Amazon, Apple, Facebook, Google, Sony, etc…: I don't use your products/services\*, and I don't want to work for you.
 
-[^1]: I try really hard not to use your products/services, but the rest of The Internet is making it really hard :\
+---
+
+\* I try really hard not to use your products/services, but the rest of The Internet is making it really hard :\
