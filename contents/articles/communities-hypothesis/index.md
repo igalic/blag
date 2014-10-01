@@ -1,7 +1,7 @@
 ---
 title: communities hypothesis
 author: igor
-date: Wed Oct  1 08:40:08 CEST 2014
+date: 2014-10-01
 template: article.jade
 ---
 
