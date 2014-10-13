@@ -305,14 +305,6 @@ Puppet::Type.type(:trafficserver_record).provide(:traffic_line) do
 
   ConfigPattern = 'proxy.(config|local|cluster).*'
 
-  def initialize(value={})
-    super(value)
-  end
-
-  def name=(value)
-    @property_hash[:name] = value
-  end
-
   # this method is only called when value isn't insync?
   def value=(value)
     @property_hash[:name]  = resource[:name]
@@ -388,7 +380,9 @@ here, we use the constant `ConfigPattern` to call [`traffic_line -m`](http://tra
   end
 ```
 
-finally, we override the `self.prefetch`[[4](#fn_4)]) method to assign each resource with our provider's name to our provider, and we should now have a functioning RAL, that we can test-drive!
+finally, we override the `self.prefetch`[[4](#fn_4)]) method to assign each resource with our provider's name to our provider, and we should now (almost) have a functioning RAL interface. all that's missing is being able to assign the `record`/`value` we declared in our type, with the ones in `@property_hash`.
+we can do that with [`mk_resource_methods`](). with that in place, we can test-drive our provider on the command line!
+
 
 ```console
 igalic@levix ~ % puppet resource trafficserver_record
@@ -419,9 +413,47 @@ trafficserver_record { 'proxy.local.outgoing_ip_to_bind':
 }
 ```
 
+the only thing missing now, is to ***set*** the `value`. we'll do this, by overriding the `mk_resource_methods` generated `value=` method:
+
+```ruby
+  # this method is only called when value isn't insync?
+  def value=(value)
+    @property_hash[:name]  = resource[:name]
+    @property_hash[:value] = value
+
+    options = []
+    options << '-s' << @property_hash[:name]
+    options << '-v' << @property_hash[:value]
+    traffic_line(options)
+  end
+```
+
+first, we have to make sure that `@property_hash[:name]` is already populated. we can help that, by setting it ourselves from the [`resource`](). with that in place, we populate an `options` array, that we again pass to traffic_line to set the value.
+
+by placing the `commands` wrapped call to `traffic_line` as last expression in our methods, we take care of all failure modes, and the return value. and with that in place, we can now use `trafficserver_record` to set a value:
+
+```console
+igalic@levix ~ % puppet resource trafficserver_record  proxy.config.admin.autoconf_port
+trafficserver_record { 'proxy.config.admin.autoconf_port':
+  value => '8083',
+}
+igalic@levix ~ % puppet resource trafficserver_record  proxy.config.admin.autoconf_port value=8084
+Notice: /Trafficserver_record[proxy.config.admin.autoconf_port]/value: value changed '8083' to '8084'
+trafficserver_record { 'proxy.config.admin.autoconf_port':
+  value => '8084',
+}
+igalic@levix ~ %
+```
+
+# intermezzo
+
+[![baby goat](http://media-cache-cd0.pinimg.com/736x/41/3d/b5/413db593be277802ab859ff684f3ab47.jpg)](http://www.pinterest.com/pin/272678952412018812/)
+
+before we move on to the next example, i'd just like you to look at this baby goat. look. at. it.
+
 # Defined Type: git::config
 
-in our first example, we'll take a look at those latter two points, and how they affect us.
+in our second (and last!) example, we'll take a look at those latter two points, and how they affect us.
 
 this is the example of [git::config](https://github.com/puppetlabs/puppetlabs-git/pull/32) overloads `$name` to be usable as section.value, just like the [git-config](http://git-scm.com/book/en/Customizing-Git-Git-Configuration) cli program:
 
@@ -490,7 +522,6 @@ define git::config(
 ```
 
 they both define parameters (or properties), and they assign them default values where necessary. for two of our
-
 
 
 ---
