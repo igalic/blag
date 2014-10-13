@@ -453,7 +453,7 @@ before we move on to the next example, i'd just like you to look at this baby go
 
 # Defined Type: git::config
 
-in our second (and last!) example, we'll take a look at those latter two points, and how they affect us.
+in our second (and last!) example, we'll take a look at those [latter two points](#differences), and how they affect us.
 
 this is the example of [git::config](https://github.com/puppetlabs/puppetlabs-git/pull/32) overloads `$name` to be usable as section.value, just like the [git-config](http://git-scm.com/book/en/Customizing-Git-Git-Configuration) cli program:
 
@@ -481,7 +481,7 @@ environment => inline_template('<%= "HOME=" + ENV["HOME"] %>'),
 
 worst yet, it will fail silently. to mitigate this, and to make this type (near) universal, we have to implement as native type.
 
-the first throw might look something like this:
+our first throw might look something like this:
 
 ```ruby
 Puppet::Type.newtype(:git_config) do
@@ -521,8 +521,46 @@ define git::config(
 )
 ```
 
-they both define parameters (or properties), and they assign them default values where necessary. for two of our
+they both define parameters (or properties), and they assign them default values where necessary. what's missing is parsing `section` and `key` from the `name`. let's fix that:
 
+## title patterns (are weird)
+
+```ruby
+  # taken from augeasproviders
+  def self.title_patterns
+    identity = lambda { |x| x }
+    [
+      [
+        /^(([^\.]+)\.([^\.]+))$/,
+        [
+          [ :name, identity ],
+          [ :section, identity ],
+          [ :key, identity ],
+        ]
+      ],
+      [
+        /(.*)/,
+        [
+          [ :name, identity ],
+        ]
+      ]
+    ]
+  end
+```
+
+while this may be some of the weirdest code you've seen (today), and while, according to its API documentation unstable/private, overriding [`title_patterns`](https://docs.puppetlabs.com/references/latest/developer/Puppet/Type.html#title_patterns-class_method) is the cannonical way to do this. if we are (for now) stuck with it, let's at least try to understand what it does!
+
+title.patterns is supposed to return an Array of Arrays, which are filled with a Regex (to match the title), and an Array with a symbol<->proc arrays.
+
+that proc (`identity`) is the first thing we define: and since we don't need any special processing (e.g.: lower or upper casing), it's only *one* proc, and it just returns `x`.
+
+next we zoom into the regexes: we are defining two of them:
+
+* one to match a valid expression
+* the other to match all invalid expressions
+
+if it's invalid, we just assign `identity` to `:name`, and we're done.
+if, however, we match `key.value` - we need to populate ***all*** fields. most importantly, that also includes the default `:name`, which is what we have the outer layer of `(regex grouping)` parens for.
 
 ---
 
