@@ -54,7 +54,7 @@ but really, the way i got here is by being curious about how things work.
 
 [![Repairing a Bang &amp; Olufsen BEOCENTER 1400](https://farm4.staticflickr.com/3398/3267064872_d4146ee6ae_z.jpg)](https://www.flickr.com/photos/mskogly/3267064872)
 
-like most of us, i like building things, or taking things apart, and maybe even, putting them back together.[[1](#fn_1)]
+like most of us, i like building things, or taking things apart, and maybe even, putting them back together.[<a id="ref_1" href="#fn_1">1</a>]
 
 ## why this talk exists
 
@@ -62,7 +62,7 @@ the main reason why i like taking things apart, is so i can better understand th
 
 ![Designer's Conceptual Model vs User's Conceptual Model vs System Image](./designers-concept-vs-users-concept.png)
 
-the above image is a book i recommend everyone to read: the design of everyday things[[2](#fn_2)]. if you ever had trouble opening a door, or if you ever ran into a glass door, you will find in its author, Dan Norman, a soul mate.
+the above image is a book i recommend everyone to read: the design of everyday things[<a id="ref_2" href="#fn_2">2</a>]. if you ever had trouble opening a door, or if you ever ran into a glass door, you will find in its author, Dan Norman, a soul mate.
 
 but what this image in particular expresses is the tension between a system as it appears, between how a user sees it, and how the designer envisioned it.
 the more successful the inventor is in communicating their idea *through* the product itself, the more successful the product can become.
@@ -88,7 +88,7 @@ let's try to make a first step towards fixing that: by extending our understandi
 
 # not quite oop
 
-in most object oriented programming languages, *classes are cookie cutters, and objects are specific cookies*[[3](#fn_3)] that result from them.
+in most object oriented programming languages, *classes are cookie cutters, and objects are specific cookies*[<a id="ref_3" href="#fn_3">3</a>] that result from them.
 in puppet, however a class nothing more than a glorified container. a namespace.
 a way of organizing, and parametrising resources
 
@@ -380,7 +380,7 @@ here, we use the constant `ConfigPattern` to call [`traffic_line -m`](http://tra
   end
 ```
 
-finally, we override the `self.prefetch`[[4](#fn_4)]) method to assign each resource with our provider's name to our provider, and we should now (almost) have a functioning RAL interface. all that's missing is being able to assign the `record`/`value` we declared in our type, with the ones in `@property_hash`.
+finally, we override the `self.prefetch`[<a id="ref_4" href="#fn_4">4</a>] method to assign each resource with our provider's name to our provider, and we should now (almost) have a functioning RAL interface. all that's missing is being able to assign the `record`/`value` we declared in our type, with the ones in `@property_hash`.
 we can do that with [`mk_resource_methods`](). with that in place, we can test-drive our provider on the command line!
 
 
@@ -479,7 +479,7 @@ this code will work wonderfully in a [master-less setup](http://www.jamescun.com
 environment => inline_template('<%= "HOME=" + ENV["HOME"] %>'),
 ```
 
-worst yet, it will fail silently. to mitigate this, and to make this type (near) universal, we have to implement as native type.
+worst yet, it will fail silently. to mitigate this, and to make this type (near) universal, we have to implement it as native type.
 
 our first throw might look something like this:
 
@@ -550,7 +550,7 @@ they both define parameters (or properties), and they assign them default values
 
 while this may be some of the weirdest code you've seen (today), and while, according to its API documentation unstable/private, overriding [`title_patterns`](https://docs.puppetlabs.com/references/latest/developer/Puppet/Type.html#title_patterns-class_method) is the cannonical way to do this. if we are (for now) stuck with it, let's at least try to understand what it does!
 
-title.patterns is supposed to return an Array of Arrays, which are filled with a Regex (to match the title), and an Array with a symbol<->proc arrays.
+`title_patterns` is supposed to return an Array of Arrays, which are filled with a Regex (to match the title), and an Array with a symbol<->proc arrays.
 
 that proc (`identity`) is the first thing we define: and since we don't need any special processing (e.g.: lower or upper casing), it's only *one* proc, and it just returns `x`.
 
@@ -564,10 +564,10 @@ if, however, we match `key.value` - we need to populate ***all*** fields. most i
 
 ---
 
-[<span id="fn_1">1</span>]: the way i got up on a stage, is by being convinced enough of myself that i actually know what i'm talking about.
+[<span id="fn_1">1</span>]: the way i got up on a stage, is by being convinced enough of myself that i actually know what i'm talking about. [⏎](#ref_1)
 
-[<span id="fn_2">2</span>]: the book was recommended to me, and to anyone else willing to listen by Kathy Sierra on twitter - [@seriouspony, recently left twitter](http://seriouspony.com/trouble-at-the-koolaid-point) :\
+[<span id="fn_2">2</span>]: the book was recommended to me, and to anyone else willing to listen by Kathy Sierra on twitter - [@seriouspony, recently left twitter](http://seriouspony.com/trouble-at-the-koolaid-point) :\ [⏎](#ref_2)
 
-[<span id="fn_3">3</span>]: this wonderfully intuitive explanation, courtesy to [Alice Goldfuss](https://twitter.com/alicegoldfuss), relayed to me through [Selena Marie](https://twitter.com/selenamarie) at an OSCon. Thanks ♥
+[<span id="fn_3">3</span>]: this wonderfully intuitive explanation, courtesy to [Alice Goldfuss](https://twitter.com/alicegoldfuss), relayed to me through [Selena Marie](https://twitter.com/selenamarie) at an OSCon. Thanks ♥ [⏎](#ref_3)
 
-[<span id="fn_4">4</span>]: big shout-out to Gary Larizza, who wrote a very angry piece about types & providers that finally made the self.prefetch method *click*: http://garylarizza.com/blog/2013/12/15/seriously-what-is-this-provider-doing/
+[<span id="fn_4">4</span>]: big shout-out to Gary Larizza, who wrote a very angry piece about types & providers that finally made the self.prefetch method *click*: http://garylarizza.com/blog/2013/12/15/seriously-what-is-this-provider-doing/ [⏎](#ref_4)
