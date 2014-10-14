@@ -528,13 +528,13 @@ that in place, we can now use `trafficserver_record` to set a value:
 
 ```console
 igalic@levix ~ % puppet resource trafficserver_record  proxy.config.admin.autoconf_port
-trafficserver_record { 'proxy.config.admin.autoconf_port':
-  value => '8083',
+trafficserver_record { 'proxy.config.ssl.SSLv3':
+  value => '1',
 }
 igalic@levix ~ % puppet resource trafficserver_record  proxy.config.admin.autoconf_port value=8084
-Notice: /Trafficserver_record[proxy.config.admin.autoconf_port]/value: value changed '8083' to '8084'
-trafficserver_record { 'proxy.config.admin.autoconf_port':
-  value => '8084',
+Notice: /Trafficserver_record[proxy.config.ssl.SSLv3]/value: value changed '1' to '0'
+trafficserver_record { 'proxy.config.ssl.SSLv3':
+  value => '0',
 }
 igalic@levix ~ %
 ```
