@@ -564,10 +564,10 @@ if, however, we match `key.value` - we need to populate ***all*** fields. most i
 
 ---
 
-[<span id="fn_1">1</span>]: the way i got up on a stage, is by being convinced enough of myself that i actually know what i'm talking about. [⏎](#ref_1)
+[<span id="fn_1">1</span>]: the way i got up on a stage, is by being convinced enough of myself that i actually know what i'm talking about. [↲](#ref_1)
 
-[<span id="fn_2">2</span>]: the book was recommended to me, and to anyone else willing to listen by Kathy Sierra on twitter - [@seriouspony, recently left twitter](http://seriouspony.com/trouble-at-the-koolaid-point) :\ [⏎](#ref_2)
+[<span id="fn_2">2</span>]: the book was recommended to me, and to anyone else willing to listen by Kathy Sierra on twitter - [@seriouspony, recently left twitter](http://seriouspony.com/trouble-at-the-koolaid-point) :\ [↲](#ref_2)
 
-[<span id="fn_3">3</span>]: this wonderfully intuitive explanation, courtesy to [Alice Goldfuss](https://twitter.com/alicegoldfuss), relayed to me through [Selena Marie](https://twitter.com/selenamarie) at an OSCon. Thanks ♥ [⏎](#ref_3)
+[<span id="fn_3">3</span>]: this wonderfully intuitive explanation, courtesy to [Alice Goldfuss](https://twitter.com/alicegoldfuss), relayed to me through [Selena Marie](https://twitter.com/selenamarie) at an OSCon. Thanks ♥ [↲](#ref_3)
 
-[<span id="fn_4">4</span>]: big shout-out to Gary Larizza, who wrote a very angry piece about types & providers that finally made the self.prefetch method *click*: http://garylarizza.com/blog/2013/12/15/seriously-what-is-this-provider-doing/ [⏎](#ref_4)
+[<span id="fn_4">4</span>]: big shout-out to Gary Larizza, who wrote a very angry piece about types & providers that finally made the self.prefetch method *click*: http://garylarizza.com/blog/2013/12/15/seriously-what-is-this-provider-doing/ [↲](#ref_4)
