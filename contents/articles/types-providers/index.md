@@ -110,7 +110,7 @@ out into nicely readable yaml
 
 ```yaml
 ---
-ssh::permit_root_login: true
+ssh::permit_root_login: false
 ```
 
 with that we're back to where we started,
