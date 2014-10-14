@@ -50,7 +50,7 @@ my name is Igor Galić (in the video you'll hear me pronouce this)
 
 i'm igalic on github and irc (in the video, you'll hear me pronouce this)
 
-and i'm @hirojin on twitter.
+and i'm [@hirojin](https://twitter.com/hirojin) on twitter.
 
 a word of warning if you're planning to follow me on twitter. i tweet,
 ***alot***. and this is my pinned tweet:
@@ -634,20 +634,19 @@ values where necessary. what's missing is parsing `section` and `key` from the
 ```ruby
   # taken from augeasproviders
   def self.title_patterns
-    identity = lambda { |x| x }
     [
       [
         /^(([^\.]+)\.([^\.]+))$/,
         [
-          [ :name, identity ],
-          [ :section, identity ],
-          [ :key, identity ],
+          [ :name ],
+          [ :section ],
+          [ :key ],
         ]
       ],
       [
         /(.*)/,
         [
-          [ :name, identity ],
+          [ :name ],
         ]
       ]
     ]
@@ -660,22 +659,27 @@ according to its API documentation unstable/private, overriding
 is the cannonical way to do this. if we are (for now) stuck with it, let's at
 least try to understand what it does!
 
-`title_patterns` is supposed to return an Array of Arrays, which are filled
-with a Regex (to match the title), and an Array with a symbol<->proc arrays.
+expressed in words, `title_patterns` is supposed to return:
 
-that proc (`identity`) is the first thing we define: and since we don't need
-any special processing (e.g.: lower or upper casing), it's only *one* proc, and
-it just returns `x`.
+> an Array of Arrays, which are filled
+>
+> with a Regex (to match the title),
+>
+> and an Array with a symbols (optionally mapped to a proc) arrays.
+>
+> or else, nil.
+
+that proc (or lambda) is just a "function", which can be used to modify the title (or the matched part). in this case, we don't actually need it, so we won't bother!
 
 next we zoom into the regexes: we are defining two of them:
 
 * one to match a valid expression
 * the other to match all invalid expressions
 
-if it's invalid, we just assign `identity` to `:name`, and we're done.  if,
-however, we match `key.value` - we need to populate ***all*** fields. most
-importantly, that also includes the default `:name`, which is what we have the
-outer layer of `(regex grouping)` parens for.
+if it's invalid, we just assign to `:name`, and we're done.  if,
+however, we match `key.value` - we need to populate ***all*** fields.
+most importantly, that also includes the default `:name`, which is what
+we have the outer layer of `(regex grouping)` parens for.
 
 # Discovering the implementation
 
@@ -703,6 +707,7 @@ igalic@levix ~ %
 
 this should get us up and running with [pry](https://github.com/pry/pry),
 installing both, pry, and pry-doc, which includes the ruby sources.
+
 
 ---
 
