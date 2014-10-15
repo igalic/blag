@@ -34,7 +34,9 @@ Providers](http://shop.oreilly.com/product/0636920026860.do), and being
 [friends](https://twitter.com/bkero) with one of the [new Pro
 Puppet](http://www.apress.com/9781430260400) i also had 6 types & providers
 books, and 2 pro puppet book to give out (as distractions), to anyone who asked
-or answered smart or silly questions. so this (talk|blog) assumes you are
+or answered smart or silly questions.
+
+this is a more detailed write-up of my talk, and assumes you are
 ***not*** a complete beginner, that you have gone through
 [puppet learning vm](http://puppetlabs.com/download-learning-vm),
 and know [how to compose (good) modules](https://puppetlabs.com/presentations/practical-guide-modules-lauren-rother-puppet-labs-morgan-haskel-puppet-labs),
@@ -65,7 +67,7 @@ a word of warning if you're planning to follow me on twitter. i tweet,
 (🚗 ✈ 🚅 🚶)
 
 
-i learned c, c++, (pic and ibm 360) assembler, java, pl/i at school.  i taught
+i learned c, c++, (pic and ibm 360) assembler, java, pl/i at school. i taught
 myself x86 assembler, php, ruby, and started doing linux semi-professionally.
 first job was what today we call "reliability engineer", deploy/debug jee apps
 on jboss running on solaris. we had automation. a self-grown solution written
@@ -156,7 +158,7 @@ include ssh
 
 classes as containers, organising "things". those things are…
 
-## resources
+# resources
 
 i've said a few times now that puppet is all about managing resources. puppet's
 [RAL](https://docs.puppetlabs.com/learning/ral.html) is a great way to
@@ -237,9 +239,9 @@ Error: Could not run: Listing all file instances is not supported.  Please speci
 
 ## differences
 
-puppet's [defined
-types](https://docs.puppetlabs.com/learning/definedtypes.html) try to be as
-close as possible to native types, yet there are a number of differences.
+puppet's [defined types](https://docs.puppetlabs.com/learning/definedtypes.html)
+try to be as close as possible to native types, yet there are a number
+of differences.
 
 knowing those differences, is what let's us answer the question, "why bother?"
 
@@ -256,7 +258,7 @@ usually, [functions](https://docs.puppetlabs.com/guides/custom_functions.html)
 called from within the puppet DSL [execute on the master](https://docs.puppetlabs.com/guides/custom_functions.html#gotchas). this
 can have surprising effects, as we'll see in our second example. executing, and
 more importantly, being able to process the output on the spot, lets us write
-more powerful, more concise code.
+more powerful, and sometimes, more concise code.
 
 * overloading $name
 
@@ -265,7 +267,7 @@ sometimes we want to override a
 to fill more than one variable, in those cases, defined types will give us a
 much easier time.
 
-# Define Type: trafficserver::config::records (a simple example)
+# Defined Type: trafficserver::config::records
 
 let's take a look at a defined type from the very [first module i
 published](https://github.com/Brainsware/puppet-trafficserver). this module
@@ -374,12 +376,11 @@ Puppet::Type.type(:trafficserver_record).provide(:traffic_line) do
 
   # this method is only called when value isn't insync?
   def value=(value)
-    @property_hash[:name]  = resource[:name]
     @property_hash[:value] = value
 
     options = []
-    options << '-s' << @property_hash[:name]
-    options << '-v' << @property_hash[:value]
+    options << '-s' << @property_hash[:record]
+    options << '-v' << value
     traffic_line(options)
   end
 
@@ -389,8 +390,9 @@ Puppet::Type.type(:trafficserver_record).provide(:traffic_line) do
     records.split("\n").collect do |line|
       name, value = line.split(' ', 2)
       # and initialize @property_hash
-      new( :name  => name,
-           :value => value.to_s)
+      new( :name   => name,
+           :record => name,
+           :value  => value.to_s)
     end
   end
 
@@ -443,8 +445,9 @@ server.
     records.split("\n").collect do |line|
       name, value = line.split(' ', 2)
       # and initialize @property_hash
-      new( :name  => name,
-           :value => value.to_s)
+      new( :name   => name,
+           :record => name,
+           :value  => value.to_s)
     end
   end
 ```
@@ -452,6 +455,8 @@ server.
 `self.instances` populates the
 [`@property_hash`](https://docs.puppetlabs.com/references/latest/developer/Puppet/Provider.html),
 all we have to fill it, is return the contents.
+in our case we'll have to make sure to return both `:name` (the ever
+present default `namevar`), and `:record` (our actual `namevar`).
 
 
 ```ruby
@@ -465,10 +470,11 @@ all we have to fill it, is return the contents.
 ```
 
 finally, we override the `self.prefetch`[<a id="ref_4" href="#fn_4">4</a>]
-method to assign each resource with our provider's name to our provider, and we
-should now (almost) have a functioning RAL interface. all that's missing is
-being able to assign the `record`/`value` we declared in our type, with the
-ones in `@property_hash`.
+method to assign each resource which carries our provider's name to be
+managed by our provider, and we should now (almost) have a functioning
+RAL interface. all that's missing is being able to assign the
+`record`/`value` we declared in our type, with the ones in
+`@property_hash`.
 we can do that with [`mk_resource_methods`](). with that in place, we can test-drive our provider on the command line!
 
 
@@ -507,20 +513,18 @@ overriding the `mk_resource_methods` generated `value=` method:
 ```ruby
   # this method is only called when value isn't insync?
   def value=(value)
-    @property_hash[:name]  = resource[:name]
     @property_hash[:value] = value
 
     options = []
-    options << '-s' << @property_hash[:name]
-    options << '-v' << @property_hash[:value]
+    options << '-s' << @property_hash[:record]
+    options << '-v' << value
     traffic_line(options)
   end
 ```
 
-first, we have to make sure that `@property_hash[:name]` is already populated.
-we can help that, by setting it ourselves from the [`resource`](). with that in
-place, we populate an `options` array, that we again pass to `traffic_line` to
-set the value.
+first, we have to make sure that `@property_hash[:value]` is populated.
+with that in place, we fill an `options` array, that we again pass to
+`traffic_line` to set the value.
 
 by placing the `commands` wrapped call to `traffic_line` as last expression in
 our methods, we take care of all failure modes, and the return value. and with
@@ -531,7 +535,7 @@ igalic@levix ~ % puppet resource trafficserver_record  proxy.config.admin.autoco
 trafficserver_record { 'proxy.config.ssl.SSLv3':
   value => '1',
 }
-igalic@levix ~ % puppet resource trafficserver_record  proxy.config.admin.autoconf_port value=8084
+igalic@levix ~ % puppet resource trafficserver_record  proxy.config.ssl.SSLv3 value=0
 Notice: /Trafficserver_record[proxy.config.ssl.SSLv3]/value: value changed '1' to '0'
 trafficserver_record { 'proxy.config.ssl.SSLv3':
   value => '0',
@@ -548,14 +552,18 @@ goat. look. at. it.
 
 # Defined Type: git::config
 
-in our second (and last!) example, we'll take a look at those [latter two
-points](#differences), and how they affect us.
+in our second (and last, i promise!) example, we'll take a look at those
+[latter two points](#differences), and how they affect us:
+
+* native types execute on the client-node
+* overloading $name
 
 this is the example of
-[git::config](https://github.com/puppetlabs/puppetlabs-git/pull/32) overloads
-`$name` to be usable as section.value, just like the
-[git-config](http://git-scm.com/book/en/Customizing-Git-Git-Configuration) cli
-program:
+[git::config](https://github.com/puppetlabs/puppetlabs-git/pull/32),
+which i tried to replace with a type&provider. it overloads `$name` to
+be usable as section.value, just like the
+[git-config](http://git-scm.com/book/en/Customizing-Git-Git-Configuration)
+cli program:
 
 ```puppet
 define git::config(
@@ -686,27 +694,151 @@ we have the outer layer of `(regex grouping)` parens for.
 before we move on, let's try to reflect where we stand, and how we've gotten
 here: in our first type & provider pair, all we did was write a method for
 `value=`, and that worked out fine, because we had a simple way of determining
-*all* `record`/`value` pairs, before we *hit the type*.
+*all* `record`/`value` pairs.
 
-***before*** we *hit* the *type*
+but here, that's not possible. there's no (simple, cheap) way for us to
+find out all possible values for all `section.key` <-> `value` pairs,
+for *all* `user`s. we have to find a different way of doing it: we have to override the "getter" for `value` as well:
 
-okay, let's pause here to actually grasp what that means. to do that we'll use
-`pry`[<a id="ref_5" href="#fn_5">5</a>]
+```ruby
+Puppet::Type.type(:git_config).provide(:git_config) do
 
-```console
-igalic@levix ~ % gem install pry-doc pry
-Successfully installed pry-doc-0.6.0
-Parsing documentation for pry-doc-0.6.0
-Done installing documentation for pry-doc after 0 seconds
-Successfully installed pry-0.10.1
-Parsing documentation for pry-0.10.1
-Done installing documentation for pry after 2 seconds
-2 gems installed
-igalic@levix ~ %
+  mk_resource_methods
+
+  def value
+    require 'etc'
+    user    = @property_hash[:user]    = @resource[:user]
+    key     = @property_hash[:key]     = @resource[:key]
+    section = @property_hash[:section] = @resource[:section]
+    home    = Etc.getpwnam(user)[:dir]
+
+    current = Puppet::Util::Execution.execute(
+      "git config --global --get #{section}.#{key}",
+      :uid => user,
+      :failonfail => false,
+      :custom_environment => { 'HOME' => home }
+    )
+    @property_hash[:value] = current.strip
+    @property_hash[:value]
+  end
 ```
 
-this should get us up and running with [pry](https://github.com/pry/pry),
-installing both, pry, and pry-doc, which includes the ruby sources.
+in that getter, we make sure that all the variables we need have already
+been set, and if they aren't, we just do it ourselves, by filling the
+holes in the `@property_hash`:
+
+```ruby
+    user    = @property_hash[:user]    = @resource[:user]
+    key     = @property_hash[:key]     = @resource[:key]
+    section = @property_hash[:section] = @resource[:section]
+```
+
+now comes the most crucial part. contrast:
+
+```puppet
+    environment => inline_template('<%= "HOME=" + ENV["HOME"] %>'),
+```
+
+with
+
+```ruby
+    home    = Etc.getpwnam(user)[:dir]
+```
+
+spoiler alert: only one of those will actually work.
+
+next we emulate the `unless` clause:
+
+```puppet
+    current = Puppet::Util::Execution.execute(
+      "git config --global --get #{section}.#{key}",
+      :uid => user,
+      :failonfail => false,
+      :custom_environment => { 'HOME' => home }
+    )
+    @property_hash[:value] = current.strip
+    @property_hash[:value]
+  end
+```
+
+we find out the "current" value of `value`, by running[<a id="ref_5"
+href="#fn_5">5</a>] the same git command as we did in the `exec` of
+`git::config`. then we just put it in `@property_hash` and return it.
+with our getter in place, puppet can now, thanks to
+[`insync?`](https://docs.puppetlabs.com/references/latest/developer/Puppet/Property.html#insync%3F-instance_method)
+decide all by itself, if it's necessary to set `value`. to allow for
+that setting, we'll override `value=` again:
+
+```ruby
+  def value=(value)
+    @property_hash[:value] = value
+    require 'etc'
+    home = Etc.getpwnam(user)[:dir]
+
+    Puppet::Util::Execution.execute(
+      "git config --global #{section}.#{key} '#{value}'",
+      :uid => user,
+      :failonfail => true,
+      :custom_environment => { 'HOME' => home }
+    )
+  end
+```
+
+we ~persist~ `value` into `@property_hash`, and then execute the same
+command as above, except this time, we set `failonfail => true`.
+
+and now we're done!
+
+[![well done owl](https://pbs.twimg.com/media/ByAidNeIcAAF4Me.jpg)](https://twitter.com/neinquarterly)
+
+let's test it, with this manifest:
+
+```puppet
+# gmt.pp
+git_config { 'merge.tool':
+  user  => 'igalic',
+  value => 'vimdiff',
+}
+```
+
+using `puppet apply`:
+
+```console
+igalic@levix ~/src/puppet/puppetlabs-git (git)-[type] % puppet apply gmt.pp
+Notice: Compiled catalog for levix in environment production in 0.02 seconds
+Notice: /Stage[main]/Main/Git_config[merge.tool]/value: value changed '' to 'vimdiff3'
+Notice: Finished catalog run in 0.17 seconds
+puppet apply gmt.pp  9,76s user 0,90s system 99% cpu 10,731 total
+igalic@levix ~/src/puppet/puppetlabs-git (git)-[type] % puppet apply gmt.pp
+```
+
+and again, to make sure it's idempotent:
+
+```console
+igalic@levix ~/src/puppet/puppetlabs-git (git)-[type] % puppet apply gmt.pp
+Notice: Compiled catalog for levix in environment production in 0.02 seconds
+Notice: Finished catalog run in 0.13 seconds
+puppet apply gmt.pp  10,04s user 0,79s system 98% cpu 10,950 total
+igalic@levix ~/src/puppet/puppetlabs-git (git)-[type] %
+```
+
+woohoo!
+
+# bonus: prying open your third eye
+
+just kidding. you can do that yourself.
+
+# thanks
+
+big thanks to the authors of Puppet Types and Providers: (Nan Liu)[https://twitter.com/sesshin] and [Dan Bode](https://twitter.com/bodepd)
+
+thanks to [Gary Larizza](https://twitter.com/glarizza) for clarifying some of that what they've written ;)
+
+big, big, big thanks to ♥ [Adrien Thebo](https://twitter.com/nullfinch) ♥ for relentless hours of hand-holding, and also for writing r10k, and filemapper.
+
+my unending thanks to [Ashley Penney](https://twitter.com/ashleypenney) and [Hunter Haugen](https://twitter.com/Hunnur) for pointing me to `pry`, and to [Benjamin Tan Wei Hao](https://twitter.com/bentanweihao) for writing this [intro](http://www.sitepoint.com/rubyists-time-pry-irb/).
+
+thanks to [Morgan Haskell](https://twitter.com/KnittyNerd), who helped me debug and fix git::config, A DAY BEFORE MY TALK.
 
 
 ---
@@ -719,6 +851,7 @@ installing both, pry, and pry-doc, which includes the ruby sources.
 
 [<span id="fn_4">4</span>]: big shout-out to Gary Larizza, who wrote a very angry piece about types & providers that finally made the self.prefetch method *click*: http://garylarizza.com/blog/2013/12/15/seriously-what-is-this-provider-doing/ [↲](#ref_4)
 
-[<span id="fn_5">5</span>]: my unending thanks to [Ashley Penney](https://twitter.com/ashleypenney) and [Hunter Haugen](https://twitter.com/Hunnur) for pointing me to pry, and to [Benjamin Tan Wei Hao](https://twitter.com/bentanweihao) for writing this intro: http://www.sitepoint.com/rubyists-time-pry-irb/ [↲](#ref_5)
+[<span id="fn_5">5</span>]: n.b.: this will actually *not* work if you're running puppet as non-root user, see [PUP-3457](https://tickets.puppetlabs.com/browse/PUP-3457) [↲](#ref_5)
 
-[<span id="fn_6">6</span>]: [↲](#ref_6)
+[<span id="fn_6">6</span>]:
+[<span id="fn_7">7</span>]: [↲](#ref_7)
