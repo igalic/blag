@@ -183,7 +183,7 @@ igalic@levix ~ %
 they can be software,
 
 ```console
-igalic@levix ~ % puppet resource packages
+igalic@levix ~ % puppet resource package
 ...
 package { 'zlib1g-dev':
   ensure => '1:1.2.8.dfsg-1ubuntu1',
@@ -830,7 +830,7 @@ just kidding. you can do that yourself.
 
 # thanks
 
-big thanks to the authors of Puppet Types and Providers: (Nan Liu)[https://twitter.com/sesshin] and [Dan Bode](https://twitter.com/bodepd)
+big thanks to the authors of Puppet Types and Providers: [Nan Liu](https://twitter.com/sesshin) and [Dan Bode](https://twitter.com/bodepd)
 
 thanks to [Gary Larizza](https://twitter.com/glarizza) for clarifying some of that what they've written ;)
 
