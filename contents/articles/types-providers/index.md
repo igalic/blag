@@ -10,9 +10,10 @@ puppetconf 2014](http://sched.co/1kR57MI)
 
 <span class="more"></span>
 
-you can find the slides of this talk on [my
-speakerdeck](https://speakerdeck.com/igalic/absolute-beginners-guide-to-puppet-through-types).
-i'll also update this space with a link to the video as soon as it's published.
+you can find the slides of this talk on
+[my speakerdeck](https://speakerdeck.com/igalic/absolute-beginners-guide-to-puppet-through-types),
+and the [video of the talk](https://puppetlabs.com/presentations/absolute-beginners-guide-puppet-through-types-igor-gali-brainsware-og)
+on the puppetconf page.
 
 initially, no, long before that, the title of my talk was meant to be:
 
@@ -852,6 +853,3 @@ thanks to [Morgan Haskell](https://twitter.com/KnittyNerd), who helped me debug 
 [<span id="fn_4">4</span>]: big shout-out to Gary Larizza, who wrote a very angry piece about types & providers that finally made the self.prefetch method *click*: http://garylarizza.com/blog/2013/12/15/seriously-what-is-this-provider-doing/ [↲](#ref_4)
 
 [<span id="fn_5">5</span>]: n.b.: this will actually *not* work if you're running puppet as non-root user, see [PUP-3457](https://tickets.puppetlabs.com/browse/PUP-3457) [↲](#ref_5)
-
-[<span id="fn_6">6</span>]:
-[<span id="fn_7">7</span>]: [↲](#ref_7)
