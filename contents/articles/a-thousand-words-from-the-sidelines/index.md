@@ -11,11 +11,11 @@ like to dissect my growth into the world of intersectional feminism.
 
 <span class="more"></span>
 
-in particular, i'd like to answer the question i receive from eye-rolling male friends:
-
 # why do you keep strumming on that harp?
 
+in particular, i'd like to answer the question i receive from eye-rolling male friends
 
+# meritocracy and colour blindness
 
 like most young geeks i've been [steeped in the
 literature](http://modelviewculture.com/pieces/the-open-source-identity-crisis)
@@ -26,10 +26,20 @@ i've long since suspected that there was something foul in the state of open
 source, even at a time when i didn't know the word "meritocracy" yet.
 funnily enough it would be women who taught it to me.
 
+# women's tragedies
+
 and, as always, it was a woman's tragedy that finally opened my eyes.
 
-i'll come back to this key-point. the tragedy of women as a background
-narrative, while at the same time their stories must never to be believed.
+the tragedy of women as a background narrative, while at the same time their
+stories must never to be believed:
+
+# believing is the first step
+
+# my feminism will be intersectional or it will be bullshit
+
+# missteps and step backs
+
+# calling out and calling in
 
 # but i'm a humanist / equalist!
 
