@@ -2,7 +2,7 @@
 title: puppet types & providers
 author: igor
 template: article.jade
-date: ZOMG-no!
+date: 1999-01-01
 ---
 
 this is a write-up of my poorly prepared and poorly presented [talk at
