@@ -2,7 +2,7 @@
 title: a thousand words from the sidelines
 author: igor
 template: article.jade
-date: NaN
+date: ZOMG-no!
 ---
 
 over the past couple of years i've read a bachelor's degree worth of feminist
