@@ -2,7 +2,7 @@
 title: a thousand words from the sidelines
 author: igor
 template: article.jade
-date: 1999-01-01
+date: 2014-11-31
 ---
 
 over the past couple of years i've read a bachelor's degree worth of feminist
