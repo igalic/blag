@@ -39,7 +39,13 @@ stories must never to be believed:
 
 # missteps and step backs
 
+# the death of heroes and idols
+
 # calling out and calling in
+
+# privacy and surveilance
+
+security through a feminist lens.
 
 # but i'm a humanist / equalist!
 
@@ -47,3 +53,7 @@ lol.
 
 [![Equaslit Propaganda (fan art from the show The Legend of Korra)](http://fc08.deviantart.net/fs70/i/2012/162/f/f/equalist_propaganda_by_outspire-d5367yu.png)](http://outspire.deviantart.com/art/Equalist-Propaganda-307659990)
 
+
+# links
+
+@SwiftOnSecurity [Thoughts on online harassment](https://storify.com/SwiftOnSecurity/thoughts-on-online-harassment)
