@@ -7,6 +7,7 @@
     "owner": "igor",
     "description": "disappointing expectations since 1894."
   },
+  "output": "htdocs",
   "plugins": [
     "./plugins/paginator.coffee"
   ],
