@@ -1,12 +1,22 @@
 ---
-title: open source burnout
+title: Open Sourcing Mental Illness - open source burnout
 date: 2014-11-21
 author: igor
 template: article.jade
 ---
 
-Open source is work. Not just a work of passion, but real actual work. And it
-can be taxing. I'd like to discuss how.
+This talk runs under [Ed Fink](http://funkatron.com/)'s Banner of [Open
+Sourcing Mental Illness](http://funkatron.com/osmi.html), who has been running
+these types of talks for over a year now. Ed talks very broadly on the subject,
+while still backing it up with his personal stories.
+
+I'd like to mirror his work under that banner: I'd like to talk about
+depression, and addiction: Open source is work. Not just a work of passion, but
+real actual work. And it can be taxing. I'd like to discuss how.
+
+Content Warnings galore: The topics I discuss and the stories I tell can be
+triggering. I am perfectly happy answering questions, but not everyone will
+be comfortable asking. You can always seek me outside of this talk.
 
 <span class="more"></span>
 
