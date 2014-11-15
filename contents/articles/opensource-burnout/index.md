@@ -35,7 +35,9 @@ be comfortable asking. You can always seek me outside of this talk.
 * polyglot (Bosanski/српски/hrvatski, Deutsch, English, C, Ruby)
 * dyslexic
 * grew up in abusive home
+* school drop-out
 * alcoholic
+* autodidact
 * depression
 * workaholic
 * queer
@@ -46,14 +48,19 @@ be comfortable asking. You can always seek me outside of this talk.
 # Why I'm telling you this
 
 I could be telling you this for a number of reasons: first off, I could simply
-be lying. This could be a fabrication, one way or another it's a manipulation.
-I could be trying to feed you sublime messages about the importance of
-diversity, in order to further my feminist, queer agenda. But, actually, it's
-about making myself vulnerable, about opening up. This is an extremely
-sensitive subject, so I will need you to trust me.
+be lying. This could be a fabrication. But one way or another it *is* a
+manipulation.  I could be trying to feed you subliminal messages about the
+importance of diversity, in order to further my feminist, queer agenda. But,
+actually, it's about making myself vulnerable, about opening up. This is an
+extremely sensitive subject, so I will need you to trust me.
 
-Many of those things on this list can be "fixed", other things are not for
-fixing but might need to be discovered and embraced.
+***This trust comes with a caveat:*** I am not a health-care specialist. All I'm
+doing is sharing my own stories and experiences. What has worked for me, might
+not work for you. All I can do for you is listen to your stories, but the only
+real advise I'll be able to give is to ask you to seek help.
+
+Let's get back on to my list: Many of those items can be "fixed", other things
+are not for fixing but might need to be discovered and embraced.
 
 I cannot go back and change the fact that as a child I had to flee my home
 country, and along with other things in my history, it made me the person who I
