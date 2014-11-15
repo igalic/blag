@@ -87,6 +87,154 @@ All I can contribute is this
 
 > Depression lies, and when we listen to its lies, it kills.
 
+I couldn't just quit depression. Which, ridiculously enough, is something that
+people who don't know depression will demand. The same kind of people who will
+happily ask me, every time, if I want a drink, while only listing alcohol.
+
+There's a lesson here, and I'll come back to this subject later.
+
+# Step One: Self-treatment
+
+Having been a life-long autodidact, I was very eager to make a changes to fix
+my life. I would listen to advise from friends or even random strangers. I'd
+take their advise on what bothered them about me, or I'd talk about something
+that was bothering *me* about *myself*.
+
+The pattern was always the same, and it's a well-documented in self-help books
+that are not complete garbage, because it's extremely effective
+
+* Identify an issue
+* Find a set of solutions, and choose *one*
+* Implement it, and stick with it for >=3 months
+* Document, or observe changes
+* Verify the result
+
+Every single of one those steps is extremely hard.
+
+It's well possible to train myself in a new habit of getting up an hour
+earlier, or working out three times a week to run a marathon, or to learn a new
+(programming) language. It's extremely hard, but it's possible.
+
+It's a lot harder however, if I were in a depressive episode, and my brain
+is lying to me.
+
+* Every issue will be with me.
+* Every solution will be that I somehow vanish from existence.
+* Every attempt at sticking with a plan will be abandoned within days.
+* Every observation will be warped.
+* Every reflexion will conclude that the issue was with me to begin with, and
+  that, yes, I must somehow vanish from this plane of existence.
+
+And, none of this will help me identify that I do indeed have depression.
+None of this *did* help me identify that. Sometimes you will need feedback from
+the out-side world. Some people get that through friends or family, who rightly
+recognize their issue, *and* have the courage to point it out. Maybe they even
+point it out in a helpful way.
+
+My push came through an eye-opening experience with a former partner.
+
+# Gauging your Limits
+
+My then partner and I were together for about six months at that time, when she
+left for long-planned month long vacation to south-east Asia.
+
+She came back a "different woman." One she hadn't been in over ten years:
+Anxiety and depression started to slowly seep in. They fed her insomnia. The
+lack of sleep made her work as primary school teacher even more stressful.
+
+The simplest of tasks such as printing a word document became infuriatingly
+frustrating. Sending her into a fit of rage, or just sobbing and crying.
+
+I *was* there for here; I'd work-out with her when she asked me to; I'd cook
+with her, help her with her paintings; I'd hold her. But none of the help I
+thought I could provide was enough.
+
+She started researching suicide methods. There was nothing *I* could do.
+
+All I could do was ask her to seek help. And help her get bootstrapped: Find
+therapy. Find a psychiatrist. Make appointments.
+
+I hit the cold hard wall of reality, and it made me realize: That was the limit
+of my ability. It also made me realize that she was going through experiences that
+were anything but new to me. She was experiencing it on a magnitude that I
+never had. But that only helped to reinforce my own powerlessness.
+
+There was nothing *I* could do, yet there was a support network ready to help her.
+
+If there was help for her, then surely there was help for me too.
+
+# Being Out In the Open
+
+Three years ago, I had my [coming out](/articles/coming-out/). I'm *all* about
+Open Source. I know the benefits of doing things in the open.
+
+* With enough eyes, all bugs become shallow[<a id="ref_1" href="#fn_1">1</a>]
+
+***No.***
+
+Even if my friends were actually medical health professionals, I couldn't
+possibly expect help from them directly.
+
+* It's much easier to create a support-network
+
+The most important aspect of being out openly to my friends, means that my
+friends already know. This means that when I need their help, or need them to
+be more sensitive, or need more room, then I don't need to have *that
+conversation*. We've already had it.
+
+* When I fall behind on my goals…
+
+…people can be there for me. They can remind me of those goals. Or they might
+offer support, such as finding a new therapist.
+
+I'd like to quote [Avery Edison](http://averyedison.com/) on the subject of
+coming out, from her book, [Right Body, Wrong
+Junk](http://averyedison.com/rightbodywrongjunk/):
+
+> The fact that it's not a secret makes it all the easier to say. I still worry
+> about how someone might react (there's always the possibility of a hidden
+> bigot in the mix), but the whole process is easier. I don't feel like I'm
+> unburdening myself, I just feel like I'm providing relevant info.
+
+But there's this giant stigma attached to mental illness, like all things that
+only exist in the margins of society, so disclosing it is a delicate issue.
+
+Let's talk about addiction then.
+
+# Alcohol
+
+In January 2012 I started working as freelancer, and for the first time I was
+earning adequate amounts of money for my level of experience and the
+performance I was delivering. Which was *really* good, because after six months
+of unemployment, of traveling, and, drinking, I had around €20000 in debts.
+
+Those first two months, in which I worked my ass off, and, automated myself away,
+had paid off my debt. But, I still hadn't quite learned anything at that point.
+It took another six months of drinking, and "writing" (sitting in bars with a
+notebook), until a police patrol picked me off my bike after a couple Guinness
+too many. Once again, this was an external incentive, one for which, despite
+the big price tag, I will be eternally grateful for.
+
+It gave me *official* reason to pause, and reflect. Reflect on things I had
+suspected were wrong for a long time. However, I had pushed them aside, as
+being under my control, or important for my creativity, or that it's genetic,
+or part of my charming personality.
+
+
+
+
 # Let's talk about work
 
 
+# Making a Change
+
+* surround yourself with people who support you, not just with people who
+  *claim* they are supportive of you.
+
+-----
+
+[<span id="fn_1">1</span>]: writing those lines was extremely hard. Just
+writing it, despite its context, felt absolutely hypocritical, after recent
+experiences with a friend dying. [↲](#ref_1)
+
+[<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
