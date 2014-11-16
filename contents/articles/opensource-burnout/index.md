@@ -282,7 +282,16 @@ Nóirín's ferocity gave me the courage to stand up for myself and simply say:
 
 In just a couple of days after quitting, I had learned how powerful the truth
 about addiction can be. When it's simply pronounced like that, it left people
-speechless. But if you read [Kara's
+speechless. There is some dark irony behind the fact that I used to drink,
+because I thought I am unable to talk to people otherwise[<a id="ref_2"
+href="#fn_2">1</a>]. I was also afraid, that my not drinking would be the only
+subject to talk about. Fortunately, that turned out not to be the case. And, at
+the last conference party I was at (organized by Kara, no less!) I had someone
+call me a
+
+> Social Butterfly
+
+But if you read [Kara's
 article](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-tech-events-with-non-alcoholic-options)
 you may learn that this kind of openness isn't for everyone. It can be hard
 enough to admit this to ourselves, or admitting it to friends and family, but
@@ -298,7 +307,7 @@ others…
 ## Let's talk about work
 
 For the longest part of my life, my work has been a core part of my
-identity.[<a id="ref_2" href="#fn_2">1</a>]
+identity.[<a id="ref_3" href="#fn_3">1</a>]
 
 > Šta radiš, Igo?
 
@@ -336,8 +345,11 @@ For a number of personal reasons, I fall into that last category.
 writing it, despite its context, felt absolutely hypocritical, after recent
 experiences with a friend dying. [↲](#ref_1)
 
-[<span id="fn_2">X</span>]: There is another 4000 word essay in that sentence,
+[<span id="fn_2">2</span>]: do I really have to point out how badly that
+worked? [↲](#ref_2)
+
+[<span id="fn_3">X</span>]: There is another 4000 word essay in that sentence,
 that I didn't get to write last week, for reasons already mentioned…
-[↲](#ref_2)
+[↲](#ref_3)
 
 [<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
