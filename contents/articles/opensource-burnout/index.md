@@ -20,14 +20,18 @@ be comfortable asking. You can always seek me outside of this talk.
 
 <span class="more"></span>
 
-# How I appear to be like everyone else (here)
+# Introductions
+
+I'll start with some introductions…
+
+## How I appear to be like everyone else (here)
 
 * english speaking
 * male
 * white
 * straight
 
-# How I'm not quite like everyone else
+## How I'm not quite like everyone else
 
 * war refugee
 * immigrant
@@ -45,7 +49,7 @@ be comfortable asking. You can always seek me outside of this talk.
 
 ![@hirojin's twitter as of 20141113: 18.1k tweets](@hirojin.png)
 
-# Why I'm telling you this
+## Why I'm telling you this
 
 I could be telling you this for a number of reasons: first off, I could simply
 be lying. This could be a fabrication. But one way or another it *is* a
@@ -93,7 +97,7 @@ happily ask me, every time, if I want a drink, while only listing alcohol.
 
 There's a lesson here, and I'll come back to this subject later.
 
-# Step One: Self-treatment
+## Step One: Self-treatment
 
 Having been a life-long autodidact, I was very eager to make a changes to fix
 my life. I would listen to advise from friends or even random strangers. I'd
@@ -133,7 +137,7 @@ point it out in a helpful way.
 
 My push came through an eye-opening experience with a former partner.
 
-# Gauging your Limits
+## Gauging your Limits
 
 My then partner and I were together for about six months at that time, when she
 left for long-planned month long vacation to south-east Asia.
@@ -163,26 +167,31 @@ There was nothing *I* could do, yet there was a support network ready to help he
 
 If there was help for her, then surely there was help for me too.
 
-# Being Out In the Open
+## Being Out In the Open
 
 Three years ago, I had my [coming out](/articles/coming-out/). I'm *all* about
 Open Source. I know the benefits of doing things in the open.
 
-* With enough eyes, all bugs become shallow[<a id="ref_1" href="#fn_1">1</a>]
+### With enough eyes, all bugs become shallow
 
-***No.***
+If there's any message you take away from this talk, let it be that:
+
+***No, This is not true.***[<a id="ref_1" href="#fn_1">1</a>]
+
+Heck, it's not even true for Open Source, as OpenSSL has so thoroughly
+demonstrated.
 
 Even if my friends were actually medical health professionals, I couldn't
-possibly expect help from them directly.
+possibly expect help from them *directly*.
 
-* It's much easier to create a support-network
+### It's much easier to create a support-network
 
 The most important aspect of being out openly to my friends, means that my
 friends already know. This means that when I need their help, or need them to
 be more sensitive, or need more room, then I don't need to have *that
 conversation*. We've already had it.
 
-* When I fall behind on my goals…
+### When I fall behind on my goals…
 
 …people can be there for me. They can remind me of those goals. Or they might
 offer support, such as finding a new therapist.
@@ -199,14 +208,18 @@ Junk](http://averyedison.com/rightbodywrongjunk/):
 But there's this giant stigma attached to mental illness, like all things that
 only exist in the margins of society, so disclosing it is a delicate issue.
 
+# Addiction
+
 Let's talk about addiction then.
 
-# Alcohol
+
+## Alcohol
 
 In January 2012 I started working as freelancer, and for the first time I was
 earning adequate amounts of money for my level of experience and the
 performance I was delivering. Which was *really* good, because after six months
-of unemployment, of traveling, and, drinking, I had around €20000 in debts.
+of unemployment, of traveling, and, drinking, I had amassed around €20000 in
+debts.
 
 Those first two months, in which I worked my ass off, and, automated myself away,
 had paid off my debt. But, I still hadn't quite learned anything at that point.
