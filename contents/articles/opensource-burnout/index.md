@@ -317,11 +317,22 @@ If I hadn't been really, really bad at sucking up to authority, I might have
 made it all the way through school and into university, and might now be an
 ACADEMIC.
 
-[link to appropriate tweet]
+<blockquote class="twitter-tweet" lang="en"><p>maybe i am, without knowing it,
+an academic(!!!).</p>&mdash; The Wrath of PB™ (@hirojin)
+<a href="https://twitter.com/hirojin/status/521506926916825088">October 13,
+2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js"
+charset="utf-8"></script>
 
 But even so, I am doing something, for money, that I absolutely enjoy.
 
-[link to a million appropriate tweets disproving the above]
+<blockquote class="twitter-tweet" lang="en"><p>i should start using twitter for
+time keeping:<br/>✶ complaining about meetings → meeting<br/>✶ complaining
+about rspec / puppet → &quot;open source&quot;<br/> ✶ complaining about haskell
+/ python / java / puppet / configuration formats → ~paid work~<br/>✶
+complaining about debuntu / ipv6 → <a href="https://twitter.com/brainsware">@brainsware</a><br/>
+✶ praising a piece of technology: I PROBABLY HAVEN&#39;T ACTUALLY WORKED WITH
+THIS DISREGARD MY OPINION.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitter.com/hirojin/status/527112045188354049">October 28,
+2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Except, when I don't. Make money for it, I mean.
 
