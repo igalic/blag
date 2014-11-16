@@ -52,8 +52,8 @@ I'll start with some introductions…
 ## Why I'm telling you this
 
 I could be telling you this for a number of reasons: first off, I could simply
-be lying. This could be a fabrication. But one way or another it *is* a
-manipulation.  I could be trying to feed you subliminal messages about the
+be lying. This could be a fabrication. And one way or another it *is* a
+manipulation: I could be trying to feed you subliminal messages about the
 importance of diversity, in order to further my feminist, queer agenda. But,
 actually, it's about making myself vulnerable, about opening up. This is an
 extremely sensitive subject, so I will need you to trust me.
@@ -70,13 +70,14 @@ I cannot go back and change the fact that as a child I had to flee my home
 country, and along with other things in my history, it made me the person who I
 am. I have "managed" my alcoholism in a simple, yet effective way: I quit.
 
-This, however, is not so simple with depression, or when you're a workaholic.
+This, however, is not so simple with other issues…
 
 # Depression
 
 I am constantly reminded of the fact that depression is a chronic illness, one
-that can drastically shorten someone's life-expectancy. Be that through the
-media, medical journals, or personal experiences.
+that can drastically shorten a person's life-expectancy. These reminders come
+through the media and medical journals I read, and they come through personal
+experiences.
 
 Last week, [a friend of mine died](/articles/a-friend-died-last-night/)
 
@@ -99,8 +100,8 @@ There's a lesson here, and I'll come back to this subject later.
 
 ## Step One: Self-treatment
 
-Having been a life-long autodidact, I was very eager to make a changes to fix
-my life. I would listen to advise from friends or even random strangers. I'd
+Having been a life-long autodidact, I was very eager to make a changes to "fix
+my life". I would listen to advise from friends or even random strangers. I'd
 take their advise on what bothered them about me, or I'd talk about something
 that was bothering *me* about *myself*.
 
@@ -135,7 +136,16 @@ the out-side world. Some people get that through friends or family, who rightly
 recognize their issue, *and* have the courage to point it out. Maybe they even
 point it out in a helpful way.
 
-My push came through an eye-opening experience with a former partner.
+This whole process is made all the harder in that depression is *insulating* me
+from the things that people are telling me, be that by overriding everything
+they say with:
+
+> They must be lying
+
+Or, by directly *isolating* me from my friends.
+
+My push past those lines of defense came through an eye-opening experience with
+a former partner.
 
 ## Gauging your Limits
 
@@ -184,6 +194,8 @@ demonstrated.
 Even if my friends were actually medical health professionals, I couldn't
 possibly expect help from them *directly*.
 
+But there are other benefits from being out openly:
+
 ### It's much easier to create a support-network
 
 The most important aspect of being out openly to my friends, means that my
@@ -222,7 +234,7 @@ of unemployment, of traveling, and, drinking, I had amassed around €20000 in
 debts.
 
 Those first two months, in which I worked my ass off, and, automated myself away,
-had paid off my debt. But, I still hadn't quite learned anything at that point.
+had paid off my debt. But, I still hadn't quite learned any lesson at that point.
 It took another six months of drinking, and "writing" (sitting in bars with a
 notebook), until a police patrol picked me off my bike after a couple Guinness
 too many. Once again, this was an external incentive, one for which, despite
@@ -245,7 +257,7 @@ amounts.
 Let's take a minute to talk about our culture here. Fortunately I don't have to
 pull anything out of my ass, because the outstanding [Kara
 Sowles](http://www.karasowles.com/) wrote a piece for [Model View
-Culture](https://modelviewculture.com/) [Events
+Culture's](https://modelviewculture.com/) [Events
 issue](https://modelviewculture.com/issues/events) about [Alcohol and
 Inclusivity: Planning Tech Events with Non-Alcoholic
 Options](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-tech-events-with-non-alcoholic-options).
@@ -256,10 +268,13 @@ To very, very, very briefly summarize what everyone should read:
 * They shouldn't be compelled to give you a *reason*
 * We should still provide options drinking options for them
 
-I am deeply indebted, to [Nóirín Plunkett](https://twitter.com/noirinp) stood
-up for me, and defended my decision before others, who were about to ask,
-"Why?". Their ferocity gave me the courage to stand up for myself and simply
-say:
+I am deeply indebted, to [Nóirín Plunkett](https://twitter.com/noirinp) for
+standing up for me, and defending my decision before other OSCon participants,
+who were about to ask the dreaded?
+
+> Why?
+
+Nóirín's ferocity gave me the courage to stand up for myself and simply say:
 
 > Because I'm an alcoholic.
 
