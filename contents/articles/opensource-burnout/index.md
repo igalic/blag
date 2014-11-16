@@ -290,15 +290,40 @@ imagine how hard it is then to admit it to all kinds of strangers, over, and
 over, and over, and over again.
 
 This is a parallel to coming out as queer: Unless we have it tattooed across
-our foreheads, queer people don't have their "coming out" once, they have to
-come out over, and over, and over again to new friends, new colleagues, or
-potential love interests. As you can guess, some of those coming outs are
-easier than others…
+our foreheads, queer people don't have their "coming out" once, we have to come
+out over, and over, and over again to new friends, new colleagues, or potential
+love interests. As you can guess, some of those coming outs are easier than
+others…
 
 ## Let's talk about work
 
+For the longest part of my life, my work has been a core part of my
+identity.[<a id="ref_2" href="#fn_2">1</a>]
 
+> Šta radiš, Igo?
 
+> Radim.
+
+If I hadn't been really, really bad at sucking up to authority, I might have
+made it all the way through school and into university, and might now be an
+ACADEMIC.
+
+[link to appropriate tweet]
+
+But even so, I am doing something, for money, that I absolutely enjoy.
+
+[link to a million appropriate tweets disproving the above]
+
+Except, when I don't. Make money for it, I mean.
+
+### A Show of Hands
+
+* Who here does no Open Source Work at all?
+* Who here lives 100% off their Open Source work?
+* 50ish%?
+* Who here would starve if all they did was Open Source?
+
+For a number of personal reasons, I fall into that last category.
 
 # Making a Change
 
@@ -310,5 +335,9 @@ easier than others…
 [<span id="fn_1">1</span>]: writing those lines was extremely hard. Just
 writing it, despite its context, felt absolutely hypocritical, after recent
 experiences with a friend dying. [↲](#ref_1)
+
+[<span id="fn_2">X</span>]: There is another 4000 word essay in that sentence,
+that I didn't get to write last week, for reasons already mentioned…
+[↲](#ref_2)
 
 [<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
