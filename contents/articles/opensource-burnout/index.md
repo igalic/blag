@@ -233,10 +233,56 @@ suspected were wrong for a long time. However, I had pushed them aside, as
 being under my control, or important for my creativity, or that it's genetic,
 or part of my charming personality.
 
+I decided to quit. To literally never drink again, and that on its own was an
+admission: I had admitted to myself that I was an addict. But that was just a
+shaky start: Two weeks down the road, OSCon was going to be on, and I was deeply
+afraid of what I knew was going to be obviously happening: An Open Source Event
+meant it was guaranteed that beer and booze would be flowing in near infinite
+amounts.
+
+## Open Booze
+
+Let's take a minute to talk about our culture here. Fortunately I don't have to
+pull anything out of my ass, because the outstanding [Kara
+Sowles](http://www.karasowles.com/) wrote a piece for [Model View
+Culture](https://modelviewculture.com/) [Events
+issue](https://modelviewculture.com/issues/events) about [Alcohol and
+Inclusivity: Planning Tech Events with Non-Alcoholic
+Options](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-tech-events-with-non-alcoholic-options).
+
+To very, very, very briefly summarize what everyone should read:
+
+* There are people who don't drink alcohol
+* They shouldn't be compelled to give you a *reason*
+* We should still provide options drinking options for them
+
+I am deeply indebted, to [Nóirín Plunkett](https://twitter.com/noirinp) stood
+up for me, and defended my decision before others, who were about to ask,
+"Why?". Their ferocity gave me the courage to stand up for myself and simply
+say:
+
+> Because I'm an alcoholic.
+
+> When I start, I don't stop. So I decided not to start.
+
+In just a couple of days after quitting, I had learned how powerful the truth
+about addiction can be. When it's simply pronounced like that, it left people
+speechless. But if you read [Kara's
+article](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-tech-events-with-non-alcoholic-options)
+you may learn that this kind of openness isn't for everyone. It can be hard
+enough to admit this to ourselves, or admitting it to friends and family, but
+imagine how hard it is then to admit it to all kinds of strangers, over, and
+over, and over, and over again.
+
+This is a parallel to coming out as queer: Unless we have it tattooed across
+our foreheads, queer people don't have their "coming out" once, they have to
+come out over, and over, and over again to new friends, new colleagues, or
+potential love interests. As you can guess, some of those coming outs are
+easier than others…
+
+## Let's talk about work
 
 
-
-# Let's talk about work
 
 
 # Making a Change
