@@ -284,7 +284,7 @@ In just a couple of days after quitting, I had learned how powerful the truth
 about addiction can be. When it's simply pronounced like that, it left people
 speechless. There is some dark irony behind the fact that I used to drink,
 because I thought I am unable to talk to people otherwise[<a id="ref_2"
-href="#fn_2">1</a>]. I was also afraid, that my not drinking would be the only
+href="#fn_2">2</a>]. I was also afraid, that my not drinking would be the only
 subject to talk about. Fortunately, that turned out not to be the case. And, at
 the last conference party I was at (organized by Kara, no less!) I had someone
 call me a
@@ -343,7 +343,60 @@ Except, when I don't. Make money for it, I mean.
 * 50ish%?
 * Who here would starve if all they did was Open Source?
 
+[TODO: Update the above list with the actual results]
+
 For a number of personal reasons, I fall into that last category.
+
+## First Burn Out
+
+When I was 21, I had my first, full-blown burn out. Seven years later, I would
+[write](/articles/random-facts-about-me/)
+
+> The first time I had a burn out while still at school, at the age of 21. It
+> was essentially three months of me not leaving the bed.
+
+Of course, that's not true. Almost a decade later, I would ask my mother about
+the time-line, and it turns out it was more like a week or so. While *I'm bad
+with time*, not even I am *that* bad with time.
+
+> Time is an illusion. Lunch-time doubly so.
+
+In its [final
+stages](https://en.wikipedia.org/wiki/Burnout_%28psychology%29#Phases), burnout
+can cause a full-blown depression. But the first step down-hill is trying to
+work harder
+
+> 2. Working Harder
+>
+> Because they have to prove themselves to others or try to fit in an
+> organization that does not suit them, people establish high personal
+> expectations.
+
+I spent seven years in a five-year school, failing every odd grade. And yet,
+even after having had a complete burn-out, I wanted to come back and finish it.
+Only then, and, thanks to being employed now and hence my newly won lack of
+time, I realized that school wasn't quite for me. Finally.
+
+## Second Burn Out
+
+I spent two years too long in a job I couldn't stand. The company had grown too
+big, the management too deep. Now, as Engineer, I was earning €30 more than
+when I started as Junior. Except when I was on-call.
+
+I stayed long hours at the office, staring blankly at the screen, or "doing
+open source" (IRC, before there was GitHub and Twitter), until everyone had
+left, so I could finally get some work done, when it was silent.
+
+Often, even then, I couldn't really get any work done, because I'd depend on my
+colleagues to do things for me. So all I'd do would be prepare my work, and write
+passive aggressive emails or tickets. Then, cycle home super late, sleep in long,
+lie half-asleep for two hours in bed, and get in super late to work.
+
+This turned out to be an unsustainable cycle[<a id="ref_4" href="#fn_4">1</a>]:
+I quit my job.
+
+Now, quitting your job is not always an option. Quitting work in general,
+appears to be no option at all in our society.
 
 # Making a Change
 
@@ -362,5 +415,7 @@ worked? [↲](#ref_2)
 [<span id="fn_3">X</span>]: There is another 4000 word essay in that sentence,
 that I didn't get to write last week, for reasons already mentioned…
 [↲](#ref_3)
+
+[<span id="fn_4">4</span>]: "unsustainable cycle is a euphemism: I was suicidal at that time. [↲](#ref_4)
 
 [<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
