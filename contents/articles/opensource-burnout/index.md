@@ -61,7 +61,7 @@ extremely sensitive subject, so I will need you to trust me.
 ***This trust comes with a caveat:*** I am not a health-care specialist. All I'm
 doing is sharing my own stories and experiences. What has worked for me, might
 not work for you. All I can do for you is listen to your stories, but the only
-real advise I'll be able to give is to ask you to seek help.
+real advice I'll be able to give is to ask you to seek help.
 
 Let's get back on to my list: Many of those items can be "fixed", other things
 are not for fixing but might need to be discovered and embraced.
@@ -447,6 +447,11 @@ because people.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitte
 * [Ed Finker's talks, slides and resources](http://funkatron.com/osmi.html)
 
 * [International Mental Health First Aid Programs](https://mhfa.com.au/cms/international-mhfa-programs)
+
+
+# Thanks
+
+* [@kangarara](https://twitter.com/kangarara) for reviews and suggestions
 
 -----
 
