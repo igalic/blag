@@ -179,8 +179,8 @@ If there was help for her, then surely there was help for me too.
 
 ## Being Out In the Open
 
-Three years ago, I had my [coming out](/articles/coming-out/). I'm *all* about
-Open Source. I know the benefits of doing things in the open.
+Three years ago, I had my ["coming out"](/articles/coming-out/). I'm *all*
+about Open Source. I know the benefits of doing things in the open.
 
 ### With enough eyes, all bugs become shallow
 
@@ -211,8 +211,8 @@ offer support, such as finding a new therapist.
 I'd like to quote [Avery Edison](http://averyedison.com/) on the subject of
 coming out, from her book, [Right Body, Wrong
 Junk](http://averyedison.com/rightbodywrongjunk/)[<a id="ref_2"
-href="#fn_2">2</a>]. Avery is a queer woman, and her book was on queer issues
-but the following commentary on her own writing struck a chord with me:
+href="#fn_2">2</a>]. Avery is a queer woman, and her book was on queer issues,
+but the following commentary on her own writing still struck a chord with me:
 
 > The fact that it's not a secret makes it all the easier to say. I still worry
 > about how someone might react (there's always the possibility of a hidden
@@ -231,7 +231,7 @@ Let's talk about addiction then.
 ## Alcohol
 
 In January 2012 I started working as freelancer, and for the first time I was
-earning adequate amounts of money for my level of experience and the
+earning adequate amounts of money for my level of experience and the kind of
 performance I was delivering. Which was *really* good, because after six months
 of unemployment, of traveling, and, drinking, I had amassed around €20000 in
 debts.
@@ -257,10 +257,10 @@ amounts.
 
 ## Open Booze
 
-Let's take a minute to talk about our culture here. Fortunately I don't have to
-pull anything out of my ass, because the outstanding [Kara
-Sowles](http://www.karasowles.com/) wrote a piece for [Model View
-Culture's](https://modelviewculture.com/) [Events
+Let's take a minute to talk about our tiny fragment of our culture here.
+Fortunately I don't have to pull anything out of my ass, because the
+outstanding [Kara Sowles](http://www.karasowles.com/) wrote a piece for [Model
+View Culture's](https://modelviewculture.com/) [Events
 issue](https://modelviewculture.com/issues/events) about [Alcohol and
 Inclusivity: Planning Tech Events with Non-Alcoholic
 Options](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-tech-events-with-non-alcoholic-options).
@@ -273,7 +273,7 @@ To very, very, very briefly summarize what everyone should read:
 
 I am deeply indebted, to [Nóirín Plunkett](https://twitter.com/noirinp) for
 standing up for me, and defending my decision before other OSCon participants,
-who were about to ask the dreaded?
+who were about to ask the dreaded
 
 > Why?
 
@@ -326,7 +326,7 @@ an academic(!!!).</p>&mdash; The Wrath of PB™ (@hirojin)
 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js"
 charset="utf-8"></script>
 
-But even so, I am doing something, for money, that I absolutely enjoy.
+But even so, I am doing something (for money), that I absolutely enjoy.
 
 <blockquote class="twitter-tweet" lang="en"><p>i should start using twitter for
 time keeping:<br/>✶ complaining about meetings → meeting<br/>✶ complaining
@@ -349,6 +349,7 @@ Except, when I don't. Make money for it, I mean.
 [TODO: Update the above list with the actual results]
 
 For a number of personal reasons, I fall into that last category.
+We'll come back to this eventually, but first I'd like to about my
 
 ## First Burn Out
 
@@ -366,8 +367,7 @@ with time*, not even I am *that* bad with time.
 
 In its [final
 stages](https://en.wikipedia.org/wiki/Burnout_%28psychology%29#Phases), burnout
-can cause a full-blown depression. But the first step down-hill is trying to
-work harder
+can cause a full-blown depression. But the first step down-hill is
 
 > Working Harder
 >
@@ -377,23 +377,24 @@ work harder
 
 I spent seven years in a five-year school, failing every odd grade. And yet,
 even after having had a complete burn-out, I wanted to come back and finish it.
-Only then, and, thanks to being employed now and hence my newly won lack of
-time, I realized that school wasn't quite for me. Finally.
+Only then, and, thanks to being employed and having slipped into a chronic lack
+of time, I realized that school wasn't quite for me. Finally.
 
 ## Second Burn Out
 
 I spent two years too long in a job I couldn't stand. The company had grown too
-big, the management too deep. Now, as Engineer, I was earning €30 more than
-when I started as Junior. Except when I was on-call.
+big, the management too deep. As Engineer, I was earning €30 more than when I
+started as Junior. Except when I was on-call.
 
 I stayed long hours at the office, staring blankly at the screen, or "doing
 open source" (IRC, before there was GitHub and Twitter), until everyone had
 left, so I could finally get some work done, when it was silent.
 
-Often, even then, I couldn't really get any work done, because I'd depend on my
-colleagues to do things for me. So all I'd do would be prepare my work, and write
-passive aggressive emails or tickets. Then, cycle home super late, sleep in long,
-lie half-asleep for two hours in bed, and get in super late to work.
+Often, even then, I couldn't really get anything done, because of course I
+depended on my colleagues to do things for me. So all I'd do would be prepare
+my work, and write passive aggressive emails or tickets. Then, cycle home super
+late, sleep in long, lie half-asleep for two hours in bed, and get in super
+late to work.
 
 This turned out to be an unsustainable cycle[<a id="ref_5" href="#fn_5">5</a>]:
 I quit my job.
@@ -404,15 +405,17 @@ finally became self-employed. And that changed things considerably for me:
 
 First, I could set my own price. But more importantly, I am now only getting
 paid for things I'm actually doing. There's no need to be present 40 hours a
-week. When I'm unproductivly staring at the screen, I'm not billing my clients,
+week. When I'm unproductively staring at the screen, I'm not billing my clients,
 and that is strangely liberating.[<a id="ref_6" href="#fn_6">6</a>]
 
-And, as I have recently discovered, that also means, that when projects
-are piling up, developers ~getting sick~, management being conspicuously vague
-or absent, I can simply remove myself for a week.
+And, as I have recently discovered that, when projects are piling up,
+developers ~getting sick~, management being conspicuously vague or absent, I
+can simply remove myself for a week.
 
 I used to be proud of being able to work in a stressful environment. Now I'm
 just really happy when I can work in one that's not toxic.
+
+Which leads us right into the topic of Open Source.
 
 # A Letter from a Hobbyist
 
@@ -426,8 +429,8 @@ However, [Open Source is
 Work](http://www.ashedryden.com/blog/the-ethics-of-unpaid-labor-and-the-oss-community).
 
 If Open Source is work, and if, for many people it's *unpaid* work, then it's
-hard to provide an adequate counter-weight to your job. It becomes another
-stressor. And we soon find ourselves trying to avoid it…
+hard for it to be a hobby that provides an adequate counter-weight to your job.
+It becomes another stressor. And we soon find ourselves trying to avoid it…
 
 ![Unread Notifications on GitHub](http://i.imgur.com/SHmZDsf.png)
 
