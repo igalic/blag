@@ -1,5 +1,5 @@
 ---
-title: Open Sourcing Mental Illness - open source burnout
+title: Open Sourcing Mental Illness - On Depression and Addiction
 date: 2014-11-21
 author: igor
 template: article.jade
