@@ -441,6 +441,12 @@ because people.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitte
 * surround yourself with people who support you, not just with people who
   *claim* they are supportive of you.
 
+# Resources
+
+* [Ed Finker's talks, slides and resources](http://funkatron.com/osmi.html)
+
+* [International Mental Health First Aid Programs](https://mhfa.com.au/cms/international-mhfa-programs)
+
 -----
 
 [<span id="fn_1">1</span>]: writing those lines was extremely hard. Just
