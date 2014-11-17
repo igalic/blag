@@ -307,7 +307,7 @@ others…
 ## Let's talk about work
 
 For the longest part of my life, my work has been a core part of my
-identity.[<a id="ref_3" href="#fn_3">1</a>]
+identity.[<a id="ref_3" href="#fn_3">3</a>]
 
 > Šta radiš, Igo?
 
@@ -392,7 +392,7 @@ colleagues to do things for me. So all I'd do would be prepare my work, and writ
 passive aggressive emails or tickets. Then, cycle home super late, sleep in long,
 lie half-asleep for two hours in bed, and get in super late to work.
 
-This turned out to be an unsustainable cycle[<a id="ref_4" href="#fn_4">1</a>]:
+This turned out to be an unsustainable cycle[<a id="ref_4" href="#fn_4">4</a>]:
 I quit my job.
 
 Now, quitting your job is not always an option. Quitting work in general,
@@ -401,7 +401,8 @@ finally became self-employed. And that changed things considerably for me:
 
 First, I could set my own price. But more importantly, I am now only getting
 paid for things I'm actually doing. There's no need to be present 40 hours a
-week.
+week. When I'm unproductivly staring at the screen, I'm not billing my clients,
+and that is strangely liberating.[<a id="ref_5" href="#fn_5">5</a>]
 
 And, as I have recently discovered, that also means, that when projects
 are piling up, developers ~getting sick~, management being conspicuously vague
@@ -456,10 +457,15 @@ experiences with a friend dying. [↲](#ref_1)
 [<span id="fn_2">2</span>]: do I really have to point out how badly that
 worked? [↲](#ref_2)
 
-[<span id="fn_3">X</span>]: There is another 4000 word essay in that sentence,
+[<span id="fn_3">3</span>]: There is another 4000 word essay in that sentence,
 that I didn't get to write last week, for reasons already mentioned…
 [↲](#ref_3)
 
 [<span id="fn_4">4</span>]: "unsustainable cycle is a euphemism: I was suicidal at that time. [↲](#ref_4)
+
+[<span id="fn_5">5</span>]: There's this piece by [Quinn
+Norton](https://twitter.com/quinnnorton), [Against
+Productivity](https://medium.com/message/against-productivity-b19f56b67da6),
+that I still haven't read… [↲](#ref_5)
 
 [<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
