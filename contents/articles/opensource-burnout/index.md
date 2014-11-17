@@ -427,6 +427,14 @@ stressor. And we soon find ourselves trying to avoid it…
 
 ![Unread Notifications on GitHub](http://i.imgur.com/SHmZDsf.png)
 
+The problem isn't really the software we're working on…
+
+<blockquote class="twitter-tweet" lang="en"><p>the short summary is that
+software is suffering.&#10;&#10;the longer story is that software is suffering,
+because people.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitter.com/hirojin/status/532841838059986944">November 13,
+2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 
 # Making a Change
 
