@@ -434,10 +434,37 @@ stressor. And we soon find ourselves trying to avoid it…
 The problem isn't really the software we're working on…
 
 <blockquote class="twitter-tweet" lang="en"><p>the short summary is that
-software is suffering.&#10;&#10;the longer story is that software is suffering,
+software is suffering.<br/>the longer story is that software is suffering,
 because people.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitter.com/hirojin/status/532841838059986944">November 13,
 2014</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+
+## J. Random Hacker
+
+A quick show of hands, who here has read esr's
+
+* [Jargon File](http://www.catb.org/jargon/html/)?
+* or [A Portrait of J. Random Hacker](http://www.catb.org/jargon/html/appendixb.html)
+
+[TODO: Update with the above list with actual results]
+
+If you haven't read the latter, I highly recommend to also compare it with the
+WikiPedia on the [burnout
+"roadmap"](https://en.wikipedia.org/wiki/Burnout_%28psychology%29#Phases)[<a id="ref_7" href="#fn_8">7</a>]
+
+Probably the biggest disconnect with the rest of the text is visible from
+[Weaknesses](http://www.catb.org/jargon/html/weaknesses.html) chapter.
+
+> Hackers have relatively little ability to identify emotionally with other
+> people. This may be because hackers generally aren't much like ‘other
+> people’. Unsurprisingly, hackers also tend towards self-absorption,
+> intellectual arrogance, and impatience with people and tasks perceived to be
+> wasting their time.
+
+I would posit that this portrait of J. Random Hacker was probably the most
+toxic piece of writing that I could have absorbed while growing up and learning
+to program. It validated all the things that lead me into burning up, and it
+brushed aside all the things that I was uncomfortable with.
 
 
 # Making a Change
@@ -481,5 +508,10 @@ that I didn't get to write last week, for reasons already mentioned…
 Norton](https://twitter.com/quinnnorton), [Against
 Productivity](https://medium.com/message/against-productivity-b19f56b67da6),
 that I still haven't read… [↲](#ref_6)
+
+[<span id="fn_7">7</span>]: thanks to David Schmitt for
+[pointing](https://twitter.com/dev_el_ops/status/534228435556909057)
+[out](https://twitter.com/dev_el_ops/status/534229556543385600) that connection
+[↲](#ref_7)
 
 [<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
