@@ -366,7 +366,7 @@ stages](https://en.wikipedia.org/wiki/Burnout_%28psychology%29#Phases), burnout
 can cause a full-blown depression. But the first step down-hill is trying to
 work harder
 
-> 2. Working Harder
+> Working Harder
 >
 > Because they have to prove themselves to others or try to fit in an
 > organization that does not suit them, people establish high personal
@@ -396,7 +396,37 @@ This turned out to be an unsustainable cycle[<a id="ref_4" href="#fn_4">1</a>]:
 I quit my job.
 
 Now, quitting your job is not always an option. Quitting work in general,
-appears to be no option at all in our society.
+appears to be no option at all in our society. So, after a six month hiatus, I
+finally became self-employed. And that changed things considerably for me:
+
+First, I could set my own price. But more importantly, I am now only getting
+paid for things I'm actually doing. There's no need to be present 40 hours a
+week.
+
+And, as I have recently discovered, that also means, that when projects
+are piling up, developers ~getting sick~, management being conspicuously vague
+or absent, I can simply remove myself for a week.
+
+I used to be proud of being able to work in a stressful environment. Now I'm
+just really happy when I can work in one that's not toxic.
+
+# A Letter from a Hobbyist
+
+I could probably count the jobs and projects I've gotten through my Open Source
+work on one hand. I'm not a developer in the classical sense. And on the DevOps
+continuum, I am definitely on the Ops side. For a long time I've seen Open
+Source as a hobby. An intellectually slightly more challenging and thus
+rewarding pursuit, than, say, reading comics.
+
+However, [Open Source is
+Work](http://www.ashedryden.com/blog/the-ethics-of-unpaid-labor-and-the-oss-community).
+
+If Open Source is work, and if, for many people it's *unpaid* work, then it's
+hard to provide an adequate counter-weight to your job. It becomes another
+stressor. And we soon find ourselves trying to avoid it…
+
+![Unread Notifications on GitHub](http://i.imgur.com/SHmZDsf.png)
+
 
 # Making a Change
 
