@@ -472,14 +472,44 @@ brushed aside all the things that I was uncomfortable with.
 
 # Making a Change
 
-* surround yourself with people who support you, not just with people who
-  *claim* they are supportive of you.
+I believe that our ~hacker culture~ is in urgent need of disruption. I am
+convinced that it's so thoroughly toxic that we are going to work ourselves,
+and the people who most depend on us, into a corner. For now, while we are
+still the movers and the shakers of the world, we should perhaps stop and
+consider how to wield that power responsibly.
+
+## If you do not suffer from depression or addiction
+
+I think the first and simplest thing that everyone can do is to be more
+considerate of themselves, and of others.
+
+[Leslie Hawthorn](https://twitter.com/lhawthorn) has held this very [short
+keynote](https://www.youtube.com/watch?v=kWRCQYRZJzo) at OSCon this year, in
+which she gives a very simple recipe for how to do that:
+
+> Listen to people who are not like you.
+
+
+## If you suffer from depression or addiction
+
+I can only recommend you surround yourself with people who support you, not
+just with people who *claim* they are supportive of you.
+
+And, I implore you, seek help.
+
+I am convinced that if everyone in this room today were to regularly see a
+therapist, that the world would be a better place tomorrow.
+
+Thank you.
 
 # Resources
 
 * [Ed Finkler's talks, slides and resources](http://funkatron.com/osmi.html)
 
 * [International Mental Health First Aid Programs](https://mhfa.com.au/cms/international-mhfa-programs)
+
+* In Austria there's [Projekt TIRAM](http://www.iam.or.at/tiram/), which among
+  other things connects patients with therapists in training.
 
 
 # Thanks
