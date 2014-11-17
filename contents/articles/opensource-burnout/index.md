@@ -210,15 +210,18 @@ offer support, such as finding a new therapist.
 
 I'd like to quote [Avery Edison](http://averyedison.com/) on the subject of
 coming out, from her book, [Right Body, Wrong
-Junk](http://averyedison.com/rightbodywrongjunk/):
+Junk](http://averyedison.com/rightbodywrongjunk/)[<a id="ref_2"
+href="#fn_2">2</a>]. Avery is a queer woman, and her book was on queer issues
+but the following commentary on her own writing struck a chord with me:
 
 > The fact that it's not a secret makes it all the easier to say. I still worry
 > about how someone might react (there's always the possibility of a hidden
 > bigot in the mix), but the whole process is easier. I don't feel like I'm
 > unburdening myself, I just feel like I'm providing relevant info.
 
-But there's this giant stigma attached to mental illness, like all things that
-only exist in the margins of society, so disclosing it is a delicate issue.
+But, unlike coming out, which in my experience is not that big a deal anymore,
+there's this giant stigma attached to mental illness, like all things that only
+exist in the margins of society, so disclosing it is a delicate issue.
 
 # Addiction
 
@@ -283,8 +286,8 @@ Nóirín's ferocity gave me the courage to stand up for myself and simply say:
 In just a couple of days after quitting, I had learned how powerful the truth
 about addiction can be. When it's simply pronounced like that, it left people
 speechless. There is some dark irony behind the fact that I used to drink,
-because I thought I am unable to talk to people otherwise[<a id="ref_2"
-href="#fn_2">2</a>]. I was also afraid, that my not drinking would be the only
+because I thought I am unable to talk to people otherwise[<a id="ref_3"
+href="#fn_3">3</a>]. I was also afraid, that my not drinking would be the only
 subject to talk about. Fortunately, that turned out not to be the case. And, at
 the last conference party I was at (organized by Kara, no less!) I had someone
 call me a
@@ -298,16 +301,16 @@ enough to admit this to ourselves, or admitting it to friends and family, but
 imagine how hard it is then to admit it to all kinds of strangers, over, and
 over, and over, and over again.
 
-This is a parallel to coming out as queer: Unless we have it tattooed across
-our foreheads, queer people don't have their "coming out" once, we have to come
-out over, and over, and over again to new friends, new colleagues, or potential
-love interests. As you can guess, some of those coming outs are easier than
-others…
+This is again a parallel to coming out as queer: Unless we have it tattooed
+across our foreheads, queer people don't have their "coming out" once, we have
+to come out over, and over, and over again to new friends, new colleagues, or
+potential love interests. As you can guess, some of those coming outs are
+easier than others…
 
 ## Let's talk about work
 
 For the longest part of my life, my work has been a core part of my
-identity.[<a id="ref_3" href="#fn_3">3</a>]
+identity.[<a id="ref_4" href="#fn_4">4</a>]
 
 > Šta radiš, Igo?
 
@@ -392,7 +395,7 @@ colleagues to do things for me. So all I'd do would be prepare my work, and writ
 passive aggressive emails or tickets. Then, cycle home super late, sleep in long,
 lie half-asleep for two hours in bed, and get in super late to work.
 
-This turned out to be an unsustainable cycle[<a id="ref_4" href="#fn_4">4</a>]:
+This turned out to be an unsustainable cycle[<a id="ref_5" href="#fn_5">5</a>]:
 I quit my job.
 
 Now, quitting your job is not always an option. Quitting work in general,
@@ -402,7 +405,7 @@ finally became self-employed. And that changed things considerably for me:
 First, I could set my own price. But more importantly, I am now only getting
 paid for things I'm actually doing. There's no need to be present 40 hours a
 week. When I'm unproductivly staring at the screen, I'm not billing my clients,
-and that is strangely liberating.[<a id="ref_5" href="#fn_5">5</a>]
+and that is strangely liberating.[<a id="ref_6" href="#fn_6">6</a>]
 
 And, as I have recently discovered, that also means, that when projects
 are piling up, developers ~getting sick~, management being conspicuously vague
@@ -459,18 +462,24 @@ because people.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitte
 writing it, despite its context, felt absolutely hypocritical, after recent
 experiences with a friend dying. [↲](#ref_1)
 
-[<span id="fn_2">2</span>]: do I really have to point out how badly that
-worked? [↲](#ref_2)
+[<span id="fn_2">2</span>]: I'm very thankful to @kangarara for pointing out
+me that co-locating queer issues and mental health might make people associate
+that queerness is a mental illness. If my words on the subject can't help
+clarify that this is *not* what I mean, it's probably better to delete this
+whole section in future revisions.[↲](#ref_2)
 
-[<span id="fn_3">3</span>]: There is another 4000 word essay in that sentence,
+[<span id="fn_3">3</span>]: do I really have to point out how badly that
+worked? [↲](#ref_3)
+
+[<span id="fn_4">4</span>]: There is another 4000 word essay in that sentence,
 that I didn't get to write last week, for reasons already mentioned…
-[↲](#ref_3)
+[↲](#ref_4)
 
-[<span id="fn_4">4</span>]: "unsustainable cycle is a euphemism: I was suicidal at that time. [↲](#ref_4)
+[<span id="fn_5">5</span>]: "unsustainable cycle is a euphemism: I was suicidal at that time. [↲](#ref_5)
 
-[<span id="fn_5">5</span>]: There's this piece by [Quinn
+[<span id="fn_6">6</span>]: There's this piece by [Quinn
 Norton](https://twitter.com/quinnnorton), [Against
 Productivity](https://medium.com/message/against-productivity-b19f56b67da6),
-that I still haven't read… [↲](#ref_5)
+that I still haven't read… [↲](#ref_6)
 
 [<span id="fn_X">X</span>]: TXT: more txt [↲](#ref_X)
