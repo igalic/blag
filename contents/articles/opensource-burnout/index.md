@@ -268,8 +268,8 @@ Options](https://modelviewculture.com/pieces/alcohol-and-inclusivity-planning-te
 To very, very, very briefly summarize what everyone should read:
 
 * There are people who don't drink alcohol
-* They shouldn't be compelled to give you a *reason*
-* We should still provide options drinking options for them
+* They don't have to give you a reason
+* Events should provide them with drinking options
 
 I am deeply indebted, to [Nóirín Plunkett](https://twitter.com/noirinp) for
 standing up for me, and defending my decision before other OSCon participants,
