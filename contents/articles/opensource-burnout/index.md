@@ -5,7 +5,7 @@ author: igor
 template: article.jade
 ---
 
-This talk runs under [Ed Fink](http://funkatron.com/)'s Banner of [Open
+This talk runs under [Ed Finkler](http://funkatron.com/)'s Banner of [Open
 Sourcing Mental Illness](http://funkatron.com/osmi.html), who has been running
 these types of talks for over a year now. Ed talks very broadly on the subject,
 while still backing it up with his personal stories.
@@ -444,7 +444,7 @@ because people.</p>&mdash; The Wrath of PB™ (@hirojin) <a href="https://twitte
 
 # Resources
 
-* [Ed Finker's talks, slides and resources](http://funkatron.com/osmi.html)
+* [Ed Finkler's talks, slides and resources](http://funkatron.com/osmi.html)
 
 * [International Mental Health First Aid Programs](https://mhfa.com.au/cms/international-mhfa-programs)
 
