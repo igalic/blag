@@ -101,7 +101,7 @@ There's a lesson here, and I'll come back to this subject later.
 ## Step One: Self-treatment
 
 Having been a life-long autodidact, I was very eager to make a changes to "fix
-my life". I would listen to advise from friends or even random strangers. I'd
+my life". I would listen to advice from friends or even random strangers. I'd
 take their advise on what bothered them about me, or I'd talk about something
 that was bothering *me* about *myself*.
 
@@ -346,7 +346,7 @@ Except, when I don't. Make money for it, I mean.
 * 50ish%?
 * Who here would starve if all they did was Open Source?
 
-[TODO: Update the above list with the actual results]
+[Update: Very few people dared to raise their hands.]
 
 For a number of personal reasons, I fall into that last category.
 We'll come back to this eventually, but first I'd like to about my
@@ -449,7 +449,7 @@ A quick show of hands, who here has read esr's
 * [Jargon File](http://www.catb.org/jargon/html/)?
 * or [A Portrait of J. Random Hacker](http://www.catb.org/jargon/html/appendixb.html)
 
-[TODO: Update with the above list with actual results]
+[Update: surprisingly few people knew this, but many remembered after my talk]
 
 If you haven't read the latter, I highly recommend to also compare it with the
 WikiPedia on the [burnout
@@ -514,7 +514,8 @@ Thank you.
 
 # Thanks
 
-* [@kangarara](https://twitter.com/kangarara) for reviews and suggestions
+* [@kangarara](https://twitter.com/kangarara) and
+  [@shellycoen](https://twitter.com/shellycoen) for reviews and suggestions
 
 -----
 
