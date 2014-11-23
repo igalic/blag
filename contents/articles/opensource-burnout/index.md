@@ -27,7 +27,7 @@ I'll start with some introductions…
 ## How I appear to be like everyone else (here)
 
 * english speaking
-* male
+* male (*i had one woman in my talk*)
 * white
 * straight
 
