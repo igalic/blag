@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Anonymous Pro'), local('AnonymousPro'), url(/fonts/anonymouspro.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Anonymous Pro Bold'), local('AnonymousPro-Bold'), url(/fonts/anonymouspro-bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Anonymous Pro Italic'), local('AnonymousPro-Italic'), url(/fonts/anonymouspro-italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Anonymous Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Anonymous Pro Bold Italic'), local('AnonymousPro-BoldItalic'), url(/fonts/anonymouspro-bolditalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lora'), local('Lora-Regular'), url(/fonts/lora.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Lora Bold'), local('Lora-Bold'), url(/fonts/lora-bold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lora Italic'), local('Lora-Italic'), url(/fonts/lora-italic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Lora Bold Italic'), local('Lora-BoldItalic'), url(/fonts/lora-bolditalic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Merriweather Light'), local('Merriweather-Light'), url(/fonts/merriweather-light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Merriweather'), url(/fonts/merriweather.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Merriweather Bold'), local('Merriweather-Bold'), url(/fonts/merriweather.ttf) format('truetype');
+}
