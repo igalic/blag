@@ -24,10 +24,10 @@ political systems & stories, and i'm thinking that there's no chance to achieve
 
 <span class="more"></span>
 
-societies change over generations, as do their their stories.  and while, as
-societies, we frown at those (ancient or contemporary) societies that use murder
-of prisoners and slaves as entertainment, our *stories* are filled with such
-things.
+societies change over generations, as do their their stories. and while, as
+societies, we frown at those (ancient or contemporary) societies that use
+murder of prisoners and slaves as entertainment, our *stories* are filled with
+such things.
 
 the fight for power.  
 the struggle against corrupt power.  
@@ -41,5 +41,5 @@ we are inching ourselves towards it. that's societal change over generations.
 i'm starting to fear the only way we know how to radically change is to erase
 the past, and that would be profoundly dangerous.
 
-even more dangerous than forget the (often recent) past, and *regress* into
+even more dangerous than forgetting the (often recent) past, and *regress* into
 "good old" patterns.
