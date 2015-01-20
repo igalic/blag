@@ -22,6 +22,8 @@ made me think beyond programming. i've been contemplating this in terms of
 political systems & stories, and i'm thinking that there's no chance to achieve
 *radical* equality:
 
+<span class="more"></span>
+
 societies change over generations, as do their their stories.  and while, as
 societies, we frown at those (ancient or contemporary) societies that use murder
 of prisoners and slaves as entertainment, our *stories* are filled with such
