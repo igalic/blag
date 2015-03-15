@@ -13,9 +13,9 @@ Wrath of PB™ (@hirojin) <a href="https://twitter.com/hirojin/status/5755555239
 
 <span class="more"></span>
 
-yup. while marx might have laid out the ground-work with one of the best
+yup. While Marx might have laid out the ground-work with one of the best
 documentations of capitalism, it's feminists who keep pointing out the dismal
-state of affairs. while most of my communist⚡femminist rants go uncommented,
+state of affairs. While most of my communist⚡feminist rants go uncommented,
 this one was met with a reply
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en">
@@ -24,7 +24,7 @@ to my detriment that half of the population are less motivated to work for my
 company.</p>&mdash; Sam Bashton (@bashtoni) <a href="https://twitter.com/bashtoni/status/575556409561063425">March 11, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-i tried to clarify,
+I tried to clarify,
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en">
 <p><a href="https://twitter.com/bashtoni">@bashtoni</a> yes. but the existing
@@ -49,22 +49,20 @@ this uncertain, more equal future</p>&mdash; Sam Bashton (@bashtoni)
 <a href="https://twitter.com/bashtoni/status/575559145438461952">March 11, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-although i can't say i liked it.
-
-so i promised him a longer, more coherent reply. three days ago.
-let's see if i can distill my thoughts on the subject, while making myself
+So i promised him a longer, more coherent reply. Three or so days ago.
+let's see if I can distill my thoughts on the subject, while making myself
 understood:
 
-first off, i disagree with Sam, that "socialism under capitalism advances all
-by asking everyone to share the costs". and the reason why i disagree is that
-taxes primarily target *work*, never *capital*. capital has a way of protecting
+First off, I disagree with Sam, that "socialism under capitalism advances all
+by asking everyone to share the costs". And the reason why I disagree is that
+taxes primarily target *work*, never *capital*. Capital has a way of protecting
 itself, justifying its own existence…
 
-if we consider the point i was trying to make that "capitalism is fundamentally
+If we consider the point I was trying to make that "capitalism is fundamentally
 built on inequality", and when we look at how this supposedly, and *actually*
 pans out:
 
-* existing inequality is supposed to "incetivise" (holy fuck do i hate this
+* existing inequality is supposed to "incentivise" (holy fuck do I hate this
   word) a rise from the bottom to the top.
 
 * this rise is made extraordinarily hard by the fact that *work is taxed*, while
@@ -77,26 +75,31 @@ pans out:
 There is that saying that "time is money", and, for the poorest of the poor
 that is definitely st definitely true:
 
-people earning minimum wage often find themselves unable to afford public, or
-any kind of transport. this forces them to walk to work. these walks can get
+People earning minimum wage often find themselves unable to afford public, or
+any kind of transport; this forces them to walk to work. These walks can get
 quite long, when you consider where the poorest of the poor live vs where jobs
-*exist*. those poorest of the poor, are the only ones "willing" to take on
-minimum wage jobs. if we allow for "willing" to mean "having no other choice
+*exist*. Those poorest of the poor, are the only ones "willing" to take on
+minimum wage jobs. If we allow for "willing" to mean "having no other choice
 but"… and these people live in *vastly* different areas of a city, thanks to
-city planning. they are also the last people to be involved in city planning.
-not just because they have no "influence". influence isn't just money to afford
-a bus-ride to attend a town-hall meeting. it's also a connection to anyone, who
+city planning.
+
+Poor people are also the last people to be involved in city planning.  Not just
+because they have no "influence". Influence isn't just money to afford a
+bus-ride to attend a town-hall meeting. It's also a connection to anyone, who
 has information about when such meetings take place, where we will discuss the
 gentrification of yet another ghetto area (and the displacement of all of its
-inhabitants). people who have to walk to a shitty, low-paying job, for which
-they are still taxed, don't have a voice in how we're shaping our communities.
+inhabitants). Finally, influence also means having been around for a while.
 
-this is why i disagree with "sharing" in capitalism. that's why i think that
+People who have to walk to a shitty, low-paying job, for which they are still
+taxed, don't have a voice in how we're shaping our communities, because they
+don't have money, time, connections, information, and, education.
+
+This is why i disagree with "sharing" in capitalism. That's why i think that
 capital is built on inequality, and why i merely think that, while the
 incentive to rise to the top is a noble idea, which in the past has brought us
-interesting results. the same past has also showed that capital ***must***
-protect itself. (if you're not into Marx, you should read Piketty). these
-protection mechanisms have societal consequences:
+interesting results. The same past has also showed that capital ***must***
+protect itself. (if you're not into Marx, go read Piketty). These protection
+mechanisms have societal consequences:
 
 * displacement for cheep realestate
 * slave-like labour at farms in, e.g., spain, mostly by undocumented people - these
@@ -105,18 +108,18 @@ protection mechanisms have societal consequences:
 * the potential for "rising" also has consequences: education is constantly
   under-funded, while jobs require hire, and hire qualifications
 
-it's interesting how capitalism relies on labour so much, while devaluing at
+It's interesting how capitalism relies on labour so much, while devaluing at
 any front possible. minimum wage means exactly that…
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/AtjTRTKHDjg" frameborder="0" allowfullscreen></iframe>
 
-it's to keep the poor poor. to keep a work-force around. both, in form of [wage
+It's to keep the poor poor. To keep a work-force around. Both, in form of [wage
 slavery](https://en.wikipedia.org/wiki/Wage_slavery) for the "gainfully"
 employed, as well as in the form of a [reserve army of
 labour](https://en.wikipedia.org/wiki/Reserve_army_of_labour) for the
-unemployed. the latter is fascinating, and worth a read.
+unemployed. The latter is fascinating, and worth a read.
 
-yes, but what about Deleuze?
+Yes, but what about Deleuze?
 
 <blockquote class="twitter-tweet" data-conversation="none" lang="en">
 <p>.<a href="https://twitter.com/bashtoni">@bashtoni</a> short blog part
@@ -125,6 +128,6 @@ philosophy</p>&mdash; The Wrath of PB™ (@hirojin)
 <a href="https://twitter.com/hirojin/status/575569450302377984">March 11, 2015</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-how does Deleuze's nomadology fit into this?
+How does Deleuze's nomadology fit into this?
 
-i dunno, it's probably got to do with vectors…
+I dunno, it's probably got to do with vectors…
