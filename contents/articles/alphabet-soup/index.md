@@ -45,4 +45,4 @@ as a reminder for myself.
 ---
 
 I guess that most people who identify with one of those letters will identify
-with more than one.  Mine are Q and B.
+with more than one.  Mine are Q, B, and T.
