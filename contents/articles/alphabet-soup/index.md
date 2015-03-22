@@ -40,7 +40,7 @@ as a reminder for myself.
 
 ## G
 - G is for Gay
-
+- G is for Genderfluid
 
 ---
 
