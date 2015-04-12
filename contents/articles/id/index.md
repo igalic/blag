@@ -71,7 +71,7 @@ that I'm no longer fluent in my mother tongue
 A question I could answer then as inadequately as I can now.
 
 But these days, in my field, I am unquestionable. I am white. Male. Have
-"merit" in my various tech and open source communities. And above all,
+"merit" in my various tech and open source communities…
 
 <blockquote class="twitter-tweet" lang="en">
 <p>i&#39;m a white man who experienced war in Europe, fled to another country
@@ -84,9 +84,9 @@ I never lived through any direct violence of war. And yet my family remains
 scarred from war. I lost one uncle, my sister[<a id="ref_1" href="#fn_1">1</a>]
 her father. When my mother got the news that my cousin lost his hand, my mother
 channelled all those emotions she received through the phone. I felt absolutely
-helpless. In retrospect it's hard to pin-point if this was another point where
+helpless. In retrospect it's hard to pin-point if this was another case where
 I felt helpless because I didn't know how to act as "man" (I was perhaps ten),
-or just another point where I felt emotionally overwhelmed. Perhaps those two
+or just another case where I felt emotionally overwhelmed. Perhaps those two
 aren't all that unrelated.
 
 And so it remains, after all those years, that both, in geekdom, and in my
