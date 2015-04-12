@@ -127,10 +127,39 @@ And, like many people from a generation lost generation to physical and
 emotional abuse, I spent my late teens and early twenties in drug abuse, with a
 slow descend into depression and disassociation.
 
+I spent my mid- to late twenties fixing my head. First by myself, then through
+therapy. I gave up drinking along that way, which, unsurprisingly, helped a lot.
+
+In parallel, I was working to rebuild my image of masculinity. The most
+powerful tool in that regard turned out to be feminism.
+
+One of the things that feminism empowered me with was to be more daring, and
+so, one of first daring things I explored was cross dressing. This "issue" had
+been on my mind for over a year, but it was only at Halloween 2011 that I had
+actually dared to fully explore it.
+
+Convincing cross dressing, you see is an arduous, and above all, expensive
+process. Getting rid of all my body hair was liberating, while putting on
+clothes that snuggly fit my body gave me a feeling of security. I felt I
+could pass. I felt I could go outside like that. Of course the fact that it
+was Halloween was an extra security blanket.
+
+That was 2011. I meant to write about it, then, but never did.
+
+Then, five months ago last year, a man who, in discussions with me had used the
+phrase hetero-normativity, a man who never had any success with women, a man
+who was as sharp as he was lazy. [A friend had killed himself](/articles/a-friend-died-last-night).
+The fact that I "never believed he would such a thing" simply stemmed from my
+notion that his depression wasn't any worse than mine. (I ignored that he
+eschewed therapy, or any other form of help, even from friends). And so his
+death created a sense of urgency in me to deal with my identity and come to
+terms with who I am, and who I want to be.
+
+His death urged me to live.
 
 --- 
 
-[<span id="fn_1">1</span>]: cousin, if you want to be a pedant. but growing up
+[<span id="fn_1">1</span>]: cousin, if you want to be a pedant. But growing up
 we were so close, that we called each other brothers and sisters. [↲](#ref_1)
 
 [<span id="fn_X">X</span>]: X [↲](#ref_X)
