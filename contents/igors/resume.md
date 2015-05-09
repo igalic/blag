@@ -107,7 +107,7 @@ All the while producing a lot of my own, such as
 -   [Brainsware/trafficserver](https://github.com/Brainsware/puppet-trafficserver)
 -   [Brainsware/composer](https://github.com/Brainsware/puppet-composer)
 
-2014, [Daniele Sluijters](https://twitter.com/daenney) and I tarted [Puppet
+2014, [Daniele Sluijters](https://twitter.com/daenney) and I started [Puppet
 Community](https://puppet-community.github.io/). A space for the community to
 entrust popular puppet modules, or related projects, so we don't have to rely
 on a single maintainer.
@@ -118,7 +118,7 @@ more aggressively adopting new versions, or exploring new concepts.
 
 ### Trainer and Speaker
 
-Throughout my entire career I have *always* been training my fellow colleagues.
+Throughout my entire career I have always been training my fellow colleagues.
 This has started with teaching C programming to lower-class mates while still
 attending school. It continued with basic training on Version Control Software
 in Bwin, as well as Shell scripting, basic and advanced Unix know-how, as well
