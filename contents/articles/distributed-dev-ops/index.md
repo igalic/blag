@@ -27,7 +27,7 @@ as well as the occasional feature request from ops that gets through to product
 management.
 
 Nobody cares enough, or, nobody who cares has a say in the development of
-logging, or monitoring "features. Let's not even talk about things like
+logging, or monitoring "features". Let's not even talk about things like
 ~introspection~. And because Dev and Ops are still segregated, Ops folk who
 *do* care, can't just go ahead and implement those features themselves. The
 segregation here is not just organisational, physical, but also technological:
@@ -41,7 +41,7 @@ Thus, we shift the goal of what success means: A huge amount of work in order
 to ***deploy***, and ***correctly configure*** a giant, complex, distributed
 system is now seen as a marker of success.
 
-But What happens when such a complex, distributed systems, developed in
+But what happens when such a complex, distributed systems, developed in
 segregation, in multiple teams, each piece tested and approved because it
 "works on my machine", integrated by yet a different team, QA, that barely
 knows the architecture, is put into production by yet another team, Ops, and
