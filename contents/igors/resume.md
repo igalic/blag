@@ -91,7 +91,7 @@ A few highlights here
     the Puppet environment
 -   Consulting developers in matters of messaging architectures
 
-### Open Source (Puppet Labs 2013--)
+### Open Source (Puppet 2013--)
 
 Following my immersion into the world of Puppet, through both the work for my
 customers as well as that for Brainsware's Infrastructure itself I became
