@@ -432,7 +432,7 @@ If Open Source is work, and if, for many people it's *unpaid* work, then it's
 hard for it to be a hobby that provides an adequate counter-weight to your job.
 It becomes another stressor. And we soon find ourselves trying to avoid it…
 
-![Unread Notifications on GitHub](http://i.imgur.com/SHmZDsf.png)
+![Unread Notifications on GitHub](https://i.imgur.com/SHmZDsf.png)
 
 The problem isn't really the software we're working on…
 
