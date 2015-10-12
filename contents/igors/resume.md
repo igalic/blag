@@ -152,5 +152,6 @@ https://brainsware.org/
 -   Phone: +43 (0) 664 88622883
 -   Email: [i.galic@brainsware.org](mailto:i.galic@brainsware.org)
 -   GPG: `8716 7A9F 989B ABD5 100F  4008 F266 55D6 2998 1641`
+-   Twitter: [@hirojin](https://twitter.com/hirojin)
 -   Jabber: [igalic@dukgo.com](xmpp:igalic@dukgo.com)
 
