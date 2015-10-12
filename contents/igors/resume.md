@@ -85,7 +85,7 @@ A few highlights here
 -   Introducing a generalized, centralized, asynchronous, open source logging
     infrastructure (logstash)
 -   Introducing package repositories for both the OS and each Programming
-    Environment in use
+    Environment in use (pip, cabal, rubygems, etc…)
 -   Assistance in the migration to Git (training of Ops Engineers)
 -   Assistance in the architectural process as well as the implementation of
     the Puppet environment
