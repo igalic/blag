@@ -22,8 +22,7 @@ Education
 I attended the [Technical College Spengergasse, for IT and
 organization](http://www.spengergasse.at/) for 7 years, failing every uneven
 year. In an attempt to finish what I had started, I attended the same school's
-evening college for a semester until it had finally sunk in: I *hate* the
-education system.
+evening college for a semester until it had finally sunk in: School is not for me.
 
 Fortunately those 7 years were not entirely wasted. I learned a lot of what I
 consider 'basics'. The method of learning I evolved has followed me throughout
@@ -69,8 +68,9 @@ a member. However, I don't even remember when I started actively supporting the
 community and contributing fixes.
 
 My contributions to these two projects have been documentation mostly, but also
-the odd code fix. I have devoted a lot of time to Apache Traffic Server as
-release manager (cat herder).
+the odd code fix: I starteed the SNI support in Traffic Server, and added
+FreeBSD raw-disk support. I have also devoted a lot of time to Apache Traffic
+Server as release manager (cat herder).
 
 ### Consulting (via Brainsware OG for various customers 2012--)
 
@@ -91,6 +91,8 @@ A few highlights here
     the Puppet environment
 -   Consulting developers in matters of messaging architectures
 
+Mid-2014 Brainsware started to develop its own product.
+
 ### Open Source (Puppet 2013--)
 
 Following my immersion into the world of Puppet, through both the work for my
@@ -108,9 +110,9 @@ All the while producing a lot of my own, such as
 -   [Brainsware/composer](https://github.com/Brainsware/puppet-composer)
 
 2014, [Daniele Sluijters](https://twitter.com/daenney) and I started [Puppet
-Community](https://puppet-community.github.io/). A space for the community to
-entrust popular puppet modules, or related projects, so we don't have to rely
-on a single maintainer.
+Community](https://puppet.community/). A space for the community to entrust
+popular puppet modules, or related projects, so we don't have to rely on a
+single maintainer.
 
 Puppet Community however, is also a space for the community to serve as a
 counterweight to Puppetlabs, or to move at a faster pace than Puppetlabs could:
@@ -138,7 +140,9 @@ speaking has vastly improved since:
 
 * At Puppetconf 2014 I held a talk about [Puppet Types &
   Providers](https://brainsware.org/blog/8-types-providers).  Spurred by the
-  feedback, I've submitted *3* talks to Puppetconf 2015.
+  feedback, I've submitted *3* talks to Puppetconf 2015, neither of which made
+  the cut. I did get to talk about Puppet Community at the Contributor Sumit
+  though, and was one of the MVP finalists.
 
 Contact
 -------
