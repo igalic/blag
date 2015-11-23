@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Profile &mdash; Puppet Fundamentals 1.0.0 Dokumentation</title>
+    <title>Roles &amp; Profiles &mdash; Puppet Fundamentals 1.0.0 Dokumentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -26,7 +26,7 @@
     <script type="text/javascript" src="_static/translations.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="Puppet Fundamentals 1.0.0 Dokumentation" href="index.html" />
-    <link rel="next" title="Schneeflocken" href="snowflakes.html" />
+    <link rel="next" title="Advanced" href="snowflakes.html" />
     <link rel="prev" title="Deployment Pipeline" href="deployment-pipeline.html" />
    
   
@@ -40,8 +40,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="profile">
-<h1>Profile<a class="headerlink" href="#profile" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="roles-profiles">
+<h1>Roles &amp; Profiles<a class="headerlink" href="#roles-profiles" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="profile">
+<h2>Profile<a class="headerlink" href="#profile" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Eines der wichtigsten <a class="reference external" href="http://c2.com/cgi/wiki?DesignPatterns">Patterns</a>, welches sich in den letzten Jahren in der
 Puppet Community etabliert hat, ist das Roles &amp; Profiles Pattern. Ursprünglich
 2012 von <a class="reference external" href="http://www.craigdunn.org/2012/05/239/">Craig Dunn</a> etabliert, hat es sich <a class="reference external" href="http://sysadvent.blogspot.co.at/2012/12/day-13-configuration-management-as-legos.html">sehr rasch</a> verbreitet.</p>
@@ -49,7 +51,7 @@ Puppet Community etabliert hat, ist das Roles &amp; Profiles Pattern. Ursprüngl
 eigener <a class="reference external" href="http://garylarizza.com/">Gary Larizza</a> in seiner <a class="reference external" href="http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/">Puppet Workflow Serie</a> zusammen
 geschrieben. Im folgenden werden wir uns <em>größtenteils</em> daran halten.</p>
 <div class="section" id="technologische-abstraktion">
-<h2>Technologische Abstraktion<a class="headerlink" href="#technologische-abstraktion" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Technologische Abstraktion<a class="headerlink" href="#technologische-abstraktion" title="Link zu dieser Überschrift">¶</a></h3>
 <blockquote>
 <div>Ein Profil ist die Abstraktion einer Technologie.</div></blockquote>
 <p>Die erste Herausforderung ist die Abgrenzung der Technologie. Wir wollen ein
@@ -57,7 +59,7 @@ Gleichgewicht zwischen Granularität einzelner Komponenten, und ihrer
 Nützlichkeit, bzw Wiederverwendbarkeit in unserem System.</p>
 <p>Das kann sich zum Teil spießen mit unserem…</p>
 <div class="section" id="opinionated-setup">
-<h3>Opinionated Setup<a class="headerlink" href="#opinionated-setup" title="Link zu dieser Überschrift">¶</a></h3>
+<h4>Opinionated Setup<a class="headerlink" href="#opinionated-setup" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Es ist vollkommen akzeptiert und in Ordnung ein Profil so aufzubauen, wie
 <strong>wir</strong> eine Technologie aufsetzen.</p>
 <p>Obwohl der Grundsatz ist, dass (alle) Daten in Hiera gehören, können wir ruhig
@@ -70,7 +72,7 @@ Seiten, der gleichzeitig einen http Vhost anlegt, der von http zu https
 redirectet.</p>
 </div>
 <div class="section" id="create-resources">
-<h3>create_resources()<a class="headerlink" href="#create-resources" title="Link zu dieser Überschrift">¶</a></h3>
+<h4>create_resources()<a class="headerlink" href="#create-resources" title="Link zu dieser Überschrift">¶</a></h4>
 <p><em>Alles andere</em> sind <em>Daten</em>. Daten die wir aus einer Bestimmten Position aus
 Hiera herausholen und dann an <a class="reference external" href="https://docs.puppetlabs.com/references/latest/function.html#createresources">create_resources()</a> übergeben.</p>
 <blockquote>
@@ -79,7 +81,7 @@ Versuch Komponenten als Profile abzugrenzen.</div></blockquote>
 </div>
 </div>
 <div class="section" id="beispiel-daten-in-hiera">
-<h2>Beispiel Daten in Hiera<a class="headerlink" href="#beispiel-daten-in-hiera" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Beispiel Daten in Hiera<a class="headerlink" href="#beispiel-daten-in-hiera" title="Link zu dieser Überschrift">¶</a></h3>
 <blockquote>
 <div>Eine Ansammlung von Verschiedener Profil Daten</div></blockquote>
 <div class="highlight-yaml"><div class="highlight"><pre><span class="nn">---</span>
@@ -96,19 +98,20 @@ Versuch Komponenten als Profile abzugrenzen.</div></blockquote>
 </div>
 </div>
 <div class="section" id="rollen">
-<h1>Rollen<a class="headerlink" href="#rollen" title="Link zu dieser Überschrift">¶</a></h1>
+<h2>Rollen<a class="headerlink" href="#rollen" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der <em>Zweite</em> Teil des Roles &amp; Profiles Patterns sind Roles.</p>
 <div class="section" id="eine-rolle-pro-server">
-<h2>&#8220;Eine&#8221; Rolle pro Server<a class="headerlink" href="#eine-rolle-pro-server" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>&#8220;Eine&#8221; Rolle pro Server<a class="headerlink" href="#eine-rolle-pro-server" title="Link zu dieser Überschrift">¶</a></h3>
 </div>
 <div class="section" id="include-profile">
-<h2>include profile<a class="headerlink" href="#include-profile" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>include profile<a class="headerlink" href="#include-profile" title="Link zu dieser Überschrift">¶</a></h3>
 </div>
 <div class="section" id="das-namens-problem">
-<h2>Das Namens Problem<a class="headerlink" href="#das-namens-problem" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Das Namens Problem<a class="headerlink" href="#das-namens-problem" title="Link zu dieser Überschrift">¶</a></h3>
 </div>
 <div class="section" id="alles-daten">
-<h2>Alles Daten<a class="headerlink" href="#alles-daten" title="Link zu dieser Überschrift">¶</a></h2>
+<h3>Alles Daten<a class="headerlink" href="#alles-daten" title="Link zu dieser Überschrift">¶</a></h3>
+</div>
 </div>
 </div>
 
@@ -120,7 +123,8 @@ Versuch Komponenten als Profile abzugrenzen.</div></blockquote>
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Inhalt</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Profile</a><ul>
+<li><a class="reference internal" href="#">Roles &amp; Profiles</a><ul>
+<li><a class="reference internal" href="#profile">Profile</a><ul>
 <li><a class="reference internal" href="#technologische-abstraktion">Technologische Abstraktion</a><ul>
 <li><a class="reference internal" href="#opinionated-setup">Opinionated Setup</a></li>
 <li><a class="reference internal" href="#create-resources">create_resources()</a></li>
@@ -137,12 +141,14 @@ Versuch Komponenten als Profile abzugrenzen.</div></blockquote>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="deployment-pipeline.html" title="vorheriges Kapitel">Deployment Pipeline</a></li>
-      <li>Next: <a href="snowflakes.html" title="nächstes Kapitel">Schneeflocken</a></li>
+      <li>Next: <a href="snowflakes.html" title="nächstes Kapitel">Advanced</a></li>
   </ul></li>
 </ul>
 </div>

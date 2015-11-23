@@ -44,6 +44,7 @@
 <h1>Ein Eigenes Modul<a class="headerlink" href="#ein-eigenes-modul" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Im folgenden Abschnitt werden wir Schritt für Schritt ein eigenes Modul für das
 Management von SSH entwickeln.</p>
+<p>Zum Mitschauen: Das Modul ist auf <a class="reference external" href="https://github.com/igalic/puppet-training-ssh.git">GitHub</a> zu finden.</p>
 <p>Der erste Schritt, bevor wir ein Modul entwickeln ist &#8220;nachdenken&#8221;. Wir können
 dieses &#8220;nachdenken&#8221; auch in einem Design Dokument (oder an einem Whiteboard!)
 &#8220;skizzieren&#8221;. (Manchmal muss man etwas länger nachdenken. Für komplexere
@@ -76,14 +77,14 @@ Werten zu befüllen. Es ist nicht <em>immer</em> notwendig. Wenn ein Parameter s
 Plattform zu Plattform nicht unterscheidet, so können wir ihn direkt in
 <code class="docutils literal"><span class="pre">manifests/init.pp</span></code> encoden:</p>
 <div class="highlight-puppet"><div class="highlight"><pre><span class="k">class</span> <span class="na">ssh</span> <span class="p">(</span>
-  <span class="na">ensure_package</span> <span class="o">=</span> <span class="s">&#39;present&#39;</span><span class="p">,</span>
+  <span class="nv">$package_ensure</span> <span class="o">=</span> <span class="s">&#39;latest&#39;</span><span class="p">,</span>
 </pre></div>
 </div>
 <p>Der Grund für die Indirektion ist nicht, dass wir in den Defaults der
 Klassenparameter keine Entscheidungen treffen können:</p>
 <div class="highlight-puppet"><div class="highlight"><pre><span class="k">class</span> <span class="na">ssh</span> <span class="p">(</span>
-  <span class="na">ensure_package</span> <span class="o">=</span> <span class="s">&#39;present&#39;</span>
-  <span class="na">package_name</span>   <span class="o">=</span> <span class="nv">$::osfamily</span> <span class="o">?</span> <span class="p">{</span>
+  <span class="nv">$ensure_package</span> <span class="o">=</span> <span class="s">&#39;latest&#39;</span><span class="p">,</span>
+  <span class="nv">$package_name</span>   <span class="o">=</span> <span class="nv">$::osfamily</span> <span class="o">?</span> <span class="p">{</span>
     <span class="s">&#39;Solaris&#39;</span>  <span class="o">=&gt;</span> <span class="s">&#39;network/ssh&#39;</span><span class="p">,</span>
     <span class="s">&#39;AIX&#39;</span>      <span class="o">=&gt;</span> <span class="s">&#39;ssh&#39;</span><span class="p">,</span>
     <span class="s">&#39;Debian&#39;</span>   <span class="o">=&gt;</span> <span class="s">&#39;openssh-server&#39;</span><span class="p">,</span>

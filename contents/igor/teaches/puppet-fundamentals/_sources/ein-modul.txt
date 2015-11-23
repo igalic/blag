@@ -4,6 +4,8 @@ Ein Eigenes Modul
 Im folgenden Abschnitt werden wir Schritt für Schritt ein eigenes Modul für das
 Management von SSH entwickeln.
 
+Zum Mitschauen: Das Modul ist auf `GitHub`_ zu finden.
+
 Der erste Schritt, bevor wir ein Modul entwickeln ist "nachdenken". Wir können
 dieses "nachdenken" auch in einem Design Dokument (oder an einem Whiteboard!)
 "skizzieren". (Manchmal muss man etwas länger nachdenken. Für komplexere
@@ -11,6 +13,7 @@ Probleme rät `Rich Hickey`_ mindestens `ein Jahr`_ einzuräumen.)
 
 .. _Rich Hickey: http://thechangelog.com/rich-hickeys-greatest-hits/
 .. _ein Jahr: https://www.youtube.com/watch?v=f84n5oFoZBc
+.. _GitHub: https://github.com/igalic/puppet-training-ssh.git
 
    Es folgt eine Design Diskussion
 
@@ -52,7 +55,7 @@ Plattform zu Plattform nicht unterscheidet, so können wir ihn direkt in
 .. code-block:: puppet
 
     class ssh (
-      ensure_package = 'present',
+      $package_ensure = 'latest',
 
 Der Grund für die Indirektion ist nicht, dass wir in den Defaults der
 Klassenparameter keine Entscheidungen treffen können:
@@ -60,8 +63,8 @@ Klassenparameter keine Entscheidungen treffen können:
 .. code-block:: puppet
 
     class ssh (
-      ensure_package = 'present'
-      package_name   = $::osfamily ? {
+      $ensure_package = 'latest',
+      $package_name   = $::osfamily ? {
         'Solaris'  => 'network/ssh',
         'AIX'      => 'ssh',
         'Debian'   => 'openssh-server',
