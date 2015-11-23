@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Managen eines Services auf einer Node &mdash; Puppet Fundamentals 1.0.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Puppet Fundamentals 1.0.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Puppet Architektur" href="puppet-architektur.html" />
+    <link rel="prev" title="Was ist Puppet" href="was-ist-puppet.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="managen-eines-services-auf-einer-node">
+<h1>Managen eines Services auf einer Node<a class="headerlink" href="#managen-eines-services-auf-einer-node" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Am besten sehen wir was Puppet ist, indem wir uns anschauen wie es arbeitet.
+<a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html">Puppets Modul System</a> ist seine größte Stärke, und deshalb fangen wir auch
+gleich damit an.</p>
+<p>In diesem Beispiel werden wir <a class="reference external" href="https://forge.puppetlabs.com/puppetlabs/ntp">Puppetlabs&#8217; NTP Modul</a> auf unserer
+Entwicklungsmaschine anwenden. Grund dafür ist, weil es in allen Beispielen in
+der Dokumentation allgegenwärtig ist, deshalb möchten wir uns gleich damit
+vertraut machen.</p>
+<div class="section" id="puppet-module-install">
+<h2>puppet module install<a class="headerlink" href="#puppet-module-install" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Um ein Modul verfügbar zu machen, muss es im richtigen Pfad zu finden sein. Mit
+<a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/modules_installing.html">puppet module install</a> können wir diese Anforderung in den meisten Fällen
+ganz gut abdecken:</p>
+<div class="highlight-python"><div class="highlight"><pre>root@levix:~# puppet module install puppetlabs-ntp
+Notice: Preparing to install into /etc/puppetlabs/code/environments/production/modules ...
+Notice: Downloading from https://forgeapi.puppetlabs.com ...
+Notice: Installing -- do not interrupt ...
+/etc/puppetlabs/code/environments/production/modules
+└─┬ puppetlabs-ntp (v4.1.0)
+  └── puppetlabs-stdlib (v4.8.0)
+root@levix:~#
+</pre></div>
+</div>
+<p>In Theorie kann Puppet nun dieses <a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/dirs_modulepath.html">Modul auch finden</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>puppet config print modulepath
+</pre></div>
+</div>
+</div>
+<div class="section" id="site-pp">
+<h2>site.pp<a class="headerlink" href="#site-pp" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn Puppet (apply, oder agent) ohne besondere Parameter sucht es nach der
+Datei site.pp in <a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/dirs_manifest.html">manifests Ordner</a>:</p>
+<div class="highlight-python"><div class="highlight"><pre>puppet config print manifest
+</pre></div>
+</div>
+</div>
+<div class="section" id="node">
+<h2>node<a class="headerlink" href="#node" title="Link zu dieser Überschrift">¶</a></h2>
+<p>In einer vollständigen <a class="reference internal" href="puppet-architektur.html#puppet-architektur"><span>Puppet Architektur</span></a> meldet sich ein Server beim
+Server mit alle Facts. Üblicherweise wird dann eine passende Node-Definition
+aufgrund des Hostnamen ausgewählt.</p>
+<p>Wir werden uns hier das Leben ein wenig erleichtern, indem wir die <a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/lang_node_definitions.html#the-default-node">default</a>
+<a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/lang_node_definitions.html">Node</a> verwenden:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">node</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="k">include</span> <span class="p">::</span><span class="na">ntp</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Nun können wir <code class="docutils literal"><span class="pre">puppet</span> <span class="pre">apply</span> <span class="pre">--verbose</span></code> ausführen, und es sollte uns das NTP Paket
+installieren, das Service konfigurieren, und starten:</p>
+<div class="highlight-python"><div class="highlight"><pre>Info: Loading facts
+Notice: Compiled catalog for levix in environment production in 4.49 seconds
+Info: Applying configuration version &#39;1447864524&#39;
+Notice: /Stage[main]/Ntp::Install/Package[ntp]/ensure: created
+Info: Computing checksum on file /etc/ntp.conf
+Info: FileBucket got a duplicate file {md5}32280703a4ba7aa1148c48895097ed07
+Info: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]: Filebucketed /etc/ntp.conf to puppet with sum 32280703a4ba7aa1148c48895097ed07
+Notice: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]/content: content changed &#39;{md5}32280703a4ba7aa1148c48895097ed07&#39; to &#39;{md5}0fba51485bf93fbcf67ec5c9f2c2baf8&#39;
+Info: Class[Ntp::Config]: Scheduling refresh of Class[Ntp::Service]
+Info: Class[Ntp::Service]: Scheduling refresh of Service[ntp]
+Notice: /Stage[main]/Ntp::Service/Service[ntp]/enable: enable changed &#39;false&#39; to &#39;true&#39;
+Notice: /Stage[main]/Ntp::Service/Service[ntp]: Triggered &#39;refresh&#39; from 1 events
+Notice: Applied catalog in 11.87 seconds
+</pre></div>
+</div>
+</div>
+<div class="section" id="params-pattern">
+<h2>Params Pattern<a class="headerlink" href="#params-pattern" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Leben der meisten Puppet Module fängt in <code class="docutils literal"><span class="pre">manifests/init.pp</span></code> an.</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">include</span> <span class="p">::</span><span class="na">ntp</span>
+</pre></div>
+</div>
+<p>Dieses Statement <a class="reference external" href="https://docs.puppetlabs.com/puppet/latest/reference/lang_namespaces.html">sucht nach</a> <code class="docutils literal"><span class="pre">class</span> <span class="pre">ntp</span></code> in <code class="docutils literal"><span class="pre">manifests/init.pp</span></code>. Aber
+diese Klasse ist voll von Indirektionen:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">class</span> <span class="na">ntp</span> <span class="p">(</span>
+  <span class="nv">$autoupdate</span>        <span class="o">=</span> <span class="nv">$ntp::params::autoupdate,</span>
+  <span class="nv">$broadcastclient</span>   <span class="o">=</span> <span class="nv">$ntp::params::broadcastclient,</span>
+  <span class="nv">$config</span>            <span class="o">=</span> <span class="nv">$ntp::params::config,</span>
+  <span class="nv">$config_template</span>   <span class="o">=</span> <span class="nv">$ntp::params::config_template,</span>
+  <span class="nv">$disable_auth</span>      <span class="o">=</span> <span class="nv">$ntp::params::disable_auth,</span>
+  <span class="nv">$disable_monitor</span>   <span class="o">=</span> <span class="nv">$ntp::params::disable_monitor,</span>
+  <span class="nv">$fudge</span>             <span class="o">=</span> <span class="nv">$ntp::params::fudge,</span>
+  <span class="nv">$driftfile</span>         <span class="o">=</span> <span class="nv">$ntp::params::driftfile,</span>
+  <span class="nv">$leapfile</span>          <span class="o">=</span> <span class="nv">$ntp::params::leapfile,</span>
+</pre></div>
+</div>
+<p>Diese Indirektion ist das <a class="reference internal" href="ein-modul.html#params-pattern"><span>Params Pattern</span></a>. Um also tatsächlich zu sehen,
+was dieses Modul tut, müssen wir auch in die <code class="docutils literal"><span class="pre">manifests/params.pp</span></code> Datei
+hinein schauen.</p>
+<p>Aber im Großen und Ganzen, scheint das Modul, oberflächlich, relativ einfach
+gestrickt:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="na">anchor</span> <span class="p">{</span> <span class="s">&#39;ntp::begin&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">-&gt;</span>
+<span class="k">class</span> <span class="p">{</span> <span class="s">&#39;::ntp::install&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">-&gt;</span>
+<span class="k">class</span> <span class="p">{</span> <span class="s">&#39;::ntp::config&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">~&gt;</span>
+<span class="k">class</span> <span class="p">{</span> <span class="s">&#39;::ntp::service&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">-&gt;</span>
+<span class="na">anchor</span> <span class="p">{</span> <span class="s">&#39;ntp::end&#39;</span><span class="p">:</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hiera">
+<h2>Hiera<a class="headerlink" href="#hiera" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Eines der mächtigsten Puppet Features ist der <a class="reference external" href="https://docs.puppetlabs.com/hiera/latest/puppet.html#automatic-parameter-lookup">automatische Parameter Lookup</a>.
+Jeder einzelne Parameter in der NTP Klasse wird in Hiera nachgeschlagen.</p>
+<p>Das vereinfacht die Konfiguration verschiedener Maschinen in verschiedenen
+Rechenzentren, Ländern, Zeitzonen, Virtualisierungen, Betriebssystemen, etc…
+Eine <code class="docutils literal"><span class="pre">hiera.yml</span></code> wie zum Beispiel:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="nn">---</span>
+<span class="l-Scalar-Plain">:hierarchy</span><span class="p-Indicator">:</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">nodes/%{::domain}/%{::hostname}</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">project/%{::project}</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">dc/%{::dc}</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">os/%{::kernel}</span>
+  <span class="p-Indicator">-</span> <span class="l-Scalar-Plain">common</span>
+</pre></div>
+</div>
+<p>Bedeutet, dass jeder Parameter in jeder Klasse in jeder Hierarchie nach
+geschlagen wird, bis er gefunden wird.</p>
+</div>
+<div class="section" id="ressourcen">
+<h2>Ressourcen<a class="headerlink" href="#ressourcen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Damit unser Modul tatsächlich auch etwas tut, braucht es Ressourcen. Wie wir
+schon in der <code class="docutils literal"><span class="pre">manifests/init.pp</span></code> sehen, ist das NTP ist ein Klassiker:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="na">anchor</span> <span class="p">{</span> <span class="s">&#39;ntp::begin&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">-&gt;</span>
+<span class="k">class</span> <span class="p">{</span> <span class="s">&#39;::ntp::install&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">-&gt;</span>
+<span class="k">class</span> <span class="p">{</span> <span class="s">&#39;::ntp::config&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">~&gt;</span>
+<span class="k">class</span> <span class="p">{</span> <span class="s">&#39;::ntp::service&#39;</span><span class="p">:</span> <span class="p">}</span> <span class="o">-&gt;</span>
+<span class="na">anchor</span> <span class="p">{</span> <span class="s">&#39;ntp::end&#39;</span><span class="p">:</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Es managt die Installation:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">package</span> <span class="p">{</span> <span class="nv">$ntp::package_name:</span>
+  <span class="na">ensure</span> <span class="o">=&gt;</span> <span class="nv">$ntp::package_ensure,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Die Konfiguration:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">file</span> <span class="p">{</span> <span class="nv">$ntp::config:</span>
+  <span class="na">ensure</span>  <span class="o">=&gt;</span> <span class="k">file</span><span class="p">,</span>
+  <span class="na">owner</span>   <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="na">group</span>   <span class="o">=&gt;</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="na">mode</span>    <span class="o">=&gt;</span> <span class="s">&#39;0644&#39;</span><span class="p">,</span>
+  <span class="na">content</span> <span class="o">=&gt;</span> <span class="k">template</span><span class="p">(</span><span class="nv">$ntp::config_template),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Und das Service:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">service</span> <span class="p">{</span> <span class="s">&#39;ntp&#39;</span><span class="p">:</span>
+  <span class="na">ensure</span>     <span class="o">=&gt;</span> <span class="nv">$ntp::service_ensure,</span>
+  <span class="na">enable</span>     <span class="o">=&gt;</span> <span class="nv">$ntp::service_enable,</span>
+  <span class="na">name</span>       <span class="o">=&gt;</span> <span class="nv">$ntp::service_name,</span>
+  <span class="na">hasstatus</span>  <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+  <span class="na">hasrestart</span> <span class="o">=&gt;</span> <span class="k">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="idempotenz">
+<h2>Idempotenz<a class="headerlink" href="#idempotenz" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der finale Schritt ist, dass wir unser <code class="docutils literal"><span class="pre">puppet</span> <span class="pre">apply</span></code> wieder und wieder und
+wieder ausführen können, ohne das sich irgendwas ändert:</p>
+<div class="highlight-python"><div class="highlight"><pre>root@levix:~# for i in $( seq 1 3 ) ; do \
+    echo &quot;Run#${i}&quot; \
+    puppet apply --verbose -e &#39;include ::ntp&#39; \
+  done
+Run#1
+Info: Loading facts
+Notice: Compiled catalog for levix.box in environment production in 1.59 seconds
+Info: Applying configuration version &#39;1447878855&#39;
+Notice: Applied catalog in 0.17 seconds
+Run#2
+Info: Loading facts
+Notice: Compiled catalog for levix.box in environment production in 1.64 seconds
+Info: Applying configuration version &#39;1447878860&#39;
+Notice: Applied catalog in 0.17 seconds
+Run#3
+Info: Loading facts
+Notice: Compiled catalog for levix.box in environment production in 1.49 seconds
+Info: Applying configuration version &#39;1447878866&#39;
+Notice: Applied catalog in 0.23 seconds
+root@levix:~#
+</pre></div>
+</div>
+<p>Nur wenn sich etwas ändert, wird auch Puppet eine Aktion setzen:</p>
+<div class="highlight-python"><div class="highlight"><pre>root@levix:~# rm /etc/ntp.conf
+root@levix:~# service ntp stop
+root@levix:~# for i in $( seq 1 3 ) ; do \
+    echo &quot;Run#${i}&quot; \
+    puppet apply --verbose -e &#39;include ::ntp&#39; \
+  done
+Run#1
+Info: Loading facts
+Notice: Compiled catalog for levix.box in environment production in 1.51 seconds
+Info: Applying configuration version &#39;1447879304&#39;
+Notice: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]/ensure: defined content as &#39;{md5}0fba51485bf93fbcf67ec5c9f2c2baf8&#39;
+Info: Class[Ntp::Config]: Scheduling refresh of Class[Ntp::Service]
+Info: Class[Ntp::Service]: Scheduling refresh of Service[ntp]
+Notice: /Stage[main]/Ntp::Service/Service[ntp]/ensure: ensure changed &#39;stopped&#39; to &#39;running&#39;
+Info: /Stage[main]/Ntp::Service/Service[ntp]: Unscheduling refresh on Service[ntp]
+Notice: Applied catalog in 0.40 seconds
+Run#2
+Info: Loading facts
+Notice: Compiled catalog for levix.box in environment production in 1.68 seconds
+Info: Applying configuration version &#39;1447879310&#39;
+Notice: Applied catalog in 0.16 seconds
+Run#3
+Info: Loading facts
+Notice: Compiled catalog for levix.box in environment production in 1.62 seconds
+Info: Applying configuration version &#39;1447879315&#39;
+Notice: Applied catalog in 0.20 seconds
+root@levix:~#
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Managen eines Services auf einer Node</a><ul>
+<li><a class="reference internal" href="#puppet-module-install">puppet module install</a></li>
+<li><a class="reference internal" href="#site-pp">site.pp</a></li>
+<li><a class="reference internal" href="#node">node</a></li>
+<li><a class="reference internal" href="#params-pattern">Params Pattern</a></li>
+<li><a class="reference internal" href="#hiera">Hiera</a></li>
+<li><a class="reference internal" href="#ressourcen">Ressourcen</a></li>
+<li><a class="reference internal" href="#idempotenz">Idempotenz</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="was-ist-puppet.html" title="vorheriges Kapitel">Was ist Puppet</a></li>
+      <li>Next: <a href="puppet-architektur.html" title="nächstes Kapitel">Puppet Architektur</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/managen-eines-services.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Los" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Geben Sie Suchbegriffe oder einen Modul-, Klassen- oder Funktionsnamen ein.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Igor Galić.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/managen-eines-services.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

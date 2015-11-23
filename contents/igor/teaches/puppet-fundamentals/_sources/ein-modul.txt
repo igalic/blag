@@ -1,0 +1,257 @@
+Ein Eigenes Modul
+~~~~~~~~~~~~~~~~~
+
+Im folgenden Abschnitt werden wir Schritt für Schritt ein eigenes Modul für das
+Management von SSH entwickeln.
+
+Der erste Schritt, bevor wir ein Modul entwickeln ist "nachdenken". Wir können
+dieses "nachdenken" auch in einem Design Dokument (oder an einem Whiteboard!)
+"skizzieren". (Manchmal muss man etwas länger nachdenken. Für komplexere
+Probleme rät `Rich Hickey`_ mindestens `ein Jahr`_ einzuräumen.)
+
+.. _Rich Hickey: http://thechangelog.com/rich-hickeys-greatest-hits/
+.. _ein Jahr: https://www.youtube.com/watch?v=f84n5oFoZBc
+
+   Es folgt eine Design Diskussion
+
+Puppet Module Skeleton
+======================
+
+`Gareth Rushgrove`_ ist Autor und Maintainer von `puppet-module-skeleton`_, ein
+immens nützliches Tool, welches wir mit ``puppet module generate`` verwenden
+können::
+
+    puppet module generate brainsware-ssh
+    ...
+    cd ssh
+    git init .
+
+um ein neues Modul zu kreieren.
+
+
+    Es folgt eine Diskussion von puppet-module-skeletons Bestandteilen
+
+.. _Gareth Rushgrove: https://twitter.com/garethr
+.. _puppet-module-skeleton: https://github.com/garethr/puppet-module-skeleton
+
+.. _params-pattern:
+
+Params Pattern
+==============
+
+Das Params Pattern ist eine etabliertes Pattern um den Automatischen Parameter
+Lookup in Klassen gezielt zu bündeln. Gebündelt ist das ganze in so ferne, als
+dass die meisten modernen Module die gesamte Konfiguration über die Hauptklasse
+abwickeln.
+
+Gleichzeitig nutzen wir dieses Pattern um unsere Klassen mit sinnvollen Standard
+Werten zu befüllen. Es ist nicht *immer* notwendig. Wenn ein Parameter sich von
+Plattform zu Plattform nicht unterscheidet, so können wir ihn direkt in
+``manifests/init.pp`` encoden:
+
+.. code-block:: puppet
+
+    class ssh (
+      ensure_package = 'present',
+
+Der Grund für die Indirektion ist nicht, dass wir in den Defaults der
+Klassenparameter keine Entscheidungen treffen können:
+
+.. code-block:: puppet
+
+    class ssh (
+      ensure_package = 'present'
+      package_name   = $::osfamily ? {
+        'Solaris'  => 'network/ssh',
+        'AIX'      => 'ssh',
+        'Debian'   => 'openssh-server',
+        default    => 'openssh',
+      },
+    ) {
+      notify { "package_name: ${package_name}" }
+    }
+    class { 'ssh': }
+
+Der Grund ist, dass ganze sehr schnell, sehr unübersichtlich wird.
+
+Mit einer Params Klasse können wir das ganze:
+
+.. code-block:: puppet
+
+    class ssh::params {
+      case $::osfamily {
+        'Solaris': {
+           $package_name = 'network/ssh'
+           $service_name = 'network/ssh'
+         }
+         'AIX': {
+           $package_name = 'ssh'
+           $service_name = 'ssh'
+         }
+         'Debian': {
+           $package_name = 'openssh-server'
+           $service_name = 'ssh'
+         }
+         default: {
+           fail("The ${module_name} module is not supported on an ${::osfamily} based system.")
+         }
+      }
+    }
+
+Hinter den Kulissen verstecken.
+
+
+Leute die mit den einzelnen Betriebssystemen
+vertraut sind, können oft schon erahnen welche Werte diese Parameter haben,
+ohne erst in ``params.pp`` nachsehen zu müssen.
+
+.. code-block:: puppet
+
+    class ssh (
+      ensure_package = 'present'
+      package_name   = $::ssh::params::package_name,
+      service_name   = $::ssh::params::service_name,
+    ) inherits ssh::params {
+
+Validierung
+===========
+
+So lange wir nicht `Puppet 4`_ einsetzen, sind die ``validate_*()`` Funktionen
+der `stdlib`_ unsere Chance für Validierung der übergeben Parameter.
+
+Überprüft werden sollten alle jene Werte, die nicht `undef`_ sind:
+
+.. code-block:: puppet
+
+    if $permit_root_login {
+      validate_re($permit_root_login, '^(yes|no|without-password|forced-commands-only)$')
+    }
+
+Validiert sollte alles werden, was relativ stabil über Zeit bleibt, oder wo
+wir als Modul Entwickler garantieren können Fehler schneller, oder leichter
+für unsere Anwender aufzudecken.
+
+Während zum Beispiel aus Puppets Sicht vollkommen legitim wäre an
+``$permit_root_login`` einen `Array`_ wie ``[ 'garble', 'blargh' ]`` zu
+übergeben, ist das für OpenSSH nicht unbedingt sinnvoll. Es macht das Debugging
+auch unnötig schwierig, da wir entweder aggregierte Logs brauchen, oder uns auf
+das System einloggen müssen. Im Fall von SSH, wäre das also fatal::
+
+    tail -f /var/log/syslog
+    Nov 19 10:52:51 levix systemd[1]: Starting OpenBSD Secure Shell server...
+    Nov 19 10:52:51 levix sshd[11894]: /etc/ssh/sshd_config line 27: unsupported option "garble".
+    Nov 19 10:52:51 levix systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+    Nov 19 10:52:51 levix systemd[1]: Unit ssh.service entered failed state.
+    Nov 19 10:52:51 levix systemd[1]: ssh.service failed.
+    Nov 19 10:52:52 levix systemd[1]: ssh.service holdoff time over, scheduling restart.
+    Nov 19 10:52:52 levix systemd[1]: start request repeated too quickly for ssh.service
+    Nov 19 10:52:52 levix systemd[1]: Failed to start OpenBSD Secure Shell server.
+    Nov 19 10:52:52 levix systemd[1]: Unit ssh.service entered failed state.
+    Nov 19 10:52:52 levix systemd[1]: ssh.service failed.
+
+
+.. _Puppet 4: https://docs.puppetlabs.com/puppet/latest/reference/lang_data_type.html
+.. _stdlib: https://forge.puppetlabs.com/puppetlabs/stdlib
+.. _undef: https://docs.puppetlabs.com/puppet/latest/reference/lang_data_undef.html
+.. _Array: https://docs.puppetlabs.com/puppet/latest/reference/lang_data_array.html
+
+Funktionen
+==========
+
+In dieser Stelle möchte ich gerne kurz auf die Limitationen von `Puppet
+Funktionen`_ eingehen: Alle Puppet Funktionen werden zur Cotalog Compile Zeit
+am Puppet Server aus geführt. Sie haben damit also nur Zugriff auf jene Daten,
+welche am Server verfügbar sind. Während bei ``puppet apply`` der "Server"
+gleich der Node ist auf der Puppet läuft, ist das in einer
+:ref:`puppet-architektur` mit Server und Agents *nicht* der Fall. Diese können
+selbst in heterogenen Umgebungen oft sogar unterschiedliche Betriebssysteme
+sein.
+
+.. _Puppet Funktionen: https://docs.puppetlabs.com/puppet/latest/reference/lang_functions.html
+.. _Catalog Compile Zeit: https://docs.puppetlabs.com/puppet/latest/reference/subsystem_catalog_compilation.html
+
+Ordnung
+=======
+
+Puppet ist in einer dynamischen Programmiersprache geschrieben. Dynamische
+Sprachen sind relativ langsam. Aber das ist nur einer Gründe, warum Puppet
+versucht soviel wie möglich von seinen Prozessen zu parallelisieren.
+
+Der Hauptgrund ist, weil Puppet ein Config Management Tool ist. Der Sinn einer
+"Node" in Puppet ist es nicht den puppet agent zu beschäftigen, sondern unseren
+unser Tagesgeschäft abzuwickeln. Ein Puppet Run soll möglichst kurz und
+schmerzfrei sein.
+
+Wie wir bisher auch schon gesehen haben, sind Puppet Klassen nicht wirklich
+Klassen im Objektorientierten Sinne. Die klassen sind `Singletons`_, aber das
+Konzept von Namespaces ist vielleicht eine bessere, oder einfachere Sicht
+darauf.
+
+So tief wir auch immer diese Namespaces schachteln, Puppet wird sie plätten, um
+so viel wie möglich zu parallisieren.
+
+Dabei kann es zu Scherereien kommen, weil zum Beispiel eine Konfigurationsdatei
+zusammen gestellt wird, noch bevor die Ordnerstruktur vom zugehörigen Paket
+erstellt worden ist. Oder es wird versucht ein Service zu starten bevor es
+korrekt konfiguriert, oder gar installiert ist.
+
+Puppet bietet zwei Konzepte zum Ordnen.
+
+* ``->``, bzw `require`_ und `before`_
+* ``~>``, bzw `subscribe`_ und `notify`_
+
+Die erste Form sorgt lediglich für die definierte Abfolge. Die zweite Form
+hingegen sorgt auch dafür, dass das nachfolgende Element `refresht`_ wird.
+Das heißt, in ``x ~> y``, wenn sich ``x`` ändert, soll Puppet dafür sorgen,
+dass auch ``y`` nochmal ausgeführt wird.
+
+Im Falle unseres SSH Moduls halten wir uns an den Klassiker:
+
+.. code-block:: puppet
+
+    contain ::ssh::install
+    contain ::ssh::config
+    contain ::ssh::service
+
+    Class[ssh::install] -> Class[ssh::config]
+    Class[ssh::config] ~> Class[ssh::service]
+
+.. _Singletons: https://docs.puppetlabs.com/puppet/latest/reference/lang_classes.html#declaring-classes
+.. _require: https://docs.puppetlabs.com/puppet/latest/reference/lang_relationships.html#syntax-relationship-metaparameters
+.. _before: https://docs.puppetlabs.com/puppet/latest/reference/lang_relationships.html#syntax-relationship-metaparameters
+.. _subscribe: https://docs.puppetlabs.com/puppet/latest/reference/lang_relationships.html#refreshing-and-notification
+.. _notify: https://docs.puppetlabs.com/puppet/latest/reference/lang_relationships.html#refreshing-and-notification
+.. _refresht: https://docs.puppetlabs.com/puppet/latest/reference/lang_relationships.html#receiving-refresh-events
+
+Cycles
+------
+
+.. image:: _static/ouroboros_by_rpb.jpg
+   :alt: Ouroboros
+
+Mit der Ordnung kann man es auch übertreiben, und gerät dann in eine `zyklische
+Abhängigkeit`_.
+
+.. _zyklische Abhängigkeit: https://docs.puppetlabs.com/puppet/latest/reference/lang_relationships.html#dependency-cycles
+
+rspec
+=====
+
+`puppet-module-skeleton`_ versorgt uns von Anfang an auch schon mit einem
+Template für `rspec-puppet`_ Tests. Die vorhandenen Testbeispiele sind jedoch 
+nicht allzu nützlich.
+
+    Im folgenden werden wir alle Parameter unsers SSH Moduls, sowie sämtliche
+    kritische Design Entscheidungen testen.
+
+.. _rspec-puppet: http://rspec-puppet.com/
+
+Idempotenz
+==========
+
+Damit unser Modul auch tatsächlich Puppet tauglich ist, müssen wir
+schlussendlich auch testen, dass es auch :ref:`idempotent <idempotenz>` ist::
+
+    for i in 1 2 3; do puppet apply -ve include ::ssh ; done
+
+Wenn alles gut geht, können wir es gleich in Produktion deployen.

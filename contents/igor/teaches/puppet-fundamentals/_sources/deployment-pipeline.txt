@@ -1,0 +1,11 @@
+Deployment Pipeline
+~~~~~~~~~~~~~~~~~~~
+
+   Mit toni Besprechen
+
+r10k
+====
+
+`r10k`_
+
+.. _r10k: https://docs.puppetlabs.com/pe/latest/r10k.html

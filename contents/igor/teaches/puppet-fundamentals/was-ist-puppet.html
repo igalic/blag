@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Was ist Puppet &mdash; Puppet Fundamentals 1.0.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Puppet Fundamentals 1.0.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Managen eines Services auf einer Node" href="managen-eines-services.html" />
+    <link rel="prev" title="Puppet Fundamentals" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="was-ist-puppet">
+<h1>Was ist Puppet<a class="headerlink" href="#was-ist-puppet" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Puppet ist ein Konfigurations Managemnt Framework, welches den Zustand von
+Ressourcen auf einer oder mehr Nodes managt.</p>
+<p>Wir klassifizieren es als Framework, nicht bloß als Tool, weil es aus</p>
+<ul class="simple">
+<li>Client tool</li>
+<li>Agent</li>
+<li>Server</li>
+<li>Datenbank</li>
+<li>Sprache</li>
+<li>Pattern und Methodologien, sowie</li>
+<li>einem eigenem Orechestrationsframework</li>
+</ul>
+<p>besteht. Wie viele andere CM Tools (oder Frameworks), basiert Puppet auf einem
+Kern, den die meisten alle gemein haben:</p>
+<ul class="simple">
+<li>ein Agent auf (größtenteils) autonome Maschinen</li>
+<li>der in einer deklarative Sprache &#8220;konfiguriert&#8221; wird</li>
+<li>managt den Zustand von Ressourcen auf dieser Maschine</li>
+<li>dabei verlassen wir uns auf Konvergenz (vergleichbar mit &#8220;eventual consistency&#8221;), und</li>
+<li>Idempotenz</li>
+</ul>
+<div class="section" id="zustand-state">
+<h2>Zustand (State)<a class="headerlink" href="#zustand-state" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ein CM kümmert sich darum, dass eine Ressource einen definierten Zustand hat.
+Wenn es eine Ressource antrifft, die von diesem abweicht, so führt es sie in
+den gewünschten Zustand über.</p>
+<p>Auch wenn es im Hintergrund gibt es Code, der diese state-Transitionen
+abbildet, so sind doch die Zustands-Definitionen selbst rein deklarativ.</p>
+<p>Also vergleichbar mit:</p>
+<blockquote>
+<div>Ich hätte bitte gerne eine Extrawurstsemmel mit scharfem Senf</div></blockquote>
+<p>vs.:</p>
+<blockquote>
+<div><p>Semmel aufschneiden</p>
+<p>Extrawurst in Scheiben?</p>
+<p>nein → in Scheiben schneiden</p>
+<p>Extrawurst Scheiben in Semmel legen</p>
+<p>Senf gewünscht?</p>
+<p>ja → Senf auf Extrawurst</p>
+<p>Semmel zuklappen</p>
+</div></blockquote>
+</div>
+<div class="section" id="ressourcen">
+<h2>Ressourcen<a class="headerlink" href="#ressourcen" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Ressourcen sind alles was nützlich sein kann zu managen. Von Haus aus liefert
+Puppet die folgenden Ressourcen:</p>
+<ul class="simple">
+<li>user</li>
+<li>group</li>
+<li>package</li>
+<li>mount</li>
+<li>service</li>
+<li><a class="reference external" href="https://docs.puppetlabs.com/references/latest/type.html">und viele, viele mehr</a></li>
+</ul>
+<p>Nachdem Puppet aber sehr <a class="reference external" href="https://docs.puppetlabs.com/guides/module_guides/bgtm.html">leicht durch Module erweitert</a> werden kann, hat die
+Puppet Community eine <a class="reference external" href="https://forge.puppetlabs.com/">reiches Set von Modulen</a> (und Ressourcen) für eine breite
+Pallette an Technologien:</p>
+<ul class="simple">
+<li>Apache</li>
+<li>F5</li>
+<li>HAProxy</li>
+<li>Logrotate</li>
+<li>MySQL</li>
+<li>PHP</li>
+<li>PostgreSQL</li>
+<li>Syslog</li>
+<li>Tomcat</li>
+<li>etc…</li>
+</ul>
+</div>
+<div class="section" id="idempotenz">
+<span id="id1"></span><h2>Idempotenz<a class="headerlink" href="#idempotenz" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Eines der wichtigsten Features von <a class="reference external" href="https://docs.puppetlabs.com/guides/introduction.html#idempotency">Puppet ist Idempotenz</a>. Das ist die
+<a class="reference external" href="https://de.wikipedia.org/wiki/Idempotenz">mathematische Bezeichnung</a> der Eigenschaft einer Operation, die nach
+mehrfacher Anwendung keine Änderungen mehr erfährt sobald der Ziel Zustand
+erreicht ist.</p>
+<p>Für Puppet bedeutet das zum Beispiel, dass wenn der User Account <code class="docutils literal"><span class="pre">igalic</span></code>,
+mit der Shell <code class="docutils literal"><span class="pre">/usr/bin/fish</span></code>, etc… dann wird dieser Code bei einer zweiten,
+dritten, vierten, 500sten, etc… Anwendung nichts tun:</p>
+<div class="highlight-puppet"><div class="highlight"><pre><span class="k">user</span> <span class="p">{</span> <span class="s">&#39;igalic&#39;</span><span class="p">:</span>
+  <span class="na">ensure</span>  <span class="o">=&gt;</span> <span class="s">&#39;present&#39;</span><span class="p">,</span>
+  <span class="na">comment</span> <span class="o">=&gt;</span> <span class="s">&#39;Igor Galić,,,&#39;</span><span class="p">,</span>
+  <span class="na">gid</span>     <span class="o">=&gt;</span> <span class="s">&#39;1000&#39;</span><span class="p">,</span>
+  <span class="na">groups</span>  <span class="o">=&gt;</span> <span class="p">[</span><span class="s">&#39;adm&#39;</span><span class="p">,</span> <span class="s">&#39;cdrom&#39;</span><span class="p">,</span> <span class="s">&#39;sudo&#39;</span><span class="p">,</span> <span class="s">&#39;audio&#39;</span><span class="p">,</span> <span class="s">&#39;dip&#39;</span><span class="p">,</span> <span class="s">&#39;plugdev&#39;</span><span class="p">,</span> <span class="s">&#39;lpadmin&#39;</span><span class="p">,</span> <span class="s">&#39;sambashare&#39;</span><span class="p">,</span> <span class="s">&#39;libvirtd&#39;</span><span class="p">,</span> <span class="s">&#39;docker&#39;</span><span class="p">,</span> <span class="s">&#39;vmnetadm&#39;</span><span class="p">],</span>
+  <span class="na">home</span>    <span class="o">=&gt;</span> <span class="s">&#39;/home/igalic&#39;</span><span class="p">,</span>
+  <span class="na">shell</span>   <span class="o">=&gt;</span> <span class="s">&#39;/usr/bin/fish&#39;</span><span class="p">,</span>
+  <span class="na">uid</span>     <span class="o">=&gt;</span> <span class="s">&#39;1000&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Was ist Puppet</a><ul>
+<li><a class="reference internal" href="#zustand-state">Zustand (State)</a></li>
+<li><a class="reference internal" href="#ressourcen">Ressourcen</a></li>
+<li><a class="reference internal" href="#idempotenz">Idempotenz</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="vorheriges Kapitel">Puppet Fundamentals</a></li>
+      <li>Next: <a href="managen-eines-services.html" title="nächstes Kapitel">Managen eines Services auf einer Node</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/was-ist-puppet.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Los" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Geben Sie Suchbegriffe oder einen Modul-, Klassen- oder Funktionsnamen ein.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Igor Galić.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/was-ist-puppet.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

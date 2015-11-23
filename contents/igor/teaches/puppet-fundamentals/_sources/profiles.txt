@@ -1,0 +1,16 @@
+Profile
+~~~~~~~
+
+Technologische Abstraktion
+==========================
+
+Opinionated Setup
+=================
+
+Daten in Hiera
+==============
+
+create_resources()
+==================
+
+

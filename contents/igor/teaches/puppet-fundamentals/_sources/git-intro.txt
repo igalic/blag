@@ -1,0 +1,39 @@
+Git Intro
+~~~~~~~~~
+
+Eines der besten Modelle um Git zu verstehen sind Tinker Toys
+
+.. image:: _static/Tinker-Toys.jpg
+   :alt: Tinker Toys
+
+Wie, werden wir gleich sehen!::
+
+    git init git-training-ground
+    cd git-training-ground
+
+Zeit für Whiteboarding!
+
+clone, branch, switch
+=====================
+
+remotes, push
+=============
+
+Gute Commit Messages
+====================
+
+Squash, rebase
+==============
+
+Cheat Sheet
+===========
+
+Wir haben uns hier ein `Cheat Sheet`_
+
+.. _Cheat Sheet: _static/git-cheatsheet-DE-white.pdf
+
+.. image:: _static/git-cheatsheet-DE-white-0.png
+   :alt: Git Cheat Sheet Seite 1
+
+.. image:: _static/git-cheatsheet-DE-white-1.png
+   :alt: Git Cheat Sheet Seite 2

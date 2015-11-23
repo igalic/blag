@@ -1,0 +1,58 @@
+
+.. _puppet-architektur:
+
+Puppet Architektur
+==================
+
+`Puppets Architektur`_ ist `wohl dokumentiert`_. Wir skizzieren hier lediglich die
+Grundzüge.
+
+Sammeln von Facts
+-----------------
+
+Am Anfang des Puppet Runs sammelt der Agent Facts über das System. Dies
+passiert über ``facter -p`` bzw, ``puppet facts``.
+
+Diese Facts werden an den Server über eine `authentifizierte`_ `HTTPS`_ Verbindung
+übermittelt.
+
+.. _authentifizierte: https://docs.puppetlabs.com/puppetserver/latest/services_master_puppetserver.html#certificate-authority-service
+.. _HTTPS: https://docs.puppetlabs.com/background/ssl/
+
+Kompilieren des Catalog
+-----------------------
+
+Mit diesen Facts compiliert der Server nun einen `Catalog`_, und schlägt dabei
+jeden Klassen Parameter in Hiera nach.
+
+Der Catalog wird zurück zum Agent gesandt. Mit::
+
+    puppet catalog download
+
+oder::
+
+    puppet catalog find
+
+können wir uns diesen Catalog ansehen.
+
+Abgleichen des Catalog
+----------------------
+
+Der Agent checkt nun jede einzelne Ressource und gleicht sie ab gegen den
+erwünschten Zustand.
+
+Report
+------
+
+Am Ende des Agent Runs schickt dieser den `Report`_ an den Server. Dort werden
+diese in verschiedensten Formaten gespeichert.
+
+On Disk können diese in
+``/opt/puppetlabs/puppet/cache/state/last_run_report.yaml`` bzw
+``/var/lib/puppet/state/last_run_report.yaml`` eingesehen werden.
+
+
+.. _Puppets Architektur: https://docs.puppetlabs.com/puppet/latest/reference/architecture.html
+.. _wohl dokumentiert: https://docs.puppetlabs.com/puppet/latest/reference/subsystem_agent_master_comm.html
+.. _Catalog: https://docs.puppetlabs.com/puppet/latest/reference/subsystem_catalog_compilation.html
+.. _Report: https://docs.puppetlabs.com/guides/reporting.html

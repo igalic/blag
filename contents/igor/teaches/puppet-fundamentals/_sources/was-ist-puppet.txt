@@ -1,0 +1,118 @@
+Was ist Puppet
+~~~~~~~~~~~~~~
+
+Puppet ist ein Konfigurations Managemnt Framework, welches den Zustand von
+Ressourcen auf einer oder mehr Nodes managt.
+
+Wir klassifizieren es als Framework, nicht bloß als Tool, weil es aus
+
+* Client tool
+* Agent
+* Server
+* Datenbank
+* Sprache
+* Pattern und Methodologien, sowie
+* einem eigenem Orechestrationsframework
+
+besteht. Wie viele andere CM Tools (oder Frameworks), basiert Puppet auf einem
+Kern, den die meisten alle gemein haben:
+
+* ein Agent auf (größtenteils) autonome Maschinen
+* der in einer deklarative Sprache "konfiguriert" wird
+* managt den Zustand von Ressourcen auf dieser Maschine
+* dabei verlassen wir uns auf Konvergenz (vergleichbar mit "eventual consistency"), und
+* Idempotenz
+
+Zustand (State)
+===============
+
+Ein CM kümmert sich darum, dass eine Ressource einen definierten Zustand hat.
+Wenn es eine Ressource antrifft, die von diesem abweicht, so führt es sie in
+den gewünschten Zustand über.
+
+Auch wenn es im Hintergrund gibt es Code, der diese state-Transitionen
+abbildet, so sind doch die Zustands-Definitionen selbst rein deklarativ.
+
+Also vergleichbar mit:
+
+    Ich hätte bitte gerne eine Extrawurstsemmel mit scharfem Senf
+
+vs.:
+
+    Semmel aufschneiden
+
+    Extrawurst in Scheiben?
+
+    nein → in Scheiben schneiden
+
+    Extrawurst Scheiben in Semmel legen
+
+    Senf gewünscht?
+
+    ja → Senf auf Extrawurst
+
+    Semmel zuklappen
+
+
+Ressourcen
+==========
+
+Ressourcen sind alles was nützlich sein kann zu managen. Von Haus aus liefert
+Puppet die folgenden Ressourcen:
+
+* user
+* group
+* package
+* mount
+* service
+* `und viele, viele mehr`_
+
+Nachdem Puppet aber sehr `leicht durch Module erweitert`_ werden kann, hat die
+Puppet Community eine `reiches Set von Modulen`_ (und Ressourcen) für eine breite
+Pallette an Technologien:
+
+
+* Apache
+* F5
+* HAProxy
+* Logrotate
+* MySQL
+* PHP
+* PostgreSQL
+* Syslog
+* Tomcat
+* etc…
+
+.. _und viele, viele mehr: https://docs.puppetlabs.com/references/latest/type.html
+.. _leicht durch Module erweitert: https://docs.puppetlabs.com/guides/module_guides/bgtm.html
+.. _reiches Set von Modulen: https://forge.puppetlabs.com/
+
+.. _idempotenz:
+
+Idempotenz
+==========
+
+Eines der wichtigsten Features von `Puppet ist Idempotenz`_. Das ist die
+`mathematische Bezeichnung`_ der Eigenschaft einer Operation, die nach
+mehrfacher Anwendung keine Änderungen mehr erfährt sobald der Ziel Zustand
+erreicht ist.
+
+Für Puppet bedeutet das zum Beispiel, dass wenn der User Account ``igalic``,
+mit der Shell ``/usr/bin/fish``, etc… dann wird dieser Code bei einer zweiten,
+dritten, vierten, 500sten, etc… Anwendung nichts tun:
+
+.. code-block:: puppet
+
+    user { 'igalic':
+      ensure  => 'present',
+      comment => 'Igor Galić,,,',
+      gid     => '1000',
+      groups  => ['adm', 'cdrom', 'sudo', 'audio', 'dip', 'plugdev', 'lpadmin', 'sambashare', 'libvirtd', 'docker', 'vmnetadm'],
+      home    => '/home/igalic',
+      shell   => '/usr/bin/fish',
+      uid     => '1000',
+    }
+
+
+.. _Puppet ist Idempotenz: https://docs.puppetlabs.com/guides/introduction.html#idempotency
+.. _mathematische Bezeichnung: https://de.wikipedia.org/wiki/Idempotenz

@@ -1,0 +1,257 @@
+Managen eines Services auf einer Node
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Am besten sehen wir was Puppet ist, indem wir uns anschauen wie es arbeitet.
+`Puppets Modul System`_ ist seine größte Stärke, und deshalb fangen wir auch
+gleich damit an.
+
+In diesem Beispiel werden wir `Puppetlabs' NTP Modul`_ auf unserer
+Entwicklungsmaschine anwenden. Grund dafür ist, weil es in allen Beispielen in
+der Dokumentation allgegenwärtig ist, deshalb möchten wir uns gleich damit
+vertraut machen.
+
+.. _Puppets Modul System: https://docs.puppetlabs.com/puppet/latest/reference/modules_fundamentals.html
+.. _Puppetlabs' NTP Modul: https://forge.puppetlabs.com/puppetlabs/ntp
+
+puppet module install
+=====================
+
+Um ein Modul verfügbar zu machen, muss es im richtigen Pfad zu finden sein. Mit
+`puppet module install`_ können wir diese Anforderung in den meisten Fällen
+ganz gut abdecken::
+
+    root@levix:~# puppet module install puppetlabs-ntp
+    Notice: Preparing to install into /etc/puppetlabs/code/environments/production/modules ...
+    Notice: Downloading from https://forgeapi.puppetlabs.com ...
+    Notice: Installing -- do not interrupt ...
+    /etc/puppetlabs/code/environments/production/modules
+    └─┬ puppetlabs-ntp (v4.1.0)
+      └── puppetlabs-stdlib (v4.8.0)
+    root@levix:~#
+
+.. _puppet module install: https://docs.puppetlabs.com/puppet/latest/reference/modules_installing.html
+
+In Theorie kann Puppet nun dieses `Modul auch finden`_::
+
+    puppet config print modulepath
+
+.. _Modul auch finden: https://docs.puppetlabs.com/puppet/latest/reference/dirs_modulepath.html
+
+site.pp
+=======
+
+Wenn Puppet (apply, oder agent) ohne besondere Parameter sucht es nach der
+Datei site.pp in `manifests Ordner`_::
+
+    puppet config print manifest
+
+.. _manifests Ordner: https://docs.puppetlabs.com/puppet/latest/reference/dirs_manifest.html
+
+node
+====
+
+In einer vollständigen :ref:`puppet-architektur` meldet sich ein Server beim
+Server mit alle Facts. Üblicherweise wird dann eine passende Node-Definition
+aufgrund des Hostnamen ausgewählt.
+
+Wir werden uns hier das Leben ein wenig erleichtern, indem wir die `default`_
+`Node`_ verwenden:
+
+.. code-block:: puppet
+
+    node default {
+      include ::ntp
+    }
+
+.. _default: https://docs.puppetlabs.com/puppet/latest/reference/lang_node_definitions.html#the-default-node
+.. _Node: https://docs.puppetlabs.com/puppet/latest/reference/lang_node_definitions.html
+
+Nun können wir ``puppet apply --verbose`` ausführen, und es sollte uns das NTP Paket
+installieren, das Service konfigurieren, und starten::
+
+    Info: Loading facts
+    Notice: Compiled catalog for levix in environment production in 4.49 seconds
+    Info: Applying configuration version '1447864524'
+    Notice: /Stage[main]/Ntp::Install/Package[ntp]/ensure: created
+    Info: Computing checksum on file /etc/ntp.conf
+    Info: FileBucket got a duplicate file {md5}32280703a4ba7aa1148c48895097ed07
+    Info: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]: Filebucketed /etc/ntp.conf to puppet with sum 32280703a4ba7aa1148c48895097ed07
+    Notice: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]/content: content changed '{md5}32280703a4ba7aa1148c48895097ed07' to '{md5}0fba51485bf93fbcf67ec5c9f2c2baf8'
+    Info: Class[Ntp::Config]: Scheduling refresh of Class[Ntp::Service]
+    Info: Class[Ntp::Service]: Scheduling refresh of Service[ntp]
+    Notice: /Stage[main]/Ntp::Service/Service[ntp]/enable: enable changed 'false' to 'true'
+    Notice: /Stage[main]/Ntp::Service/Service[ntp]: Triggered 'refresh' from 1 events
+    Notice: Applied catalog in 11.87 seconds
+
+Params Pattern
+==============
+
+Das Leben der meisten Puppet Module fängt in ``manifests/init.pp`` an.
+
+.. code-block:: puppet
+
+   include ::ntp
+
+Dieses Statement `sucht nach`_ ``class ntp`` in ``manifests/init.pp``. Aber
+diese Klasse ist voll von Indirektionen:
+
+.. code-block:: puppet
+
+    class ntp (
+      $autoupdate        = $ntp::params::autoupdate,
+      $broadcastclient   = $ntp::params::broadcastclient,
+      $config            = $ntp::params::config,
+      $config_template   = $ntp::params::config_template,
+      $disable_auth      = $ntp::params::disable_auth,
+      $disable_monitor   = $ntp::params::disable_monitor,
+      $fudge             = $ntp::params::fudge,
+      $driftfile         = $ntp::params::driftfile,
+      $leapfile          = $ntp::params::leapfile,
+
+Diese Indirektion ist das :ref:`params-pattern`. Um also tatsächlich zu sehen,
+was dieses Modul tut, müssen wir auch in die ``manifests/params.pp`` Datei
+hinein schauen.
+
+Aber im Großen und Ganzen, scheint das Modul, oberflächlich, relativ einfach
+gestrickt:
+
+.. code-block:: puppet
+
+      anchor { 'ntp::begin': } ->
+      class { '::ntp::install': } ->
+      class { '::ntp::config': } ~>
+      class { '::ntp::service': } ->
+      anchor { 'ntp::end': }
+
+
+.. _sucht nach: https://docs.puppetlabs.com/puppet/latest/reference/lang_namespaces.html
+
+Hiera
+=====
+
+Eines der mächtigsten Puppet Features ist der `automatische Parameter Lookup`_.
+Jeder einzelne Parameter in der NTP Klasse wird in Hiera nachgeschlagen.
+
+Das vereinfacht die Konfiguration verschiedener Maschinen in verschiedenen
+Rechenzentren, Ländern, Zeitzonen, Virtualisierungen, Betriebssystemen, etc…
+Eine ``hiera.yml`` wie zum Beispiel:
+
+.. code-block:: yaml
+
+    ---
+    :hierarchy:
+      - nodes/%{::domain}/%{::hostname}
+      - project/%{::project}
+      - dc/%{::dc}
+      - os/%{::kernel}
+      - common
+
+Bedeutet, dass jeder Parameter in jeder Klasse in jeder Hierarchie nach
+geschlagen wird, bis er gefunden wird.
+
+.. _automatische Parameter Lookup: https://docs.puppetlabs.com/hiera/latest/puppet.html#automatic-parameter-lookup
+
+Ressourcen
+==========
+
+Damit unser Modul tatsächlich auch etwas tut, braucht es Ressourcen. Wie wir
+schon in der ``manifests/init.pp`` sehen, ist das NTP ist ein Klassiker:
+
+.. code-block:: puppet
+
+      anchor { 'ntp::begin': } ->
+      class { '::ntp::install': } ->
+      class { '::ntp::config': } ~>
+      class { '::ntp::service': } ->
+      anchor { 'ntp::end': }
+
+
+Es managt die Installation:
+
+.. code-block:: puppet
+
+    package { $ntp::package_name:
+      ensure => $ntp::package_ensure,
+    }
+
+Die Konfiguration:
+
+.. code-block:: puppet
+
+    file { $ntp::config:
+      ensure  => file,
+      owner   => 0,
+      group   => 0,
+      mode    => '0644',
+      content => template($ntp::config_template),
+    }
+
+Und das Service:
+
+.. code-block:: puppet
+
+    service { 'ntp':
+      ensure     => $ntp::service_ensure,
+      enable     => $ntp::service_enable,
+      name       => $ntp::service_name,
+      hasstatus  => true,
+      hasrestart => true,
+    }
+
+
+Idempotenz
+==========
+
+Der finale Schritt ist, dass wir unser ``puppet apply`` wieder und wieder und
+wieder ausführen können, ohne das sich irgendwas ändert::
+
+    root@levix:~# for i in $( seq 1 3 ) ; do \
+        echo "Run#${i}" \
+        puppet apply --verbose -e 'include ::ntp' \
+      done
+    Run#1
+    Info: Loading facts
+    Notice: Compiled catalog for levix.box in environment production in 1.59 seconds
+    Info: Applying configuration version '1447878855'
+    Notice: Applied catalog in 0.17 seconds
+    Run#2
+    Info: Loading facts
+    Notice: Compiled catalog for levix.box in environment production in 1.64 seconds
+    Info: Applying configuration version '1447878860'
+    Notice: Applied catalog in 0.17 seconds
+    Run#3
+    Info: Loading facts
+    Notice: Compiled catalog for levix.box in environment production in 1.49 seconds
+    Info: Applying configuration version '1447878866'
+    Notice: Applied catalog in 0.23 seconds
+    root@levix:~#
+
+Nur wenn sich etwas ändert, wird auch Puppet eine Aktion setzen::
+
+    root@levix:~# rm /etc/ntp.conf
+    root@levix:~# service ntp stop
+    root@levix:~# for i in $( seq 1 3 ) ; do \
+        echo "Run#${i}" \
+        puppet apply --verbose -e 'include ::ntp' \
+      done
+    Run#1
+    Info: Loading facts
+    Notice: Compiled catalog for levix.box in environment production in 1.51 seconds
+    Info: Applying configuration version '1447879304'
+    Notice: /Stage[main]/Ntp::Config/File[/etc/ntp.conf]/ensure: defined content as '{md5}0fba51485bf93fbcf67ec5c9f2c2baf8'
+    Info: Class[Ntp::Config]: Scheduling refresh of Class[Ntp::Service]
+    Info: Class[Ntp::Service]: Scheduling refresh of Service[ntp]
+    Notice: /Stage[main]/Ntp::Service/Service[ntp]/ensure: ensure changed 'stopped' to 'running'
+    Info: /Stage[main]/Ntp::Service/Service[ntp]: Unscheduling refresh on Service[ntp]
+    Notice: Applied catalog in 0.40 seconds
+    Run#2
+    Info: Loading facts
+    Notice: Compiled catalog for levix.box in environment production in 1.68 seconds
+    Info: Applying configuration version '1447879310'
+    Notice: Applied catalog in 0.16 seconds
+    Run#3
+    Info: Loading facts
+    Notice: Compiled catalog for levix.box in environment production in 1.62 seconds
+    Info: Applying configuration version '1447879315'
+    Notice: Applied catalog in 0.20 seconds
+    root@levix:~#

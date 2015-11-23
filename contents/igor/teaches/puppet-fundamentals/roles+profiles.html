@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Profile &mdash; Puppet Fundamentals 1.0.0 Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Puppet Fundamentals 1.0.0 Dokumentation" href="index.html" />
+    <link rel="next" title="Schneeflocken" href="snowflakes.html" />
+    <link rel="prev" title="Deployment Pipeline" href="deployment-pipeline.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="profile">
+<h1>Profile<a class="headerlink" href="#profile" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Eines der wichtigsten <a class="reference external" href="http://c2.com/cgi/wiki?DesignPatterns">Patterns</a>, welches sich in den letzten Jahren in der
+Puppet Community etabliert hat, ist das Roles &amp; Profiles Pattern. Ursprünglich
+2012 von <a class="reference external" href="http://www.craigdunn.org/2012/05/239/">Craig Dunn</a> etabliert, hat es sich <a class="reference external" href="http://sysadvent.blogspot.co.at/2012/12/day-13-configuration-management-as-legos.html">sehr rasch</a> verbreitet.</p>
+<p>Eine der damals vielleicht beste Dokumentationen zu dem Thema hat Puppetlabs&#8217;
+eigener <a class="reference external" href="http://garylarizza.com/">Gary Larizza</a> in seiner <a class="reference external" href="http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/">Puppet Workflow Serie</a> zusammen
+geschrieben. Im folgenden werden wir uns <em>größtenteils</em> daran halten.</p>
+<div class="section" id="technologische-abstraktion">
+<h2>Technologische Abstraktion<a class="headerlink" href="#technologische-abstraktion" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div>Ein Profil ist die Abstraktion einer Technologie.</div></blockquote>
+<p>Die erste Herausforderung ist die Abgrenzung der Technologie. Wir wollen ein
+Gleichgewicht zwischen Granularität einzelner Komponenten, und ihrer
+Nützlichkeit, bzw Wiederverwendbarkeit in unserem System.</p>
+<p>Das kann sich zum Teil spießen mit unserem…</p>
+<div class="section" id="opinionated-setup">
+<h3>Opinionated Setup<a class="headerlink" href="#opinionated-setup" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es ist vollkommen akzeptiert und in Ordnung ein Profil so aufzubauen, wie
+<strong>wir</strong> eine Technologie aufsetzen.</p>
+<p>Obwohl der Grundsatz ist, dass (alle) Daten in Hiera gehören, können wir ruhig
+die Daten, die Teil unseres <em>Opionated Setups</em> sind, im Profil als Ressourcen
+Deklarationen verewigen.</p>
+<p>Wir können das auch soweit treiben, dass wir eigene Spezialisierungen —
+<em>Wrapper Types</em> — schreiben, um unsere eigenen Abstraktionen besser abzubilden.</p>
+<p>Ein gutes Beispiel wäre zum Beispiel ein Apache VirtualHost Wrapper für SSL
+Seiten, der gleichzeitig einen http Vhost anlegt, der von http zu https
+redirectet.</p>
+</div>
+<div class="section" id="create-resources">
+<h3>create_resources()<a class="headerlink" href="#create-resources" title="Link zu dieser Überschrift">¶</a></h3>
+<p><em>Alles andere</em> sind <em>Daten</em>. Daten die wir aus einer Bestimmten Position aus
+Hiera herausholen und dann an <a class="reference external" href="https://docs.puppetlabs.com/references/latest/function.html#createresources">create_resources()</a> übergeben.</p>
+<blockquote>
+<div>Es folgt eine Diskussion der vorhandenen Technologien und ein erster
+Versuch Komponenten als Profile abzugrenzen.</div></blockquote>
+</div>
+</div>
+<div class="section" id="beispiel-daten-in-hiera">
+<h2>Beispiel Daten in Hiera<a class="headerlink" href="#beispiel-daten-in-hiera" title="Link zu dieser Überschrift">¶</a></h2>
+<blockquote>
+<div>Eine Ansammlung von Verschiedener Profil Daten</div></blockquote>
+<div class="highlight-yaml"><div class="highlight"><pre><span class="nn">---</span>
+<span class="l-Scalar-Plain">profile::apache::vhost_defaults</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">manage_docroot</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">false</span>
+  <span class="l-Scalar-Plain">port</span>          <span class="p-Indicator">:</span> <span class="l-Scalar-Plain">8080</span>
+
+<span class="l-Scalar-Plain">profile::apache::vhosts</span><span class="p-Indicator">:</span>
+  <span class="l-Scalar-Plain">example.com</span><span class="p-Indicator">:</span>
+    <span class="l-Scalar-Plain">documentroot</span> <span class="p-Indicator">:</span> <span class="l-Scalar-Plain">/srv/web/www.example.com/htdocs</span>
+    <span class="l-Scalar-Plain">serveraliases</span><span class="p-Indicator">:</span> <span class="p-Indicator">[</span> <span class="s">&#39;www.example.com&#39;</span> <span class="p-Indicator">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="rollen">
+<h1>Rollen<a class="headerlink" href="#rollen" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Der <em>Zweite</em> Teil des Roles &amp; Profiles Patterns sind Roles.</p>
+<div class="section" id="eine-rolle-pro-server">
+<h2>&#8220;Eine&#8221; Rolle pro Server<a class="headerlink" href="#eine-rolle-pro-server" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="include-profile">
+<h2>include profile<a class="headerlink" href="#include-profile" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="das-namens-problem">
+<h2>Das Namens Problem<a class="headerlink" href="#das-namens-problem" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="alles-daten">
+<h2>Alles Daten<a class="headerlink" href="#alles-daten" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Inhalt</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Profile</a><ul>
+<li><a class="reference internal" href="#technologische-abstraktion">Technologische Abstraktion</a><ul>
+<li><a class="reference internal" href="#opinionated-setup">Opinionated Setup</a></li>
+<li><a class="reference internal" href="#create-resources">create_resources()</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#beispiel-daten-in-hiera">Beispiel Daten in Hiera</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rollen">Rollen</a><ul>
+<li><a class="reference internal" href="#eine-rolle-pro-server">&#8220;Eine&#8221; Rolle pro Server</a></li>
+<li><a class="reference internal" href="#include-profile">include profile</a></li>
+<li><a class="reference internal" href="#das-namens-problem">Das Namens Problem</a></li>
+<li><a class="reference internal" href="#alles-daten">Alles Daten</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="deployment-pipeline.html" title="vorheriges Kapitel">Deployment Pipeline</a></li>
+      <li>Next: <a href="snowflakes.html" title="nächstes Kapitel">Schneeflocken</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>Diese Seite</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/roles+profiles.txt"
+            rel="nofollow">Quellcode anzeigen</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Schnellsuche</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Los" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Geben Sie Suchbegriffe oder einen Modul-, Klassen- oder Funktionsnamen ein.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Igor Galić.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/roles+profiles.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,92 @@
+Profile
+~~~~~~~
+
+Eines der wichtigsten `Patterns`_, welches sich in den letzten Jahren in der
+Puppet Community etabliert hat, ist das Roles & Profiles Pattern. Ursprünglich
+2012 von `Craig Dunn`_ etabliert, hat es sich `sehr rasch`_ verbreitet.
+
+Eine der damals vielleicht beste Dokumentationen zu dem Thema hat Puppetlabs'
+eigener `Gary Larizza`_ in seiner `Puppet Workflow Serie`_ zusammen
+geschrieben. Im folgenden werden wir uns *größtenteils* daran halten.
+
+.. _Patterns: http://c2.com/cgi/wiki?DesignPatterns
+.. _Craig Dunn: http://www.craigdunn.org/2012/05/239/
+.. _sehr rasch: http://sysadvent.blogspot.co.at/2012/12/day-13-configuration-management-as-legos.html
+.. _Gary Larizza: http://garylarizza.com/
+.. _Puppet Workflow Serie: http://garylarizza.com/blog/2014/02/17/puppet-workflow-part-2/
+
+Technologische Abstraktion
+==========================
+
+    Ein Profil ist die Abstraktion einer Technologie.
+
+Die erste Herausforderung ist die Abgrenzung der Technologie. Wir wollen ein
+Gleichgewicht zwischen Granularität einzelner Komponenten, und ihrer
+Nützlichkeit, bzw Wiederverwendbarkeit in unserem System.
+
+Das kann sich zum Teil spießen mit unserem…
+
+Opinionated Setup
+-----------------
+
+Es ist vollkommen akzeptiert und in Ordnung ein Profil so aufzubauen, wie
+**wir** eine Technologie aufsetzen.
+
+Obwohl der Grundsatz ist, dass (alle) Daten in Hiera gehören, können wir ruhig
+die Daten, die Teil unseres *Opionated Setups* sind, im Profil als Ressourcen
+Deklarationen verewigen.
+
+Wir können das auch soweit treiben, dass wir eigene Spezialisierungen —
+*Wrapper Types* — schreiben, um unsere eigenen Abstraktionen besser abzubilden.
+
+Ein gutes Beispiel wäre zum Beispiel ein Apache VirtualHost Wrapper für SSL
+Seiten, der gleichzeitig einen http Vhost anlegt, der von http zu https
+redirectet.
+
+create_resources()
+------------------
+
+*Alles andere* sind *Daten*. Daten die wir aus einer Bestimmten Position aus
+Hiera herausholen und dann an `create_resources()`_ übergeben.
+
+    Es folgt eine Diskussion der vorhandenen Technologien und ein erster
+    Versuch Komponenten als Profile abzugrenzen.
+
+.. _create_resources(): https://docs.puppetlabs.com/references/latest/function.html#createresources
+
+Beispiel Daten in Hiera
+=======================
+
+    Eine Ansammlung von Verschiedener Profil Daten
+
+.. code-block:: yaml
+
+    ---
+    profile::apache::vhost_defaults:
+      manage_docroot: false
+      port          : 8080
+
+    profile::apache::vhosts:
+      example.com:
+        documentroot : /srv/web/www.example.com/htdocs
+        serveraliases: [ 'www.example.com' ]
+
+
+Rollen
+~~~~~~
+
+Der *Zweite* Teil des Roles & Profiles Patterns sind Roles.
+
+"Eine" Rolle pro Server
+=======================
+
+
+
+include profile
+===============
+
+Das Namens Problem
+==================
+
+Alles Daten
+===========
