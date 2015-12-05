@@ -90,4 +90,8 @@ automation software:
    Can someone who didn't write the software find out why it crashed from the
    logs? Can they fix it?
 
+* Document each of the above
+
+   How else do you think they'll actually discover any of that functionality!?
+
 That's all folks!
