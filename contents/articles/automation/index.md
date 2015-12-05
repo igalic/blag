@@ -49,8 +49,9 @@ up by them falling over.
    Rather than bootstrapping a daemon and a watchdog, use (smf|systemd|etc…)
 
    Use the OS package manager, or your programming environment's package
-   manager (gem|pip|war|etc). Or your container's package manager. This makes
-   installation really easy, and an *atomic transaction*.
+   manager (gem|pip|war|etc). Or your
+   [container](http://blog.gardeviance.org/2015/08/is-there-trouble-brewing-in-land-of.html)'s
+   package manager. This makes installation really easy, and an *atomic transaction*.
 
 * Do *not* reinvent a new package manager
 
