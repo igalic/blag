@@ -33,12 +33,12 @@ more aggressively adopting new versions, or exploring new concepts.
 I have been an [Apache](https://www.apache.org/) committer since February 2010,
 when I joined the [Apache httpd](https://httpd.apache.org/), and shortly
 thereafter the [Apache Traffic Server](https://trafficserver.apache.org/)
-project. 2012 I became a member. 
+project. 2012 I became a member.
 
 My contributions to these two projects have been documentation mostly, but also
 the odd code fix: I starteed the SNI support in Traffic Server, and added
 FreeBSD raw-disk support. I have also devoted a lot of time to Apache Traffic
-Server as release manager (cat herder).
+Server as release manager.
 
 # Dev♥Ops
 
@@ -106,10 +106,10 @@ speaking has vastly improved since:
   engineers at [WebCamp Zagreb 2013](http://2013.webcampzg.org/)
 
 * At Puppetconf 2014 I held a talk about [Puppet Types &
-  Providers](https://brainsware.org/blog/8-types-providers).  Spurred by the
-  feedback, I've submitted *3* talks to Puppetconf 2015, none of which made
-  the cut. I did get to talk about Puppet Community at the Contributor Sumit
-  though, and was one of the MVP finalists.
+  Providers](https://brainsware.org/blog/8-types-providers)
+
+* I got to talk about Voxpupuli at the Contributor Summit, and was one of
+  the MVP finalists.
 
 # Personal
 
