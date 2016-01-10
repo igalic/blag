@@ -108,8 +108,8 @@ speaking has vastly improved since:
 * At Puppetconf 2014 I held a talk about [Puppet Types &
   Providers](https://brainsware.org/blog/8-types-providers)
 
-* I got to talk about Voxpupuli at the Contributor Summit, and was one of
-  the MVP finalists.
+* At the 2015 Puppetconf I got to talk about Voxpupuli at the Contributor
+  Summit, and was one of the MVP finalists.
 
 # Personal
 
