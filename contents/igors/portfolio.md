@@ -13,8 +13,8 @@ past 10 years.
 ## Puppet
 
 Following my immersion into the world of Puppet, through both the work for my
-customers as well as that for Brainsware's infrastructure itself I became
-increasingly active in the Puppet community.
+customers as well as that for Brainsware — my own company's infrastructure, I
+became increasingly active in the Puppet community.
 
 2013 I was offered commit access to two of the most used Puppet Labs modules:
 [https://github.com/puppetlabs/puppetlabs-apache/](puppetlabs-apache), and
