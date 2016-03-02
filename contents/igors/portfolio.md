@@ -13,11 +13,13 @@ past 10 years.
 ## Puppet
 
 Following my immersion into the world of Puppet, through both the work for my
-customers as well as that for Brainsware's Infrastructure itself I became
+customers as well as that for Brainsware's infrastructure itself I became
 increasingly active in the Puppet community.
 
-2013 I was offered commit access to two Puppet Labs modules.  All the while
-producing a lot of my own.
+2013 I was offered commit access to two of the most used Puppet Labs modules:
+[https://github.com/puppetlabs/puppetlabs-apache/](puppetlabs-apache), and
+[https://github.com/puppetlabs/puppetlabs-mysql/](puppetlabs-mysql).  All the
+while producing a lot of my own.
 
 2014, [Daniele Sluijters](https://twitter.com/daenney) and I started
 [Voxpupuli](https://voxpupuli.org/) (The voice of the puppets). A space for the
@@ -75,8 +77,8 @@ A few highlights here
 -   Introducing package repositories for both the OS and each Programming
     Environment in use (pip, cabal, rubygems, etc…)
 -   Assistance in the migration to Git (training of Ops Engineers)
--   Assistance in the architectural process as well as the implementation of
-    the Puppet environment
+-   Assistance in the rearchitecturing process as well as the implementation of
+    the Puppet environment affecting hundreds of machines and dozens of services
 -   Consulting developers in matters of messaging architectures
 
 Mid-2014 Brainsware started to develop its own product. This prompted me to
