@@ -17,8 +17,8 @@ customers as well as that for Brainsware — my own company's infrastructure, I
 became increasingly active in the Puppet community.
 
 2013 I was offered commit access to two of the most used Puppet Labs modules:
-[https://github.com/puppetlabs/puppetlabs-apache/](puppetlabs-apache), and
-[https://github.com/puppetlabs/puppetlabs-mysql/](puppetlabs-mysql).  All the
+[puppetlabs-apache](https://github.com/puppetlabs/puppetlabs-apache), and
+[puppetlabs-mysql](https://github.com/puppetlabs/puppetlabs-mysql).  All the
 while producing a lot of my own.
 
 2014, [Daniele Sluijters](https://twitter.com/daenney) and I started
