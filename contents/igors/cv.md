@@ -14,21 +14,17 @@ Co-founded [Voxpupuli](https://voxpupuli.org/)<label for="mn-demo" class="margin
 Puppetlabs [MySQL](https://github.com/puppetlabs/puppetlabs-mysql) & [Apache](https://github.com/puppetlabs/puppetlabs-apache) modules maintainer<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">2013</span>
 
-
 Joined [Apache TrafficServer](https://trafficserver.apache.org/) Project<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">2012</span>
 
 [OpenCSW](https://opencsw.org/) Maintainer (eremitus)<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">2011</span>
 
-
 Became Member of the ASF<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">2011</span>
 
-
 Joined [Apache HTTPD](https://httpd.apache.org/) Project<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">2010</span>
-
 
 
 # Dev♥Ops
@@ -74,43 +70,42 @@ CoffeeScript (JavaScript), Erlang (Elixir), Lisp (Scheme & Clojure)
 
 # Experience
 
-on-call duty for production landscape running on Solaris & Linux<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
-<span class="marginnote">Bwin</span>
-
-Dozens of applications running on \~60 servers<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
-<span class="marginnote">Bwin</span>
-
 Working closely with developers, testers and managers
 
 Introduced centralized logging infrastructure<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">RISE</span>
 
-Introducing package repositories for both the OS and each Programming Environment in use (Solaris, Debian, RPM, pip, cabal, rubygems, etc…)
-
 (Assistance in the) migration to Subversion/Mercurial/Git
+
+Introducing package repositories for both the OS and each Programming Environment in use (Solaris, Debian, RPM, pip, cabal, rubygems, etc…)
 
 Assistance in the rearchitecturing process as well as the implementation of the Puppet environment affecting hundreds of machines and dozens of services<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
 <span class="marginnote">RISE & ÖAMTC</span>
 
 Consulting developers in matters of messaging architectures
 
+on-call duty for production landscape running on Solaris & Linux<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
+<span class="marginnote">Bwin</span>
+
+Dozens of applications running on \~60 servers<label for="mn-demo" class="margin-toggle">⊕</label><input id="mn-demo" class="margin-toggle" type="checkbox">
+<span class="marginnote">Bwin</span>
+
+
 # Speaker
-
-[WebCamp Zagreb 2013](http://2013.webcampzg.org/): on the woes of [cooperation between Developers and Operations](https://speakerdeck.com/igalic/building-web-applications-for-the-high-scale)
-
-[ApacheCon EU 2014](http://apacheconeu2014.sched.org/event/1pbrT4i/open-sourcing-mental-illness-dealing-with-open-source-burnout-igor-galic): [Open Sourcing Mental Illness](https://blag.esotericsystems.at/articles/opensource-burnout/)
-
-[Puppetconf 2014](http://puppetconf2014.sched.org/event/1kR57MI/absolute-beginners-guide-to-puppet-through-types-igor-galic-brainsware-og): [Puppet Types & Providers](https://brainsware.org/blog/8-types-providers)
 
 Puppet Contributor Summit 2015: Introduction of [Voxpupuli](https://voxpupuli.org/)
 
+[Puppetconf 2014](http://puppetconf2014.sched.org/event/1kR57MI/absolute-beginners-guide-to-puppet-through-types-igor-galic-brainsware-og): [Puppet Types & Providers](https://brainsware.org/blog/8-types-providers)
+
+[ApacheCon EU 2014](http://apacheconeu2014.sched.org/event/1pbrT4i/open-sourcing-mental-illness-dealing-with-open-source-burnout-igor-galic): [Open Sourcing Mental Illness](https://blag.esotericsystems.at/articles/opensource-burnout/)
+
+[WebCamp Zagreb 2013](http://2013.webcampzg.org/): on the woes of [cooperation between Developers and Operations](https://speakerdeck.com/igalic/building-web-applications-for-the-high-scale)
 
 # Languages
 
 - српски/hrvatski/bosanski
 - Deutsch (native)
 - English (fluent)
-
 
 # Contact
 
