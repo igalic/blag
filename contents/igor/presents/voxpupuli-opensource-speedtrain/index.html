@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Voxpupuli &mdash; Voxpupuli - Opensource Speedtrain</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/tufte.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2016.05.16',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="top" title="Voxpupuli - Opensource Speedtrain" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="voxpupuli">
+
+<h1>Voxpupuli</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://voxpupuli.org/"><img alt="_images/8bit-vox.png" src="_images/8bit-vox.png" style="width: 305.25px; height: 305.25px;" /></a>
+</div>
+<p><strong>Opensource 🚅 Speedtrain</strong></p>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="whoami">
+
+<h1>whoami</h1>
+
+<p>Igor Galić — Co-Founder</p>
+<p>igalic — Infrastructure &amp; Open Source</p>
+<p>&#64;hirojin - Disappointing Expectations</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Hello, my name is…
+Igor Galić — Co-Founder of Voxpupuli, and of my own company, Brainsware</p>
+<p>igalic — profesionally, my motto can be summed up as &quot;Infrastructure &amp; Open Source&quot;</p>
+<p class="last">&#64;hirojin - on social media, it is generally, &quot;Disappointing Expectations&quot;</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>whoami</h2>
+
+<p>🌈queer🌈</p>
+<div class="figure">
+<a class="reference external image-reference" href="https://twitter.com/hirojin/status/646652627581829120"><img alt="_images/genders-shoes.png" src="_images/genders-shoes.png" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>daenney and I started this project. He also started the fine tradition at
+puppetConf, to mention, or rather, proudly proclaim, that he is gay.</p>
+<p>I am convinced that <em>diversity cannot exist without visibility</em>.</p>
+<p>I am a very visible member of this community, so I want to be clear:</p>
+<p class="last">I am 🌈queer🌈</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="what-is-voxpupuli">
+
+<h1>What is Voxpupuli</h1>
+
+<p>We are a collective of Puppet module, tooling and documentation authors all working together to ensure continued development on the code we maintain.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Some of my favourite words are on this slide</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="id2">
+
+<h1>What is Voxpupuli</h1>
+
+<p>We are a <strong>collective</strong> of Puppet <strong>module</strong>, tooling and <strong>documentation</strong> authors all <strong>working together</strong> to <em>ensure</em> <strong>continued development</strong> on the <em>code</em> we <strong>maintain</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>We are a collective of Puppet module, tooling and documentation authors all
+working together to ensure continued development on the code we maintain.</p>
+<p>And while our website blurbs explain quite well who we are, what we do, why
+we do it, and how we do it — We aren't well known enough! This talk aims to
+change that.</p>
+<p class="last">Let's get started with</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="who-is-voxpupuli">
+
+<h1>Who is Voxpupuli?</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://pixabay.com/en/gray-fox-kits-young-babies-956687/"><img alt="_images/gray-fox-kits-956687_1280.jpg" src="_images/gray-fox-kits-956687_1280.jpg" style="width: 320.0px; height: 231.0px;" /></a>
+</div>
+<p>64… wait 65… no actually 66 volunteers</p>
+<ul class="simple">
+<li>admins</li>
+<li>many non-coders</li>
+<li>git newbies</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Currently, Voxpupuli is made of +64+ +65+ 66 people who alltogether have
+access to 130~ repositories. Most of those represent either puppet modules
+(100~) or puppet-lint checks, or some other kind of gem.</p>
+<p class="last">Except for those among us who are Puppet employees, none of our contributors are
+paid to do this work. And even the Puppet employees aren't paid to do <em>this</em> work!
+We are volunteers, most of us are admins, many of us not coders, a lot of us don't
+know how git works…</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="why-is-voxpupuli">
+
+<h1>Why is Voxpupuli?</h1>
+
+<ul class="simple">
+<li>impulsiveness</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Daenney and me founded, then Puppet-Community, out of impulsiveness. We were
+frustrated with the pace at which things were moving, and we figured that we
+needed a space where we can iterate faster than Puppet. Puppet is bound by
+contracts to their customers. We as admins, running primarily the open source
+version of puppet, on the other hand, are free to decide on our own when to
+move, upgrade or break something.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="id3">
+
+<h1>Why is Voxpupuli?</h1>
+
+<ul class="simple">
+<li>impulsiveness</li>
+<li>necessity</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Maintaining puppet modules is hard. Constantly ensuring quality is a
+never-ending race against bit-rot. The ruby ecosystem is evolving fast, and it's
+hard to keep up with the tools and /best/ practices.
+Running this race alone can be exhausting, at best. But slipping up, falling
+ill, taking vacation, changing jobs, losing interest - being human, makes it
+impossible to keep up /alone/.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="id4">
+
+<h1>Why is Voxpupuli?</h1>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/daenney+igalic.png"><img alt="_images/daenney+igalic.png" src="_images/daenney+igalic.png" style="width: 358.4px; height: 179.2px;" /></a>
+</div>
+<ul class="simple">
+<li>single point of failure</li>
+<li>right here →</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>As systems administrators we strive to eliminate any possible
+single-point-of-failure. Often times forgetting that we ourselves can become
+one. Sometimes in this very process.</p>
+<p>A puppet module can be tiny. Yet, at times, it may require a lot of attention
+and time. Even if not, if you have more than one module, it adds up!</p>
+<p class="last">With 60~ other people around, you are not alone. I believe that in Voxpupuli we
+have succeeded in eliminating the single-point of failure of the <em>maintainer</em>.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="id5">
+
+<h1>Why is Voxpupuli?</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://www.flickr.com/photos/yellowstonenps/18654448490"><img alt="_images/more-fox-pups.jpg" src="_images/more-fox-pups.jpg" style="width: 320.0px; height: 216.0px;" /></a>
+</div>
+<ul class="simple">
+<li>Collaborative Space</li>
+<li>Safe-haven</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Daenney and I may have been the fire-starters, but Voxpupuli has transcended our
+hopes and expectations. It has become that proof that the sum is greater than
+its parts.</p>
+<p>Voxpupuli is a collaborative space, and a safe-haven.</p>
+<p class="last">For people, and for their work.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="how-does-voxpupuli">
+
+<h1>How does Voxpupuli…?</h1>
+
+<ul class="simple">
+<li>People</li>
+<li>Robots</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">So how are we doing this? With people; obviously.
+With robots, too. And with tools, that enforce standards and conventions.
+Let's start with the robots…</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="robots-vpci">
+
+<h1>Robots: vpci</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://github.com/pccibot"><img alt="_images/8bit-vpci.png" src="_images/8bit-vpci.png" style="width: 203.6px; height: 333.2px;" /></a>
+</div>
+<ul class="simple">
+<li>beaker</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Is a set of bash and python scripts that runs beaker tests for Voxpupuli, but
+also for Puppet. Of those modules that have beaker acceptance tests, we can be
+relatively certain that they will work out quite fine.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="robots-travis">
+
+<h1>Robots: Travis</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://travis-ci.org/voxpupuli"><img alt="_images/travis-mascot-600px.png" src="_images/travis-mascot-600px.png" style="width: 240.4px; height: 238.4px;" /></a>
+</div>
+<ul class="simple">
+<li>rspec-puppet</li>
+<li>STRICT_VARIABLES</li>
+<li>rubocop</li>
+<li>release</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Travis does /the rest/. Our ~.travis.yml~ is rather extensive. We have test
+against all /current/ ruby versions. We test puppet 3.x and 4.x. Always with
+~STRICT_VARIABLES~. We run linters for our puppet code, and rspec-rubocop for
+our spec tests and ruby code.</p>
+<p>Sometimes rubocop can be a pain — mostly because it's a fast moving target.
+However, enforcing a uniform style, and catching potentially dangerous code
+in a highly dynamic language, with a highly flexible syntax, is absolutely
+invaluable.</p>
+<p>Finally, Travis also deploys our modules to the Puppetforge, and our Gems to the
+Rubyforge. It does so, whenever someone creates a tag. And to make <em>this</em>
+uniform too, we have the ~voxpupuli/release~ gem with rake tasks that check the
+~CHANGELOG.md~, tag, bump the version, and push.</p>
+<p class="last">We tried really hard to make our release process as /easy/ as possible, so that
+anyone who wants, or needs a release of the current master, can request that
+simply by creating a pull-request.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="people-contributor">
+
+<h1>People: Contributor</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://pixabay.com/en/frame-mirror-picture-baroque-empty-308791/"><img alt="_images/frame-308791_1280.png" src="_images/frame-308791_1280.png" style="width: 240.5px; height: 320.0px;" /></a>
+</div>
+<ul class="simple">
+<li>issues &amp; pull requests</li>
+<li>feedback on irc &amp; slack</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>So if <em>you</em> need a fresh release of puppet-mcollective, <em>you</em> can do that. All
+you have to do is create a pull-request. And hunt-down someone who'll merge it,
+and run <cite>rake travis_release</cite>.</p>
+<p class="last">For this we have a broad set of channels: GitHub Pull Requests and Issues being
+the most obvious here. And you can use those for other bug reports, or to provide
+us with patches.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="structure-and-communication">
+
+<h1>Structure and Communication</h1>
+
+<p>in Community Management</p>
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://www.flickr.com/photos/timmy/5910881115/"><img alt="_images/plumbing.jpg" src="_images/plumbing.jpg" style="width: 311.04px; height: 232.32px;" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The /plumbing/ repository is where you can track or report structural issues
+that need public discussion. Bugs in the community, or feature requests, if you
+so will. We also have a Code of Conduct email list, for privately disclosing
+issues.</p>
+<p>All our channels, be that IRC &amp; Slack, or Github, or Mailing Lists, adhere to the
+the general Puppet code of conduct. We also explicitly have the Covenant Code of
+Conduct in place in all of our repositories.</p>
+<p class="last">Every contribution, no matter how trivial or elaborate, or even /wrong/ is
+immensely valuable. Treating it, and the person it comes from with the respect
+and hummility strenghtens our ties to the community, and can broaden it, too.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="people-members">
+
+<h1>People: Members</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://commons.wikimedia.org/wiki/File:Accept.svg"><img alt="_images/Accept.png" src="_images/Accept.png" style="width: 200px; height: 200px;" /></a>
+</div>
+<ul class="simple">
+<li>push buttons</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Many drive-thru contributors circle around, and finally stick around. Whenever I
+notice that someone is doing my job, I invite them to the organisation. Clicking
+on <cite>accept</cite> in that email is all they have to do. We don't require anyone to
+sign a CLA (Contributor License Agreement), or anything like that. But, clicking
+that button is a powerful motion. Suddenly, instead of having one pet project, a
+person has <cite>merge</cite> access to <em>all</em> our repositories. This can be an exhilerating
+feeling. It might not last long, mind you, but even so, it motivates them to
+clean up a bunch of old issues &amp; pull requests, or release a module that hasn't
+been released in a while.</p>
+<p>Again, the reason why it's so simple to get started with these things, rather than
+to be overwhelmed with it are our standards and conventions.</p>
+<ul class="last simple">
+<li>We use <cite>module_sync</cite> to handle boilerplate code across repositories</li>
+<li>This ensures .rubocop.yml, .puppet-lint.rc, Rakefile &amp; Gemfile, and .travis.yml to be same-ish</li>
+<li>Every pull request is checked by Travis &amp; vpci</li>
+<li>Every pull request is reviewed and merged by someone who is <em>not</em> the author</li>
+</ul>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="id6">
+
+<h1>People: Members</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://www.flickr.com/photos/widnr/6588149033"><img alt="_images/tyre-fire.jpg" src="_images/tyre-fire.jpg" style="width: 426.96px; height: 288.0px;" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If this sounds boring, all I can say is that boring code is <em>good</em>. We have
+far too much excitement in our jobs.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="id7">
+
+<h1>People: Members</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://www.flickr.com/photos/sejanc/866122048"><img alt="_images/lagerfeuer.jpg" src="_images/lagerfeuer.jpg" style="width: 446.7px; height: 277.05px;" /></a>
+</div>
+<ul class="simple">
+<li>…boring is good</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">So having boring code code that helps us run our infrastructure give you
+that warm fuzzy feeling of reliability.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="people-community-gardeners">
+
+<h1>People: Community Gardeners</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://www.flickr.com/photos/pellesten/8286654017/"><img alt="_images/community-garden.jpg" src="_images/community-garden.jpg" style="width: 275.4px; height: 275.4px;" /></a>
+</div>
+<ul class="simple">
+<li>grant &amp; revoke access</li>
+<li>enforce coc</li>
+<li>listen</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>I am, in GitHub speak, one of the Owners of the Voxpupuli organisation. In GitHub
+terms this means I can grant (and revoke) access to our repositories.</p>
+<p>In our own terms, it means that I</p>
+<ul class="simple">
+<li>hold the keys to our secrets</li>
+<li>get to be on the <a class="reference external" href="mailto:coc&#37;&#52;&#48;voxpupuli&#46;org">coc<span>&#64;</span>voxpupuli<span>&#46;</span>org</a> list</li>
+</ul>
+<p class="last">It means that I have to listen — often for clues — to our community. I might
+have to moderate behaviour, or (over)enthusiasm. If others have failed to do so,
+I have to enforce our CoC. And finally, I have to recognize and empower
+contributors, elavating them to members.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="the-quantified-us">
+
+<h1>The Quantified Us</h1>
+
+<ul class="simple">
+<li>underscoregan/community_management</li>
+<li>lbabhr/octohatrack</li>
+<li>duckinator/how_is</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Often, just listening is not enough. In the days of Big Data, we can gather
+information about our community automatically, thanks to the magic of APIs! And
+we can proccess this Big Data with Big Data tools, such as CSV.</p>
+<p>Currently we use</p>
+<ul class="simple">
+<li>underscoregan/community_management</li>
+<li>lbabhr/octohatrack</li>
+<li>duckinator/how_is</li>
+</ul>
+<p class="last">to gather the basic info on how our community is doing — and more importantly
+<em>who</em> is doing things. It's very important to us to reward all members of our
+community with the gift of merge access — especially the ones the ones who may
+otherwise slip thru the cracks because all they do is report bugs / issues, and
+review pull requests!</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="what-does-voxpupuli">
+
+<h1>What does Voxpupuli…</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://voxpupuli.org/"><img alt="_images/8bit-vox.png" src="_images/8bit-vox.png" style="width: 305.25px; height: 305.25px;" /></a>
+</div>
+<ul class="simple">
+<li>… do for my company?</li>
+<li>… do for me?</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>We provide a broad set of well recongised modules. These modules &lt;unterliegen&gt;
+highest quality standards — enforced by robots!</p>
+<p>Our modules are released frequently (by robots!), and are compatible with the
+latest puppet versions.</p>
+<p class="last">If you have a popular module or gem, we can adopt it, <em>and you</em>.
+Come talk to us in ~#voxpupuli~!</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="steal-this-process">
+
+<h1>Steal this process</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://voxpupuli.org/"><img alt="_images/8bit-vox.png" src="_images/8bit-vox.png" style="width: 305.25px; height: 305.25px;" /></a>
+</div>
+<ul class="simple">
+<li>Empower people</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>At the off chance that none of our modules strike your fancy, you might still be
+interested in our tools, or our process.</p>
+<p>All the tools we use are freely (gratis, libre) available.
+All the tools we produce are freely (gratis, libre) available.</p>
+<p>If you are stuck in a silo, you may be able to aleviate your pains by adopting
+our tools to enforce standards, quality, and to make deployments easy.</p>
+<p>If you are &quot;stuck&quot; in a flat hierarchy, you may be in the unique position of
+having responsibility, <em>and</em> power.</p>
+<p>I advise your to take your responsibility for your team mates first, and to use
+your power wisely. If you adopt our management process, it will mean that
+on-boarding practially takes care of itself.</p>
+<p class="last">Be that new junior ops colleagues, or veteran developers, when you empower them
+you will earn their trust and their respect.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+<article class="slide level-1" id="thank-you">
+
+<h1>Thank you</h1>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://voxpupuli.org/"><img alt="_images/8bit-vox.png" src="_images/8bit-vox.png" style="width: 305.25px; height: 305.25px;" /></a>
+</div>
+<ul class="simple">
+<li>Catch me for questions!</li>
+<li>…join us!</li>
+</ul>
+
+
+
+
+<div class="slide-footer">@hirojin for @VoxpupuliOrg</div>
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>
