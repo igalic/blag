@@ -1,0 +1,52 @@
+https://keybase.io/igalic
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://blag.esotericsystems.at
+  * I am igalic (https://keybase.io/igalic) on keybase.
+  * I have a public key ASDHKkE2IWsiN9qQQVkHy-jYSziRb79APDNsYXCGHtTJkQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120c72a4136216b2237da90415907cbe8d84b38916fbf403c336c6170861ed4c9910a",
+            "host": "keybase.io",
+            "kid": "0120c72a4136216b2237da90415907cbe8d84b38916fbf403c336c6170861ed4c9910a",
+            "uid": "a800392e93370ee92586e49bebbfed19",
+            "username": "igalic"
+        },
+        "service": {
+            "hostname": "blag.esotericsystems.at",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1465905877,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1465905826,
+        "hash": "9b87fc6aa728cde38c5bbe40019151d507d7bcd60713cc2dcaf4eb2ae64f21a86951531c2ac4d247bab0778b28b7ec116beddb52982a4bde0785edd2feb464d6",
+        "seqno": 483646
+    },
+    "prev": "46708b60d9e5f9ac79b9150b1891387b5ac448238dcf58efe313c1c6df819c50",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgxypBNiFrIjfakEFZB8vo2Es4kW+/QDwzbGFwhh7UyZEKp3BheWxvYWTFAv17ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzcyYTQxMzYyMTZiMjIzN2RhOTA0MTU5MDdjYmU4ZDg0YjM4OTE2ZmJmNDAzYzMzNmM2MTcwODYxZWQ0Yzk5MTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzcyYTQxMzYyMTZiMjIzN2RhOTA0MTU5MDdjYmU4ZDg0YjM4OTE2ZmJmNDAzYzMzNmM2MTcwODYxZWQ0Yzk5MTBhIiwidWlkIjoiYTgwMDM5MmU5MzM3MGVlOTI1ODZlNDliZWJiZmVkMTkiLCJ1c2VybmFtZSI6ImlnYWxpYyJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiYmxhZy5lc290ZXJpY3N5c3RlbXMuYXQiLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xNiJ9LCJjdGltZSI6MTQ2NTkwNTg3NywiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDY1OTA1ODI2LCJoYXNoIjoiOWI4N2ZjNmFhNzI4Y2RlMzhjNWJiZTQwMDE5MTUxZDUwN2Q3YmNkNjA3MTNjYzJkY2FmNGViMmFlNjRmMjFhODY5NTE1MzFjMmFjNGQyNDdiYWIwNzc4YjI4YjdlYzExNmJlZGRiNTI5ODJhNGJkZTA3ODVlZGQyZmViNDY0ZDYiLCJzZXFubyI6NDgzNjQ2fSwicHJldiI6IjQ2NzA4YjYwZDllNWY5YWM3OWI5MTUwYjE4OTEzODdiNWFjNDQ4MjM4ZGNmNThlZmUzMTNjMWM2ZGY4MTljNTAiLCJzZXFubyI6OCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEBQ/z6hw340qj7tkHWJxvrfUGjvlTHRDJisguKRWQypm15erV6KFKgCeNvMydxO1czKBJE9L3N4VT/DvPmnOOwAqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/igalic
+
