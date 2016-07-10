@@ -14,6 +14,7 @@ The books of [Christopher Alexander](http://www.patternlanguage.com/ca/ca.html),
 ## Design and Social Justice
 
 Design is an act of social (in)justice. On a global level, [Victor Papanek](https://en.wikipedia.org/wiki/Victor_Papanek) explores this in a way that can be felt viscerally in his (second) edition of Design for the Real World. For a slightly smaller than global scale, I recommend [Don Norman's](http://www.jnd.org/about.html) [The Design of Everyday Things](http://www.jnd.org/books.html). It also makes for a good introduction into design thinking. Perhaps a tangent, but it's interesting that the [Papanek Foundation's Archive](http://papanek.org/archive/) is not openly accessible, despite Papanek being a fierce critic of the concept of copyright and patents.
+Design of Systems and the resulting social (ir)responsibilities are [Maciej Cegłowski](http://idlewords.com/)'s forte. Pretty much all of his talks are very watchable or readable. In one of my favourite ones he tries to give the [Internet a Human face](http://idlewords.com/talks/internet_with_a_human_face.htm)
 
 ## Education and Politics
 
