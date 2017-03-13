@@ -29,6 +29,9 @@ Joined [Apache HTTPD](https://httpd.apache.org/) Project<label for="join-httpd" 
 
 # Dev♥Ops
 
+DevOps Engineer for [Metro Systems](https://www.metrogroup.de/en/company/service-companies/systems) building a PaaS<label for="devops-msys" class="margin-toggle">⊕</label><input id="devops-msys" class="margin-toggle" type="checkbox">
+<span class="marginnote">2016—…</span>
+
 Coaching of [S-IT](http://www.erstegroupit.com/at-de/)<label for="coach-sid" class="margin-toggle">⊕</label><input id="coach-sid" class="margin-toggle" type="checkbox">
 <span class="marginnote">2015</span>
 
@@ -68,7 +71,12 @@ JVM, BEAM
 
 CoffeeScript (JavaScript), Erlang (Elixir), Lisp (Scheme & Clojure)
 
+Distributed Systems theory
+
 # Experience
+
+Building and Debugging Distributed Systems<label for="dds-metro" class="margin-toggle">⊕</label><input id="dds-metro" class="margin-toggle" type="checkbox">
+<span class="marginnote">Metro Systems</span>
 
 Working closely with developers, testers and managers
 
@@ -109,7 +117,7 @@ Puppet Contributor Summit 2015: Introduction of [Voxpupuli](https://voxpupuli.or
 
 # Contact
 
-https://brainsware.org/<label for="bw-web" class="margin-toggle">⊕</label><input id="bw-web" class="margin-toggle" type="checkbox">
+https://brainsware.at/<label for="bw-web" class="margin-toggle">⊕</label><input id="bw-web" class="margin-toggle" type="checkbox">
 <span class="marginnote">Web</span>
 
 [+43 (0) 664 88622883](tel:+4366488622883)<label for="ig-phon" class="margin-toggle">⊕</label><input id="ig-phon" class="margin-toggle" type="checkbox">
