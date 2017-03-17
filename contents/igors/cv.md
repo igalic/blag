@@ -1,7 +1,7 @@
 ---
 template: single.jade
 filename: cv.html
-title: Curiculum Vitae
+title: Curriculum Vitae
 ---
 
 Igor Galić: Infrastructure & Open Source
@@ -38,7 +38,7 @@ Coaching of [S-IT](http://www.erstegroupit.com/at-de/)<label for="coach-sid" cla
 Puppet Migration Project for [ÖAMTC](https://www.oeamtc.at/)<label for="migrate-oeamtc" class="margin-toggle">⊕</label><input id="migrate-oeamtc" class="margin-toggle" type="checkbox">
 <span class="marginnote">2015</span>
 
-Brainsware starts devloping their own Product<label for="bw-dev-sealas" class="margin-toggle">⊕</label><input id="bw-dev-sealas" class="margin-toggle" type="checkbox">
+Brainsware starts developing their own Product: [Sealas](https://sealas.at/)<label for="bw-dev-sealas" class="margin-toggle">⊕</label><input id="bw-dev-sealas" class="margin-toggle" type="checkbox">
 <span class="marginnote">2014</span>
 
 Infrastructure team of [RISE GmbH](https://rise-world.com/)<label for="rise-infra" class="margin-toggle">⊕</label><input id="rise-infra" class="margin-toggle" type="checkbox">
