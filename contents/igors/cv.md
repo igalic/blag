@@ -7,6 +7,9 @@ title: Curriculum Vitae
 Igor Galić: Infrastructure & Open Source
 
 # Open Source
+
+Co-founded [FruitfulJS](https://github.com/fruitfuljs)<label for="co-found-fruitfuljs" class="margin-toggle">⊕</label><input id="co-found-fruitfuljs" class="margin-toggle" type="checkbox">
+<span class="marginnote">2017</span>
    
 Co-founded [Voxpupuli](https://voxpupuli.org/)<label for="co-found-voxp" class="margin-toggle">⊕</label><input id="co-found-voxp" class="margin-toggle" type="checkbox">
 <span class="marginnote">2014</span>
@@ -31,6 +34,9 @@ Joined [Apache HTTPD](https://httpd.apache.org/) Project<label for="join-httpd" 
 
 DevOps Engineer for [Metro Systems](https://www.metrogroup.de/en/company/service-companies/systems) building a PaaS<label for="devops-msys" class="margin-toggle">⊕</label><input id="devops-msys" class="margin-toggle" type="checkbox">
 <span class="marginnote">2016—…</span>
+
+Developer of  an Infrastructure Provisioning system for [Metro Systems](https://www.metrogroup.de/en/company/service-companies/systems)<label for="dev-msys" class="margin-toggle">⊕</label><input id="dev-msys" class="margin-toggle" type="checkbox">
+<span class="marginnote">2017—…</span>
 
 Coaching of [S-IT](http://www.erstegroupit.com/at-de/)<label for="coach-sid" class="margin-toggle">⊕</label><input id="coach-sid" class="margin-toggle" type="checkbox">
 <span class="marginnote">2015</span>
@@ -73,7 +79,12 @@ CoffeeScript (JavaScript), Erlang (Elixir), Lisp (Scheme & Clojure)
 
 Distributed Systems theory
 
+Go, and more JavaScript
+
 # Experience
+
+Developing an Infrastructure Provisioning system for Metro (primarily Go)<label for="infra-metro" class="margin-toggle">⊕</label><input id="infra-metro" class="margin-toggle" type="checkbox">
+<span class="marginnote">Metro Systems</span>
 
 Building and Debugging Distributed Systems<label for="dds-metro" class="margin-toggle">⊕</label><input id="dds-metro" class="margin-toggle" type="checkbox">
 <span class="marginnote">Metro Systems</span>
@@ -109,6 +120,8 @@ Puppet Contributor Summit 2015: Introduction of [Voxpupuli](https://voxpupuli.or
 
 [WebCamp Zagreb 2013](http://2013.webcampzg.org/): on the woes of [cooperation between Developers and Operations](https://speakerdeck.com/igalic/building-web-applications-for-the-high-scale)
 
+I've given this Presentation about [Voxpupuli, Open Source Speedtrain](https://blag.esotericsystems.at/igor/presents/voxpupuli-opensource-speedtrain/) at numerous conferences. Sadly it has never been recorded. However, there's a [blog post](https://voxpupuli.org/blog/2016/06/10/voxpupuli-opensource-speedtrain/)
+
 # Languages
 
 - српски/hrvatski/bosanski
@@ -132,5 +145,5 @@ https://brainsware.at/<label for="bw-web" class="margin-toggle">⊕</label><inpu
 [@hirojin](https://twitter.com/hirojin)<label for="hirojin-tw" class="margin-toggle">⊕</label><input id="hirojin-tw" class="margin-toggle" type="checkbox">
 <span class="marginnote">Twitter</span>
 
-[igalic@dukgo.com](xmpp:igalic@dukgo.com)<label for="ig-jabber" class="margin-toggle">⊕</label><input id="ig-jabber" class="margin-toggle" type="checkbox">
-<span class="marginnote">Jabber</span>
+[@hirojin](https://mastodon.social/@hirojin)<label for="hirojin-masto" class="margin-toggle">⊕</label><input id="hirojin-masto" class="margin-toggle" type="checkbox">
+<span class="marginnote">Mastodon</span>

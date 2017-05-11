@@ -5,7 +5,7 @@ title: Portfolio
 ---
 
 Here's a small selection of skills I've learned, or roles I've filled in the
-past 10 years.
+past 12 years.
 
 
 # Open Source
@@ -27,8 +27,20 @@ community to entrust popular puppet modules, or related projects, so we don't
 have to rely on a single maintainer.
 
 Voxpupuli however, is also a space for the community to serve as a
-counterweight to Puppetlabs, or to move at a faster pace than Puppetlabs could:
+counterweight to Puppet Inc, or to move at a faster pace than Puppet Inc could:
 more aggressively adopting new versions, or exploring new concepts.
+
+Once Voxpupuli had grown to a *considerable* size, we organized votes for a
+leadership group. After the votes, Daenney stepped back completely, and I
+vanished slowly into the background. The project had taken on life of its own,
+but more importantly, it was very vital without its founders.
+
+## JavaScript
+
+After seeing the success of Voxpupuli, and, after presenting its model seeing
+other people groups (or [companies](https://www.chef.io/))adopt it, I thought it
+was time that we start something like this for JavaScript.
+So, [FruitfulJS](https://github.com/fruitfuljs/) was born.
 
 ## Apache
 
@@ -80,6 +92,8 @@ A few highlights here
 -   Assistance in the rearchitecturing process as well as the implementation of
     the Puppet environment affecting hundreds of machines and dozens of services
 -   Consulting developers in matters of messaging architectures
+-   Debugging distributed systems and distributed teams
+-   Building an Infrastructure Provisioning system
 
 Mid-2014 Brainsware started to develop its own product. This prompted me to
 devote more of my time to learning new technologies, such as:
@@ -90,6 +104,9 @@ devote more of my time to learning new technologies, such as:
   handling and distributed systems
 
 - JavaScript and CoffeeScript, they have taught me more about pain tolerance than m4
+
+- Since all new devops things have to be written in Go these days, there wasn't
+  much choice
 
 My primary focus and the reason for expanding my horizons remains on design,
 architecture, and usability.
@@ -113,6 +130,8 @@ speaking has vastly improved since:
 * I got to talk about Voxpupuli at the Puppet Contributor Summit 2015, and was
   voted one of the MVP finalists at Puppet Conf in that year.
 
+* I've given this Presentation about [Voxpupuli, Open Source Speedtrain](https://blag.esotericsystems.at/igor/presents/voxpupuli-opensource-speedtrain/) at numerous conferences. Sadly it has never been recorded. However, there's a [blog post](https://voxpupuli.org/blog/2016/06/10/voxpupuli-opensource-speedtrain/)
+
 # Personal
 
 
@@ -127,11 +146,11 @@ speaking has vastly improved since:
 
 # Contact
 
-https://brainsware.org/
+https://brainsware.at/
 
 -   Phone: [+43 (0) 664 88622883](tel:+4366488622883)
--   Email: [i.galic@brainsware.org](mailto:i.galic@brainsware.org)
+-   Email: [igalic@brainsware.at](mailto:i.galic@brainsware.org)
 -   GPG: `8716 7A9F 989B ABD5 100F  4008 F266 55D6 2998 1641`
 -   Twitter: [@hirojin](https://twitter.com/hirojin)
--   Jabber: [igalic@dukgo.com](xmpp:igalic@dukgo.com)
+-   Mastodon: [@hirojin](https://mastodon.social/@hirojin)
 
