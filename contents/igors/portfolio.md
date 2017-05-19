@@ -148,7 +148,8 @@ speaking has vastly improved since:
 
 https://brainsware.at/
 
--   Phone: [+43 (0) 664 88622883](tel:+4366488622883)
+-   Phone AT: [+43 (0) 664 88622883](tel:+4366488622883)
+-   Phone DE: [+49 (0) 162 3832698](tel:+491623832698)
 -   Email: [igalic@brainsware.at](mailto:i.galic@brainsware.org)
 -   GPG: `8716 7A9F 989B ABD5 100F  4008 F266 55D6 2998 1641`
 -   Twitter: [@hirojin](https://twitter.com/hirojin)

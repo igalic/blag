@@ -134,7 +134,10 @@ https://brainsware.at/<label for="bw-web" class="margin-toggle">⊕</label><inpu
 <span class="marginnote">Web</span>
 
 [+43 (0) 664 88622883](tel:+4366488622883)<label for="ig-phon" class="margin-toggle">⊕</label><input id="ig-phon" class="margin-toggle" type="checkbox">
-<span class="marginnote">Phone</span>
+<span class="marginnote">Phone AT</span>
+
+[+49 (0) 162 3832698](tel:+491623832698)<label for="ig-phon-de" class="margin-toggle">⊕</label><input id="ig-phon-de" class="margin-toggle" type="checkbox">
+<span class="marginnote">Phone DE</span>
 
 [igalic@brainsware.at](mailto:igalic@brainsware.at)<label for="ig-mail" class="margin-toggle">⊕</label><input id="ig-mail" class="margin-toggle" type="checkbox">
 <span class="marginnote">Email</span>
