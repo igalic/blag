@@ -1,0 +1,15 @@
+code {
+  font-size: 95%;
+  font-family: 'Fantasque Sans Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+  color: black;
+}
+
+
+.slides > article.far-past,
+.slides > article.past,
+.slides > article.next,
+.slides > article.far-next,
+.slides > article.current {
+  background-size: cover;
+}
