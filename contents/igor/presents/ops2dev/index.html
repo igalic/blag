@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ops to Dev &mdash; Ops to Dev</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="_static/single.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/tufte.css" type="text/css" />
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '2017.08.10',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/common.js"></script>
+    
+    <script type="text/javascript" src="_static/slides.js"></script>
+    <script type="text/javascript" src="_static/sync.js"></script>
+    <script type="text/javascript" src="_static/controller.js"></script>
+    <script type="text/javascript" src="_static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="Ops to Dev" href="#" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="ops-to-dev">
+
+<h1>Ops to Dev</h1>
+
+<p>What to bring, and what to leave behind.</p>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-1" id="whoami">
+
+<h1>whoami</h1>
+
+<p>Igor Galić — Co-Founder of things</p>
+<p>igalic — Infrastructure &amp; Open Source</p>
+<p>&#64;hirojin - Disappointing Expectations</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>HI, my name is Igor</p>
+<p>I'm a co-founder of various open source projects (Vox Pupuli &amp; FruitfulJS). I'm active (or, have been) on many more than that (Apache httpd &amp; trafficserver), Puppet (modules), and recently, iocage.</p>
+<p class="last">I am also the cofounder of my company, where the general theme of Infrastructure &amp; Open Source continues.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>whoami</h2>
+
+<p>✨🌈queer✨🌈.</p>
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://twitter.com/hirojin/status/646652627581829120"><img alt="_images/genders-shoes.png" src="_images/genders-shoes.png" style="width: 626.25px; height: 358.5px;" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Daenny Sluijters who founded Voxpupuli with me, also started the fine tradition at PuppetConf, <strong>proudly</strong> proclaim, that he is gay.</p>
+<p>despite, or perhaps <strong>because</strong> of appearances I find important to mention that I'm queer, because</p>
+<ul class="simple">
+<li>i am white</li>
+<li>male looking (passing?)</li>
+<li>english speaking</li>
+</ul>
+<p class="last">appearances aside, my first language was serbo-croatian,</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>whoami</h2>
+
+<p>appearances aside, my first language was serbo-croatian,</p>
+<div class="figure align-right">
+<img alt="_images/email-ć-missing.png" src="_images/email-ć-missing.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>I was a war refugee, I'm an alcoholic, I'm depressed, I'm bi-sexual, and I'm gender-queer.</p>
+<p>None of these things are important or really relevant to this talk, but they are to our community in general:</p>
+<p>Any attempt to at diversity is a mere lip-service if we don't reognize the people in our midst as who and what they are.
+The easiest way to do so, is to have prominent members of the community use the platforms they are given to represent the full spectrum of our community.</p>
+<p class="last">And sometimes that can be as simple as saying who and what they are.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="background-radiation">
+
+<h2>Background (radiation)</h2>
+
+<p>I am a classically trained Unix systems administrator.</p>
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/The_C_Programming_Language_cover.png"><img alt="_images/The_C_Programming_Language_cover.png" src="_images/The_C_Programming_Language_cover.png" style="width: 399.3px; height: 515.9000000000001px;" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>For the longest time in my career, I would not have called myself a programmer.
+I was a &quot;system administrator&quot;, an &quot;application engineer&quot;, a &quot;systems engineer&quot;, a &quot;devops engineer&quot; <em>* groan *</em>, etc…</p>
+<p>A little bit of background: I am a classically trained Unix systems administrator.</p>
+<p>That is, I went to school, and learned programming in C.
+and then C++, Micro Assembler, 360 Assembler, PL/I, Java and PHP.
+I finally gave up before learning COBOL and switched to the networking branch.</p>
+<p>Now, <strong>you</strong> might look at this, and think, that looks like an awful lot of programming. Are you sure you weren't a develeloper already?</p>
+<p>…And you might be right.
+…And if it hadn't taken me 15 years to recognize this, we wouldn't be here for this talk.</p>
+<p class="last">And so my first job was an <a class="reference external" href="https://omniti.com/seeds/what-is-web-operations">SRE position</a> (at at a time when it wasn't called that) in a Solaris shop.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="http://www.linuxfromscratch.org/lfs/view/stable/">How to build a distro</a></li>
+<li>How the Unix Runtime works</li>
+<li>How to build Software</li>
+<li>How to debug the runtime, a.k.a. <cite>strace(1)</cite></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Here's a couple of tools I learned in my Ops jobs (and <em>how</em> I learned them).
+We'll talk about some of the important ones later — when they show up in our development tool-box.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id3">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="http://users.owt.com/lazrchet/humor/install.htm">How to install software</a></li>
+<li>&quot;Documentation&quot;</li>
+<li>Debugging (when all you want is sleep)</li>
+<li>risk assessment</li>
+<li>reading code of literally any language</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">I learned everything there is to know about how to install software from Dave Barry in Cybespace, or at least that one chapter that's copy/pasted on all those old &quot;humour&quot; sites…</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id4">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://blag.esotericsystems.at/articles/automation/">Automation</a></li>
+<li>perl, bash, ruby</li>
+<li>make (I'm friggin serious)</li>
+<li>idempotency (okay, Puppet might be better here;)</li>
+<li>systems and more systems</li>
+<li>read &amp; comprehend docs</li>
+<li>predict &amp; control behaviour</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">I wrote a blog post about software vs automation a few years ago, and we'll get to the gist of it shortly</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id5">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li>Support (IRC!)</li>
+<li>debugging other people's problems</li>
+<li>Patience (Thank you <a class="reference external" href="https://twitter.com/rbowen">Rich Bowen</a>)</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">IRC and other distractions seem to be mostly an Ops thing?
+Regardless of that, I've learned a lot from IRC, such as debugging other people's problems with minimal (and completely obscure or wrong) information.
+And Patience. Big thanks to Rich Bowen for teaching me this, by example.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id6">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li>Design &amp; Architecture</li>
+<li>Building &amp; Debugging &quot;distributed&quot; &quot;systems&quot;</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Explaining the same problems (&amp; solutions) to the same developers every 3 - 6 months (patience is a very important skill)</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id7">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="https://dbsmasher.com/2016/12/07/on-being-on-call/">On Call</a></li>
+<li>surviving on minimal sleep (bad for patience)</li>
+<li>followed by maximum alcohol</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">(I'm glad that a new generation of Ops folks is indulging in tea. This seems a much healthier option)</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id8">
+
+<h2>Ops Tools</h2>
+
+<ul class="simple">
+<li>NO</li>
+<li>can we do…? No.</li>
+<li>Can we get…? No.</li>
+<li>We need… No.</li>
+<li>… because, No.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The biggest Ops tool, the NO Hammer (or: Fear &amp; Loathing of the sleep deprived)</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="how-i-became-a-developer">
+
+<h2>How I &quot;became&quot; a Developer</h2>
+
+<div class="figure">
+<a class="reference external image-reference" href="https://twitter.com/dberkholz/status/902164887496949760"><img alt="_images/dberkholz-scripting-vs-development.png" src="_images/dberkholz-scripting-vs-development.png" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>At some point in your life, or career, you might notice that you're writing more Ruby or Python than YAML.</p>
+<p>Congratulations, you've now crossed the line and have become a developer.</p>
+<p class="last">I'm extremely proud to be part of Puppet (however peripheral these days), because Puppet has been pushing the limits of what it means to be a &quot;DevOps Engineer&quot;.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id9">
+
+<h2>How I &quot;became&quot; a Developer</h2>
+
+<p>Relationship status with Programming: It's complicated</p>
+<div class="figure">
+<a class="reference external image-reference" href="https://twitter.com/dberkholz/status/902164887496949760"><img alt="_images/dberkholz-scripting-vs-development.png" src="_images/dberkholz-scripting-vs-development.png" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>And yet, it's still somehow &quot;complicated&quot; — in my mind, anyway.
+The many thousands of lines of C++ code I [STRIKEOUT:wrote] deleted for Apache Traffic Server didn't really count: I didn't get paid for that.
+And really, I was just mostly a release manager, and a documentation copy/paster.</p>
+<p>And neither did the thousands of lines of Ruby and Puppet code count, because that was just infrastructure automation, and infrastructure is, by default, invisible.</p>
+<p class="last">I'm very glad Puppet happened to me. I got to know a lot of people who I consider dear friends, I co-started Voxpupuli, and Puppet &amp; Ruby inspired me to learn a bunch of Functional Programming languages, expanding my horizons from Erlang to Common Lisp &amp; Clojure, all the way to JavaScript.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id10">
+
+<h2>How I &quot;became&quot; a Developer</h2>
+
+<p><strong>Culture-unfit</strong></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>So despite the fact that I wrote (or, deleted) a lot of code, I never considered myself a programmer, or a software engineer, or a coder (and I was long past romanticizing myself as hacker).</p>
+<p>Then, one day this year, I told my boss (yes, self-employed contracters also have bosses), that I wasn't really sure I could be coming back next quarter.</p>
+<p>In fact, I might not be coming back next month.</p>
+<p>The new <strong>full-time</strong> (an attribute always greatly appreciated by managers) hire had a coöperation style which wasn't really appreciated by anyone who's actually had to work with him.</p>
+<p>Instead of leaving, my boss askmed to transfer to a different team.</p>
+<p>That team was developing an infrastructure provisioning tool in Go.</p>
+<p class="last">And <strong>*that's*</strong> how I became a developer.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools-in-dev">
+
+<h2>Ops Tools in Dev</h2>
+
+<div class="figure">
+<a class="reference external image-reference" href="https://twitter.com/hirojin/status/672033157391245314"><img alt="_images/hirojin-maintaining-a-million-puppet-modules.png" src="_images/hirojin-maintaining-a-million-puppet-modules.png" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>A few years ago, I wrote:</p>
+<p>maintaining a million puppet modules has taught me one thing: not a single piece of software was written with automation in mind</p>
+<p class="last">which, after being challenged on it, I then expanded into a blog post</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id11">
+
+<h2>Ops Tools in Dev</h2>
+
+<ul class="simple">
+<li>known &quot;good&quot; configuration format</li>
+<li>Packages</li>
+<li>system facilities</li>
+<li>Documentation</li>
+<li><em>useful</em> error &amp; log messages</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>The basic pillars here are: Don't reinvent the package wheel, don't reinvent the configuration wheel, don't reinvent the watchdog wheel, don't reinvent log/rotation wheel.</p>
+<p>Document your wheels (how much air pressure do they take? Is this a tire for winter or summer time?) Why is this wheel two triangles???</p>
+<p class="last">Provide understandable logging / error messages</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools-in-dev-packages">
+
+<h2>Ops Tools in Dev: Packages</h2>
+
+<ul class="simple">
+<li>Packages provide atomicity</li>
+<li>version numbers that can be trusted (right? <em>right??</em>)</li>
+<li>discoverable!</li>
+<li>don't (<em>accidentally</em>) make <a class="reference external" href="https://medium.com/&#64;sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527">your own package manager</a></li>
+</ul>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools-in-dev-services">
+
+<h2>Ops Tools in Dev: Services</h2>
+
+<ul class="simple">
+<li>use your init system as watchdog!</li>
+<li>log rotation!</li>
+<li>run batch jobs with a scheduler!</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Most Operating systems provide a <em>lot</em> of facilities that you can just use.</p>
+<p>A watch-dog service that will restart your application when it crashes (why aren't you just using Erlang?), a log-rotation service to rotate &amp; compress your logs shortly after they filled the disk, and a facility to run schedule batch-jobs</p>
+<p class="last">A lot of this is trickier in containerized environments, in that it's… different.
+But that just means learning a new toolset!!</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools-in-dev-configuration">
+
+<h2>Ops Tools in Dev: Configuration</h2>
+
+<ul class="simple">
+<li>use known, good configuration formats</li>
+<li>well behaved (idempotent) configuration tool</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Now, since writing this, I have learned a lot about configuration formats</p>
+<p class="last">Who here has worked in a company, or on a project that's invented its own configuration language? Or programming language? Or both? accidentally?</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id12">
+
+<h2>Ops Tools in Dev: Configuration</h2>
+
+<div class="figure">
+<a class="reference external image-reference" href="https://twitter.com/hirojin/status/903159370686582784"><img alt="_images/greenspuns-11th-rule.png" src="_images/greenspuns-11th-rule.png" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>So… rather than inventing another wheel, maybe we should just start embedding well rounded wheels.</p>
+<p class="last">Like Lua… don't worry if you didn't think of this any earlier… I only thought of it last week.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools-in-dev-experience">
+
+<h2>Ops Tools in Dev: Experience</h2>
+
+<p>Start advocating for everything you've always felt was missing!</p>
+<ul class="simple">
+<li>UI / UX in CLI tools</li>
+<li>or perhaps, UI / UX in general…</li>
+<li>resilience</li>
+<li>stable existing software</li>
+<li>debugging complex issues</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If you're building a command line application, you could argue for better UI/UX — now, let's be honest, you could always argue for better UX, but CLI utilities are just criminally neglected in this regard.</p>
+<p>As is their documentation. And their log messages or their error handling.</p>
+<p>If you're building a web application, you would want to bring in resilience.</p>
+<p>Resilience could mean any number of things: Such as splitting the app along different lines (of concerns) so that crashes don't affect vital parts, or adding metrics to eventually figure out why it's crashing to begin with.</p>
+<p>With your rich experience of running and debugging a million different daemons, you might help »accelerate« your [STRIKEOUT:burnout] »burndown« chart, by writing less code.</p>
+<p>Entire modules someone planned, or even designed, and someone would need to write, can often be replaced with a single configuration option in an existing, well tested piece of software.</p>
+<p class="last">With your very different toolkit, you could <em>easily</em> aid in debugging complex issues, regardless of your (lack of) experience with the language in question.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="ops-tools-in-dev-in-experience">
+
+<h2>Ops Tools in Dev: (In)experience</h2>
+
+<p>Start advocating for everything you've always felt was missing!</p>
+<ul class="simple">
+<li>documenting bad code vs refactoring</li>
+<li>Support - like Admin of the Day!</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Establish a support channel: Most Ops folks (I know) are very comfortable asking for help on 👻IRC👻 or other media.</p>
+<p>You may want to establish this kind of service for the software you're building as well.
+In $BigCo, we adopted the Admin of the Day concept for rotating the Support Person of the Day.
+And recently, a support-backup! for new team members!</p>
+<p>It's a well worn (although not necessarily good) tradition, that the newest member on the team complete, or, often enough, simply, <em>write</em> the project's documentation.</p>
+<p class="last">Personally, I've found one of the easiest ways to document code is to refactor it for simplicity.
+I will use any number of reasons (excuses) to push for this.
+One of my favourite being, I'm dyslexic. I might be disylexic, but making code easier to read benefits everyone.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="what-to-leave-behind">
+
+<h2>What to leave behind</h2>
+
+<ul class="simple">
+<li>🐢 (all the way down)</li>
+<li>NO, because no.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>In the before-time, before everything was automated and cloudified, ops was always there to you:</p>
+<p>No.</p>
+<p class="last">Ops was always risky job, and many of us have developed a habit of being risk-aware, or rather, risk-averse — to a fault.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id13">
+
+<h2>What to leave behind</h2>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/rust-logo-512x512-blk.png"><img alt="_images/rust-logo-512x512-blk.png" src="_images/rust-logo-512x512-blk.png" style="width: 384.0px; height: 384.0px;" /></a>
+</div>
+<p>There are no new ideas.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>This culminates in the habit of saying no to every new idea. Let me dispel your fears today:</p>
+<p>There are no new ideas.</p>
+<p class="last">(The Rust programming language is so named because while appearing relatively recently, none of the concepts it incorporates are. Most of the theory behind rust is at least 20 years old.)</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="fear-of-inadequacy">
+
+<h2>Fear of Inadequacy</h2>
+
+<p>I am not am impostor</p>
+<p>(I'm just not a very good programmer)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>I'm not going to talk about impostor syndrome. More competent folks have talked a lot more competently about this than I possibly could. <em>/* … */</em> But, in all seriousness, I'm not a very good programmer.</p>
+<p>This is something I have used as leverage, by arguing for refactoring barely readable code, but it's also something that's held me back for the longest time.</p>
+<p>Despite ability to read and understand a piece of software, to point to a code-block that needs fixing, and sometimes even fixing it, this is &quot;relatively easy&quot;.</p>
+<p>Even though this skill has given me an incredible edge compared to most of my co-workers, in my head I considered this a core skill that every Unix administrator had to have.</p>
+<p>Understanding the software as a whole — enough to add new features is an entirely different matter.</p>
+<p>Reading Code is hard. Reading code comprehensively is hard. Writing code is hard. Writing good code is harder still.</p>
+<p class="last">So let's talk about the (secret??)</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="missing-dev-tools">
+
+<h2>Missing Dev Tools</h2>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/programming_owl.jpg"><img alt="_images/programming_owl.jpg" src="_images/programming_owl.jpg" style="width: 540.0px; height: 440.1px;" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>It turns out there's a number of things I've been missing, and worse yet — misunderstanding.</p>
+<p class="last">The most grave of misunderstandings was how I could go from step 1 to step 2 here.
+It turns out the answer is simple:</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id14">
+
+<h2>Missing Dev Tools</h2>
+
+<div class="figure align-right">
+<img alt="_images/wax-on-wax-off.jpg" src="_images/wax-on-wax-off.jpg" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">By repeating step 1. Forever.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id15">
+
+<h2>Missing Dev Tools</h2>
+
+<div class="figure align-right">
+<img alt="_images/wax-on-wax-off.jpg" src="_images/wax-on-wax-off.jpg" />
+</div>
+<ul class="simple">
+<li>FreeBSD manual of Programming?</li>
+<li>Linux from Scratch manual of Programming?</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>There wasn't really a FreeBSD manual equivalent for programming (that I was aware of): A manual that comprehensively explains general concepts of programming as clearly as the FreeBSD manual explains the concepts of Unix system administration.</p>
+<p>Alternatively, a <a class="reference external" href="http://www.linuxfromscratch.org/lfs/view/stable/">Linux from Scratch</a> equivalent would be incredibly helpful:</p>
+<p class="last">If we look deeper into the LFS book, it takes us from a blank slate to a usable Linux Distro through relentless repetition: At every checkpoint we either have a working base, or have to debug — using only the limited methods we have learned, and only the tools we have <strong>built</strong> so far. Failing that, we have to start over.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="missing-dev-tools-books">
+
+<h2>Missing Dev Tools: Books</h2>
+
+<div class="figure align-right">
+<a class="reference internal image-reference" href="_images/EloquentJScover.png"><img alt="_images/EloquentJScover.png" src="_images/EloquentJScover.png" style="width: 234.3px; height: 303.6px;" /></a>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="http://eloquentjavascript.net/">Eloquent JavaScript</a>, and</li>
+<li><a class="reference external" href="http://www.ccs.neu.edu/home/matthias/HtDP2e/">How to Design Programs (Second
+Edition)</a></li>
+<li><a class="reference external" href="https://www.nostarch.com/javascriptforkids">JavaScript for Kids</a></li>
+<li><a class="reference external" href="https://www.nostarch.com/rubywizardry">Ruby Wizardry</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>There are books that fit this bill. They are few and far in between. Most of all, they are <strong>not</strong> the classically recommended books</p>
+<p class="last">If you're not up-to-speed with programming at all yet and what to start out, then I can highly recommend the &quot;For Kids&quot; series of books.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="missing-dev-tools-shell">
+
+<h2>Missing Dev Tools: Shell</h2>
+
+<div class="figure align-right">
+<a class="reference external image-reference" href="https://fishshell.com/"><img alt="_images/fishshell-logo.png" src="_images/fishshell-logo.png" /></a>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Sometimes we have to bite the bullet and learn a new paradigm, but often enough we can get away with using parallels for understanding or exploring.
+For me, one of the most powerful paradigms that I use <strong>daily</strong> is a REPL (read eval print loop).</p>
+<p class="last">I use <a class="reference external" href="https://fishshell.com/">Fish</a> all day, and I suppose you use something similar. Now, first off: That's a REPL right there. But, what if I told you, that you could explore a programming language the same way you're exploring a (Unix) system?</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id16">
+
+<h2>Missing Dev Tools: Shell</h2>
+
+<div class="figure align-right">
+<img alt="_images/pry-json-iconv.png" src="_images/pry-json-iconv.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Enter pry. Literally. Let's say you wanted to find out how <code class="docutils literal"><span class="pre">iconv</span></code> in Ruby's JSON module work…</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id17">
+
+<h2>Missing Dev Tools: Shell</h2>
+
+<ul class="simple">
+<li>Ruby: pry</li>
+<li>python: jupyter</li>
+<li>clojure: (clojure ;)</li>
+<li>erlang &amp; Elixir: iex</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>To me, <code class="docutils literal"><span class="pre">pry</span></code> was a revelation. Once I found pry, I wanted every programming environment to have something like that! What actually happened, is that I would gravitate towards systems which had something like pry ;)</p>
+<p>A powerful REPL is a good sign of a good tooling ecosystem that will let you browse, explore and auto-complete source code.
+This might might represent a bit of a heretic departure from the classic Unix way of using just an editor, but, eh <code class="docutils literal"><span class="pre">¯\(°_o)/¯</span></code>.
+If you want to dig through 330 thousand lines of 17 years old C++ code, you will want to use any trick and cheat that exists out there.</p>
+<p class="last">Depending on your grasp of C++, 330KLoC could read like the first book of Game of Thrones (~298K words), or, like the entire series (1M 770k. thus far).
+But unlike GoT, you can't read Apache Traffic Server's code from start to finish.
+Where does it begin? Where does it end?? It's a mystery;)</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-2" id="id18">
+
+<h2>Missing Dev Tools?</h2>
+
+<ul class="simple">
+<li><a class="reference external" href="http://patshaughnessy.net/ruby-under-a-microscope">Ruby under a
+Microscope</a>,
+and</li>
+<li><a class="reference external" href="http://www.erlang-in-anger.com/">ERLANG IN ANGER</a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>So I lied. Obviously ;) There are good resources and good tools.</p>
+<p>Available, to make programming accessible. I want to call out two other books, which are very useful once you get far, far, far — and then get stuck!</p>
+<p class="last">Which brings us close to the end, and the last thing missing</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-1" id="id19">
+
+<h1>$€£¥.¢</h1>
+
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Now that you're a successful (powerful) Developer, you may wanna renegotiate your salary.</p>
+<p>If you're not earning as much as your Dev colleagues, something's amiss…</p>
+<p class="last">Come to think of it, perhaps your Ops colleagues should renegotiate their contracts as well: After all, DevOps <em>is</em> the great equalizer.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-1" id="that-s-all-folks">
+
+<h1>That's all Folks</h1>
+
+<p>Questions? Comments! Anecdotes</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">From me, anyway! At this point, I'd like to welcome your questions, comments and anecdotes about your Journey (in either direction) and your experiences or fears.</p>
+</div>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+<article class="slide level-1" id="links-references">
+
+<h1>Links &amp; References</h1>
+
+<p>Background: <a class="reference external" href="https://www.flickr.com/photos/thefreerangekid/19814791259/">https://www.flickr.com/photos/thefreerangekid/19814791259/</a></p>
+
+
+
+
+<div class="slide-footer">@hirojin</div>
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

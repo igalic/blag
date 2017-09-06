@@ -1,0 +1,510 @@
+
+.. Ops to Dev slides file, created by
+   hieroglyph-quickstart on Thu Aug 10 12:44:05 2017.
+
+
+Ops to Dev
+~~~~~~~~~~
+
+What to bring, and what to leave behind.
+
+whoami
+~~~~~~
+
+Igor Galić — Co-Founder of things
+
+igalic — Infrastructure & Open Source
+
+@hirojin - Disappointing Expectations
+
+.. note:: HI, my name is Igor
+
+          I'm a co-founder of various open source projects (Vox Pupuli & FruitfulJS). I'm active (or, have been) on many more than that (Apache httpd & trafficserver), Puppet (modules), and recently, iocage.
+
+          I am also the cofounder of my company, where the general theme of Infrastructure & Open Source continues.
+
+whoami
+======
+
+✨🌈queer✨🌈.
+
+.. figure:: _static/genders-shoes.png
+   :align: right
+   :target: https://twitter.com/hirojin/status/646652627581829120
+   :scale: 75%
+
+.. note:: Daenny Sluijters who founded Voxpupuli with me, also started the fine tradition at PuppetConf, **proudly** proclaim, that he is gay.
+
+    despite, or perhaps **because** of appearances I find important to mention that I'm queer, because
+
+    - i am white
+    - male looking (passing?)
+    - english speaking
+
+    appearances aside, my first language was serbo-croatian,
+
+whoami
+======
+
+appearances aside, my first language was serbo-croatian,
+
+.. figure:: _static/email-ć-missing.png
+   :align: right
+
+.. note:: I was a war refugee, I'm an alcoholic, I'm depressed, I'm bi-sexual, and I'm gender-queer.
+
+    None of these things are important or really relevant to this talk, but they are to our community in general:
+
+    Any attempt to at diversity is a mere lip-service if we don't reognize the people in our midst as who and what they are.
+    The easiest way to do so, is to have prominent members of the community use the platforms they are given to represent the full spectrum of our community.
+
+    And sometimes that can be as simple as saying who and what they are.
+
+Background (radiation)
+======================
+
+I am a classically trained Unix systems administrator.
+
+.. figure:: _static/The_C_Programming_Language_cover.png
+   :align: right
+   :scale: 55%
+   
+.. note:: For the longest time in my career, I would not have called myself a programmer.
+    I was a "system administrator", an "application engineer", a "systems engineer", a "devops engineer" *\* groan \**, etc…
+
+    A little bit of background: I am a classically trained Unix systems administrator.
+
+    That is, I went to school, and learned programming in C.
+    and then C++, Micro Assembler, 360 Assembler, PL/I, Java and PHP.
+    I finally gave up before learning COBOL and switched to the networking branch.
+
+    Now, **you** might look at this, and think, that looks like an awful lot of programming. Are you sure you weren't a develeloper already?
+
+    …And you might be right.
+    …And if it hadn't taken me 15 years to recognize this, we wouldn't be here for this talk.
+
+    And so my first job was an `SRE position <https://omniti.com/seeds/what-is-web-operations>`_ (at at a time when it wasn't called that) in a Solaris shop.
+
+Ops Tools
+=========
+
+- `How to build a distro <http://www.linuxfromscratch.org/lfs/view/stable/>`_
+- How the Unix Runtime works
+- How to build Software
+- How to debug the runtime, a.k.a. `strace(1)`
+
+.. note:: Here's a couple of tools I learned in my Ops jobs (and *how* I learned them).
+     We'll talk about some of the important ones later — when they show up in our development tool-box.
+
+Ops Tools
+=========
+
+- `How to install software <http://users.owt.com/lazrchet/humor/install.htm>`_
+- "Documentation"
+- Debugging (when all you want is sleep)
+- risk assessment
+- reading code of literally any language
+
+.. note:: I learned everything there is to know about how to install software from Dave Barry in Cybespace, or at least that one chapter that's copy/pasted on all those old "humour" sites…
+
+Ops Tools
+=========
+
+
+- `Automation <https://blag.esotericsystems.at/articles/automation/>`__
+- perl, bash, ruby
+- make (I'm friggin serious)
+- idempotency (okay, Puppet might be better here;)
+- systems and more systems
+- read & comprehend docs
+- predict & control behaviour
+
+.. note:: I wrote a blog post about software vs automation a few years ago, and we'll get to the gist of it shortly
+
+Ops Tools
+=========
+
+-  Support (IRC!)
+-  debugging other people's problems
+-  Patience (Thank you `Rich Bowen <https://twitter.com/rbowen>`__)
+
+.. note:: IRC and other distractions seem to be mostly an Ops thing?
+     Regardless of that, I've learned a lot from IRC, such as debugging other people's problems with minimal (and completely obscure or wrong) information.
+     And Patience. Big thanks to Rich Bowen for teaching me this, by example.
+
+Ops Tools
+=========
+
+-  Design & Architecture
+-  Building & Debugging "distributed" "systems"
+
+.. note:: Explaining the same problems (& solutions) to the same developers every 3 - 6 months (patience is a very important skill)
+
+Ops Tools
+=========
+
+-  `On Call <https://dbsmasher.com/2016/12/07/on-being-on-call/>`__
+-  surviving on minimal sleep (bad for patience)
+-  followed by maximum alcohol 
+
+.. note:: (I'm glad that a new generation of Ops folks is indulging in tea. This seems a much healthier option)
+
+Ops Tools
+=========
+
+-  NO 
+-  can we do…? No.
+-  Can we get…? No.
+-  We need… No.
+-  … because, No.
+
+.. note:: The biggest Ops tool, the NO Hammer (or: Fear & Loathing of the sleep deprived)
+
+
+How I "became" a Developer
+==========================
+
+.. figure:: _static/dberkholz-scripting-vs-development.png
+   :target: https://twitter.com/dberkholz/status/902164887496949760
+
+.. note:: At some point in your life, or career, you might notice that you're writing more Ruby or Python than YAML.
+
+      Congratulations, you've now crossed the line and have become a developer.
+
+      I'm extremely proud to be part of Puppet (however peripheral these days), because Puppet has been pushing the limits of what it means to be a "DevOps Engineer".
+
+How I "became" a Developer
+==========================
+
+Relationship status with Programming: It's complicated
+
+.. figure:: _static/dberkholz-scripting-vs-development.png
+   :target: https://twitter.com/dberkholz/status/902164887496949760
+      
+.. note:: And yet, it's still somehow "complicated" — in my mind, anyway.
+          The many thousands of lines of C++ code I [STRIKEOUT:wrote] deleted for Apache Traffic Server didn't really count: I didn't get paid for that.
+          And really, I was just mostly a release manager, and a documentation copy/paster.
+
+          And neither did the thousands of lines of Ruby and Puppet code count, because that was just infrastructure automation, and infrastructure is, by default, invisible.
+
+          I'm very glad Puppet happened to me. I got to know a lot of people who I consider dear friends, I co-started Voxpupuli, and Puppet & Ruby inspired me to learn a bunch of Functional Programming languages, expanding my horizons from Erlang to Common Lisp & Clojure, all the way to JavaScript.
+
+How I "became" a Developer
+==========================
+
+**Culture-unfit**
+
+.. note:: So despite the fact that I wrote (or, deleted) a lot of code, I never considered myself a programmer, or a software engineer, or a coder (and I was long past romanticizing myself as hacker).
+
+          Then, one day this year, I told my boss (yes, self-employed contracters also have bosses), that I wasn't really sure I could be coming back next quarter.
+
+          In fact, I might not be coming back next month.
+
+          The new **full-time** (an attribute always greatly appreciated by managers) hire had a coöperation style which wasn't really appreciated by anyone who's actually had to work with him.
+
+          Instead of leaving, my boss askmed to transfer to a different team.
+
+          That team was developing an infrastructure provisioning tool in Go.
+
+          And ***that's*** how I became a developer.
+
+
+Ops Tools in Dev
+================
+
+
+.. figure:: _static/hirojin-maintaining-a-million-puppet-modules.png
+   :target: https://twitter.com/hirojin/status/672033157391245314           
+
+.. note:: A few years ago, I wrote:
+
+    maintaining a million puppet modules has taught me one thing: not a single piece of software was written with automation in mind
+
+    which, after being challenged on it, I then expanded into a blog post
+
+Ops Tools in Dev
+================
+
+-  known "good" configuration format
+-  Packages
+-  system facilities
+-  Documentation
+-  *useful* error & log messages
+
+.. note:: The basic pillars here are: Don't reinvent the package wheel, don't reinvent the configuration wheel, don't reinvent the watchdog wheel, don't reinvent log/rotation wheel.
+
+          Document your wheels (how much air pressure do they take? Is this a tire for winter or summer time?) Why is this wheel two triangles???
+
+          Provide understandable logging / error messages
+
+Ops Tools in Dev: Packages
+==========================
+
+-  Packages provide atomicity
+-  version numbers that can be trusted (right? *right??*)
+-  discoverable!
+-  don't (*accidentally*) make `your own package manager <https://medium.com/@sdboyer/so-you-want-to-write-a-package-manager-4ae9c17d9527>`__
+
+
+Ops Tools in Dev: Services
+==========================
+
+-  use your init system as watchdog!
+-  log rotation!
+-  run batch jobs with a scheduler!
+
+
+.. note:: Most Operating systems provide a *lot* of facilities that you can just use.
+
+          A watch-dog service that will restart your application when it crashes (why aren't you just using Erlang?), a log-rotation service to rotate & compress your logs shortly after they filled the disk, and a facility to run schedule batch-jobs
+
+          A lot of this is trickier in containerized environments, in that it's… different.
+          But that just means learning a new toolset!!
+
+Ops Tools in Dev: Configuration
+===============================
+
+- use known, good configuration formats
+- well behaved (idempotent) configuration tool
+
+.. note:: Now, since writing this, I have learned a lot about configuration formats
+
+          Who here has worked in a company, or on a project that's invented its own configuration language? Or programming language? Or both? accidentally?
+
+Ops Tools in Dev: Configuration
+===============================
+
+.. figure:: _static/greenspuns-11th-rule.png
+   :target: https://twitter.com/hirojin/status/903159370686582784
+
+.. note:: So… rather than inventing another wheel, maybe we should just start embedding well rounded wheels.
+
+          Like Lua… don't worry if you didn't think of this any earlier… I only thought of it last week.
+
+Ops Tools in Dev: Experience
+============================
+
+Start advocating for everything you've always felt was missing!
+
+- UI / UX in CLI tools
+- or perhaps, UI / UX in general…
+- resilience
+- stable existing software
+- debugging complex issues
+
+
+.. note:: If you're building a command line application, you could argue for better UI/UX — now, let's be honest, you could always argue for better UX, but CLI utilities are just criminally neglected in this regard.
+
+          As is their documentation. And their log messages or their error handling.
+
+          If you're building a web application, you would want to bring in resilience.
+
+          Resilience could mean any number of things: Such as splitting the app along different lines (of concerns) so that crashes don't affect vital parts, or adding metrics to eventually figure out why it's crashing to begin with.
+
+          With your rich experience of running and debugging a million different daemons, you might help »accelerate« your [STRIKEOUT:burnout] »burndown« chart, by writing less code.
+
+          Entire modules someone planned, or even designed, and someone would need to write, can often be replaced with a single configuration option in an existing, well tested piece of software.
+          
+          With your very different toolkit, you could *easily* aid in debugging complex issues, regardless of your (lack of) experience with the language in question.
+
+Ops Tools in Dev: (In)experience
+================================
+
+Start advocating for everything you've always felt was missing!
+
+- documenting bad code vs refactoring
+- Support - like Admin of the Day!
+
+.. note:: Establish a support channel: Most Ops folks (I know) are very comfortable asking for help on 👻IRC👻 or other media.
+
+          You may want to establish this kind of service for the software you're building as well.
+          In $BigCo, we adopted the Admin of the Day concept for rotating the Support Person of the Day.
+          And recently, a support-backup! for new team members!
+
+          It's a well worn (although not necessarily good) tradition, that the newest member on the team complete, or, often enough, simply, *write* the project's documentation.
+
+          Personally, I've found one of the easiest ways to document code is to refactor it for simplicity.
+          I will use any number of reasons (excuses) to push for this.
+          One of my favourite being, I'm dyslexic. I might be disylexic, but making code easier to read benefits everyone.
+
+
+What to leave behind
+====================
+
+-  🐢 (all the way down)
+-  NO, because no.
+
+
+.. note:: In the before-time, before everything was automated and cloudified, ops was always there to you:
+
+          No.
+
+          Ops was always risky job, and many of us have developed a habit of being risk-aware, or rather, risk-averse — to a fault.
+
+What to leave behind
+====================
+
+.. figure:: _static/rust-logo-512x512-blk.png
+   :align: right
+   :scale: 75%
+
+There are no new ideas.
+
+.. note:: This culminates in the habit of saying no to every new idea. Let me dispel your fears today:
+
+          There are no new ideas.
+
+          (The Rust programming language is so named because while appearing relatively recently, none of the concepts it incorporates are. Most of the theory behind rust is at least 20 years old.)
+
+
+Fear of Inadequacy
+==================
+
+I am not am impostor
+
+(I'm just not a very good programmer)
+
+.. note:: I'm not going to talk about impostor syndrome. More competent folks have talked a lot more competently about this than I possibly could. */\* … \*/* But, in all seriousness, I'm not a very good programmer.
+
+          This is something I have used as leverage, by arguing for refactoring barely readable code, but it's also something that's held me back for the longest time.
+
+          Despite ability to read and understand a piece of software, to point to a code-block that needs fixing, and sometimes even fixing it, this is "relatively easy".
+
+          Even though this skill has given me an incredible edge compared to most of my co-workers, in my head I considered this a core skill that every Unix administrator had to have.
+
+          Understanding the software as a whole — enough to add new features is an entirely different matter.
+
+          Reading Code is hard. Reading code comprehensively is hard. Writing code is hard. Writing good code is harder still.
+
+          So let's talk about the (secret??)
+
+Missing Dev Tools
+=================
+
+.. figure:: _static/programming_owl.jpg
+   :scale: 45%
+   :align: right
+
+.. note:: It turns out there's a number of things I've been missing, and worse yet — misunderstanding.
+
+          The most grave of misunderstandings was how I could go from step 1 to step 2 here.
+          It turns out the answer is simple:
+
+Missing Dev Tools
+=================
+
+.. figure:: _static/wax-on-wax-off.jpg
+   :align: right
+
+.. note:: By repeating step 1. Forever.
+
+Missing Dev Tools
+=================
+
+.. figure:: _static/wax-on-wax-off.jpg
+   :align: right
+
+-  FreeBSD manual of Programming?
+-  Linux from Scratch manual of Programming?
+
+.. note:: There wasn't really a FreeBSD manual equivalent for programming (that I was aware of): A manual that comprehensively explains general concepts of programming as clearly as the FreeBSD manual explains the concepts of Unix system administration.
+
+          Alternatively, a `Linux from Scratch <http://www.linuxfromscratch.org/lfs/view/stable/>`__ equivalent would be incredibly helpful:
+
+          If we look deeper into the LFS book, it takes us from a blank slate to a usable Linux Distro through relentless repetition: At every checkpoint we either have a working base, or have to debug — using only the limited methods we have learned, and only the tools we have **built** so far. Failing that, we have to start over.
+
+Missing Dev Tools: Books
+========================
+
+.. figure:: _static/EloquentJScover.png
+   :align: right
+   :scale: 55%
+
+-  `Eloquent JavaScript <http://eloquentjavascript.net/>`__, and
+-  `How to Design Programs (Second
+   Edition) <http://www.ccs.neu.edu/home/matthias/HtDP2e/>`__
+
+-  `JavaScript for Kids <https://www.nostarch.com/javascriptforkids>`__
+-  `Ruby Wizardry <https://www.nostarch.com/rubywizardry>`__
+
+.. note:: There are books that fit this bill. They are few and far in between. Most of all, they are **not** the classically recommended books
+
+          If you're not up-to-speed with programming at all yet and what to start out, then I can highly recommend the "For Kids" series of books.
+
+
+Missing Dev Tools: Shell
+========================
+
+.. figure:: _static/fishshell-logo.png
+   :target: https://fishshell.com/
+   :align: right
+
+.. note:: Sometimes we have to bite the bullet and learn a new paradigm, but often enough we can get away with using parallels for understanding or exploring.
+          For me, one of the most powerful paradigms that I use **daily** is a REPL (read eval print loop).
+
+          I use `Fish <https://fishshell.com/>`__ all day, and I suppose you use something similar. Now, first off: That's a REPL right there. But, what if I told you, that you could explore a programming language the same way you're exploring a (Unix) system?
+
+Missing Dev Tools: Shell
+========================
+
+.. figure:: _static/pry-json-iconv.png
+   :align: right
+
+.. note:: Enter pry. Literally. Let's say you wanted to find out how ``iconv`` in Ruby's JSON module work…
+
+Missing Dev Tools: Shell
+========================
+
+-  Ruby: pry
+-  python: jupyter
+-  clojure: (clojure ;)
+-  erlang & Elixir: iex
+
+.. note:: To me, ``pry`` was a revelation. Once I found pry, I wanted every programming environment to have something like that! What actually happened, is that I would gravitate towards systems which had something like pry ;)
+
+          A powerful REPL is a good sign of a good tooling ecosystem that will let you browse, explore and auto-complete source code.
+          This might might represent a bit of a heretic departure from the classic Unix way of using just an editor, but, eh ``¯\(°_o)/¯``.
+          If you want to dig through 330 thousand lines of 17 years old C++ code, you will want to use any trick and cheat that exists out there.
+
+          Depending on your grasp of C++, 330KLoC could read like the first book of Game of Thrones (~298K words), or, like the entire series (1M 770k. thus far).
+          But unlike GoT, you can't read Apache Traffic Server's code from start to finish.
+          Where does it begin? Where does it end?? It's a mystery;)
+
+Missing Dev Tools?
+==================
+
+-  `Ruby under a
+   Microscope <http://patshaughnessy.net/ruby-under-a-microscope>`__,
+   and
+-  `ERLANG IN ANGER <http://www.erlang-in-anger.com/>`__
+
+
+.. note:: So I lied. Obviously ;) There are good resources and good tools.
+
+          Available, to make programming accessible. I want to call out two other books, which are very useful once you get far, far, far — and then get stuck!
+
+          Which brings us close to the end, and the last thing missing
+
+
+$€£¥.¢
+~~~~~~
+
+
+.. note:: Now that you're a successful (powerful) Developer, you may wanna renegotiate your salary.
+
+          If you're not earning as much as your Dev colleagues, something's amiss…
+
+          Come to think of it, perhaps your Ops colleagues should renegotiate their contracts as well: After all, DevOps *is* the great equalizer.
+
+
+That's all Folks
+~~~~~~~~~~~~~~~~
+
+Questions? Comments! Anecdotes
+
+.. note:: From me, anyway! At this point, I'd like to welcome your questions, comments and anecdotes about your Journey (in either direction) and your experiences or fears.
+
+Links & References
+~~~~~~~~~~~~~~~~~~
+
+Background: https://www.flickr.com/photos/thefreerangekid/19814791259/
