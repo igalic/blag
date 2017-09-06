@@ -1,5 +1,5 @@
 ---
-title: Ops to Dev: What to bring and what to leave behind
+title: Ops to Dev - What to bring and what to leave behind
 date: 2017-09-06
 author: igor
 template: article.jade
