@@ -1,8 +1,15 @@
+---
+title: Ops to Dev: What to bring and what to leave behind
+date: 2017-09-06
+author: igor
+template: article.jade
+---
+
 # Ops to Dev
 
 This is the write-up of a talk first given a [DevOps London, 2017](https://www.devopsdays.org/events/2017-london/program/igor-galic/)
 
-You can find [my slides](slides), and a [video recording of talk](video) in the appropriate venues.
+You can find [my slides](https://blag.esotericsystems.at/igor/presents/ops2dev/), and a [video recording of talk](video) in the appropriate venues.
 
 ## Abstract
 
