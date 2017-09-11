@@ -4,5 +4,11 @@
     "underscore": "1.4.x",
     "typogr": "0.5.x"
   },
-  "repository": "none"
+  "repository": "none",
+  "devDependencies": {
+    "markdownlint-cli": "^0.3.1"
+  },
+  "scripts": {
+    "lint": "markdownlint *.md contents/*.md contents/articles/*/*.md"
+  }
 }
