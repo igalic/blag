@@ -9,7 +9,7 @@ template: article.jade
 
 This is the write-up of a talk first given a [DevOps London, 2017](https://www.devopsdays.org/events/2017-london/program/igor-galic/)
 
-You can find [my slides](https://blag.esotericsystems.at/igor/presents/ops2dev/), and a [video recording of talk](video) in the appropriate venues.
+Both [my slides](https://blag.esotericsystems.at/igor/presents/ops2dev/), and a [video recording of talk](https://www.youtube.com/watch?v=qhqw88oU6kE) are online, too.
 
 ## Abstract
 
