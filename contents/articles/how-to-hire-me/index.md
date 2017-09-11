@@ -4,13 +4,18 @@ date: 2013-06-24
 author: igor
 template: article.jade
 ---
+
 # How to hire me
 
 In the past months I have often received emails from head-hunters, or offers from people I know who work for big companies and would like me to join them.
-I have either ignored those mails, or declined these offers, mostly repeating myself. In the future, I'll just point people to this space.
+I have either ignored those mails, or declined these offers, mostly repeating myself.
+In the future, I'll just point people to this space.
 
-I am self-employed - and I love it. I (mostly) work from home (and then without pants). I work on interesting projects, with brilliant people. If you want me to come work on your project I'm all up for it if:
- 
+I am self-employed - and I love it.
+I (mostly) work from home (and then without pants).
+I work on interesting projects, with brilliant people.
+If you want me to come work on your project I'm all up for it if:
+
 * you have brilliant people, much smarter than me on the team I'm supposed to work with.
 * it's a sensibly defined project where you need my special skills,
 * or you want my brilliance/insight as consultant over a longer period of time or for training your employees

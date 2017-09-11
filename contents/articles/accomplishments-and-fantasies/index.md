@@ -4,12 +4,12 @@ date: 2014-01-01
 author: igor
 template: article.jade
 ---
+
 # Accomplishments
 
 I'd like to follow [@kvegh](https://twitter.com/kvegh)'s proposal and write about this past year's accomplishments.
 
-<blockquote class="twitter-tweet" lang="en"><p>The world would be a better place if everyone announced and congratulated on pastyearachievements instead of newyearresolutions.</p>&mdash; Karoly Vegh (@kvegh) <a href="https://twitter.com/kvegh/statuses/415605164494422016">December 24, 2013</a></blockquote>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" lang="en"><p>The world would be a better place if everyone announced and congratulated on pastyearachievements instead of newyearresolutions.</p>&mdash; Karoly Vegh (@kvegh) <a href="https://twitter.com/kvegh/statuses/415605164494422016">December 24, 2013</a></blockquote> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Let's start with a few personal ones
 

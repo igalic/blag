@@ -4,6 +4,7 @@ date: 2015-10-12
 author: igor
 template: article.jade
 ---
+
 Dear $Recruiter,
 
 thank you very much for taking the time to send me this email.

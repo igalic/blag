@@ -4,8 +4,10 @@ date: 2011-09-09
 author: igor
 template: article.jade
 ---
+
 # jMCg wisdom
-A chatlog from \#opencsw on FreeNode:
+
+A chatlog from `#opencsw` on FreeNode:
 
 ```irc
  * automaciej hopes no one asks why or how different

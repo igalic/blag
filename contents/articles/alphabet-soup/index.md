@@ -15,34 +15,42 @@ I first stumbled across the phrase, I'd just like to save it here in this space
 as a reminder for myself.
 
 ## Q
+
 - Q is for Queer
 - Q is for Questioning — one's gender, or one's sexuality
 
 ## U
+
 - U is for Undecided
 
 ## I
+
 - I is for Intersex
 
 ## L
+
 - L is for Lesbian
 
 ## T
+
 - T is for Transgender
 - T is for Transsexual
 
 ## B
+
 - B is for Bisexual
 
 ## A
+
 - A is for Agender
 - A is for Asexual
 
 ## G
+
 - G is for Gay
 - G is for Genderfluid
 
 ---
 
-I guess that most people who identify with one of those letters will identify
-with more than one.  Mine are Q, B, and T.
+I guess that most people who identify with one of those letters will identify with more than one.
+Mine are Q, B, and T.
