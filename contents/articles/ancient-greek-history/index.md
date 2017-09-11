@@ -4,7 +4,9 @@ date: 2009-08-10
 author: igor
 template: article.jade
 ---
+
 # Ancient Greek History
+
 It was when the greek nations were united under the oath to protect Helena and lead by brother kings Menelaus and Agammemnon to war against Troy, that one of the most complex and remarkable stories was retold by the blind poet, Homer.
 
 The Iliad tells the final of the 10 year war of the Greeks against Troy. Like most greek philosophy, mythology and history it leaves us (the western civilization) with many a gift. One of them is the Trojan Horse.

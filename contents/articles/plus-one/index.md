@@ -4,7 +4,9 @@ date: 2010-02-09
 author: igor
 template: article.jade
 ---
+
 # Plus One
+
 On Thursday, 4th February, 2010 I received and email from [noirin](http://blog.nerdchic.net/)
 
     Dear Igor,
@@ -13,7 +15,9 @@ On Thursday, 4th February, 2010 I received and email from [noirin](http://blog.n
     are pleased to offer you SVN write access ("commit access") to the
     httpd project documentation repositories.
 
-That caught me off-guard. Mostly because it was late, and I was tired out from debugging an issue that could've been solved actually reading ulimit(1) (provided you can find it anywhere). Also, because I didn't quite know how I earned this honour, other than by being persistently annoying ;)
+That caught me off-guard.
+Mostly because it was late, and I was tired out from debugging an issue that could've been solved actually reading ulimit(1) (provided you can find it anywhere).
+Also, because I didn't quite know how I earned this honour, other than by being persistently annoying ;)
 
 So, today, after returning from [Brussels](/2010/02/09/fosdem-2010.html), I sent off the fax and an reply and was welcomed warm-heartedly:
 
