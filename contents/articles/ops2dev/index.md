@@ -219,7 +219,7 @@ If we look deeper into the LFS book, it takes us from a blank slate to a usable 
 
 There are books that fit this bill. They are few and far in between. Most of all, they are **not** the classically recommended books
 
-![The C Programming Language](The_C_Programming_Language_cover.png)
+![The Eloquent JavaScript Book Cover](EloquentJScover.png)
 
 I'd like to point out two of my favourites:
 
