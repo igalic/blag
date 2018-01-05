@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "moment": "2.3.x",
+    "marked": "~> 0.3.9",
+    "moment": "~> 2.3.1",
     "typogr": "0.5.x",
     "underscore": "1.4.x",
     "wintersmith": "^2.4.1"
