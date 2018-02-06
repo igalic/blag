@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vox Pupuli - The Funny Community Journey - Tim Meusel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="template/tufte-dz.css" rel="stylesheet" />
+<link href="template/style.css" rel="stylesheet" />
+    <style type="text/css">
+      
+    </style>
+  </head>
+  <body>
+    <textarea id="source">class: center, middle, inverse
+
+# Vox Pupuli - The Funny Community Journey
+
+## Fourth Edition?
+
+.footnote[@hirojin for @voxpupuliorg]
+
+---
+
+layout: true
+title: Vox Pupuli - The Funny Community Journey
+background-image: url(images/blue-skies.jpg)
+background-size: cover
+
+.footnote[@hirojin (not @bastelsblog) for @voxpupuliorg]
+
+---
+
+## $ whoami not
+
+* Tim 'bastelfreak' Meusel
+
+* DevOps Engineer for heg.com → GoDaddy EMEA
+
+* Puppet Contributor since 2012
+
+* Merging stuff on Vox Pupuli since 2015
+
+* Vox Pupuli PMC member
+
+* Organizing BBQ events for Arch Linux Community
+
+???
+
+Hi folks, and welcome to Tim Meusel's talk on Vox Pupuli's journey as a community.
+
+Unfortunately, Tim couldn't make it due to a work-trip. So it's a great honour to return to this stage, and this community, however briefly. Especially because I'm taking Tim's place, who's done so much for us here.
+
+---
+
+layout: true
+title: Vox Pupuli - The Funny Community Journey
+background-image: url(images/blue-skies.jpg)
+background-size: cover
+
+.footnote[@hirojin for @voxpupuliorg]
+
+---
+
+## $ whoami
+
+* Igor Galić
+
+
+???
+
+Hi, my name is Igor Galić
+
+--
+
+* big fan of Unic�de
+
+???
+
+and I'm a big fan of Unicode.
+
+--
+
+* [@hirojin](https://twitter.com/hirojin)[[@mastodon.social](https://mastodon.social/@hirojin)]
+
+???
+
+You may already know me from such places as THE INTERNET.
+
+--
+
+* igalic@(github|gitlab).com
+
+* Open Source and Infrastructure: Apache, Puppet, IOCage
+
+???
+
+I've been involved with open source for quite some time now, about as long as I've been working in Ops, or more accurately, with Infrastructure.
+
+--
+
+* Crypto & Security Design: [🔐Sealas](https://sealas.at/)
+
+* Self-employed Dev💜Ops Witch for hire
+
+???
+
+and lately I've been doing a lot of work with Crypto and Security Design on a Web Application which my company open sourced, while blogging extensively about the design process.
+P.S.: I am available for hire again! (NRW or Remote)
+
+--
+
+* QUEER
+
+???
+
+I am also queer, or, if you wanna be more specific,
+
+---
+
+## 🌈Q✨U✨E✨E✨R🌈
+
+.right-column[
+  .width75[
+    [![genders are like shoes. if they don't fit well, it looks a bit weird, and feels uncomfortable. (and that's why i like to walk barefoot)](images/igor-shoes.png)](https://twitter.com/hirojin/status/646652627581829120)
+  ]
+]
+
+???
+
+genderqueer, and bisexual, which, as highly visible member of our communities I try to mention at every stage I am given, simply to represent.
+
+but enough about me, let's talk about
+
+---
+
+
+.left-column[
+
+## Vox Pupuli
+
+]
+.right-column[
+
+### How to write and pronounce
+
+* Vox Pupuli
+
+* VoxPupuli
+
+* Voxpupuli
+
+* voxpupuli
+
+* puppet-community → Vox Pupuli
+
+]
+
+???
+
+* many people write it wrong
+* we agreed on Vox Pupuli
+
+It has come to my attention that there seems to be an issue with how Vox Pupuli is pronounced!
+Let's start with the basics: Vox Pupuli is a play on the Latin phrase *"Vox Populus"* (the voice of the people) — where *pupuli* means "little puppets".
+So it's the voice of little puppets!
+
+Here's how i pronounce it
+
+TODO: record two voice samples
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+]
+
+???
+
+To begin with, we are a Collaborative community of Puppet practitioners.
+I've stolen this *declaration* from [sous-chefs](http://sous-chefs.org/), which is a Collaborative community of Chef practitioners.
+So the good news is: We're not alone in what we do, and how we do that.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+* Maintain many many modules
+]
+
+???
+
+And what we do, is we maintain *a lot* of puppet modules.
+Currently we have 89 modules published on the forge.
+And about ~95 in our GitHub organisation, which are being polished up, so they too can be published.
+
+The sheer amount of modules and repositories leads to some challenges, which we will discuss today.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+* Maintain many many modules
+
+* Be helpful and polite to each other
+]
+
+???
+
+One way to tackle that is to be available 24/7 on IRC (and slack) to help you.
+It's our form of Chat-Ops!
+It's very important to be present, and responsive.
+But we also try very hard to be polite, while being helpful!
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+* Maintain many many modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+]
+
+???
+
+By opening our minds to new technologies, and our hearts to new people
+
+ｗｅ   ｇａｉｎ  ｍｏｒｅ   ｆｏｌｌｏｗｅｒｓ
+
+that is… we give people really easy access to our repositories.
+This certainly encourages them to pick up our slack ;) but more on that later…
+
+We also encourage users to contribute: If we cannot solve their problems, maybe we can help them fix it themself.
+
+And, finally, we're always happy to play with new software (automation scripts, IRC bots...) or adopt new modules.
+Our latest being `rtyler-jenkins`!
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+* Maintain many many modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+* Provide a home for orphaned Puppet modules
+]
+
+???
+
+And as rtyler can most certainly confirm, maintaining a module on your own can be an overwhelming experience.
+But it's also a crushing experience for someone to find your module, and notice afterwards that it's unmaintained.
+
+There's a broader issue: For each maintainer, we have ~10 (prospective) contributors.
+People who will contribute a code or docs fix, or open issues, or help out with code-review.
+And then we have around ~100 users, who are passive and silent.
+
+They might find the barrier to opening an issue harder to surpass, than forking a module internally, or finding a different one, or writing their own.
+The reasons might be technical, organizational, or language issues.
+But the reason doesn't matter.
+
+We want to provide a home for orphaned modules, to prevent this kind of churn.
+And we keep maintainers from burning out, by providing a whole collective of module developers.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+* Maintain many many modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+* Provide a home for orphaned Puppet modules
+
+* Unite lonely module and tooling authors to a collective
+]
+
+???
+
+Because developing alone sucks.
+And there is such hard pressure on a single person, if your module is popular.
+Sometimes you just want to go on vacation.
+Or you switch jobs, and your new company is all about Ansible.
+But you also might lose interest in development altogether, and finally start that alpaca farm you've been dreaming about.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+]
+.right-column[
+
+* Collaborative community of Puppet practitioners
+
+* Maintain many many modules
+
+* Be helpful and polite to each other
+
+* Be open-minded to people and technology
+
+* Provide a home for orphaned Puppet modules
+
+* Unite lonely module and tooling authors to a collective
+
+* Ensure continued development for our code
+]
+
+???
+
+Wherever life caries you, your module has *become infrastructure*, and we help *maintain* that *infrastructure*.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+### Who?
+
+]
+
+.right-column[
+
+* Currently 113 people with merge permissions
+
+* We were 107 in October 2017
+
+* We were 80 in November 2016
+
+* Just few people work for Puppet Inc.
+
+* Most of the contributors participate in their free time
+
+* Normal administrators that have to deal with puppet at work
+
+]
+
+???
+
+We are currently 113 people with merge permissions:
+
+* We were 107 in October 2017
+* We were 80 in November 2016
+
+Just five people work for Puppet Inc, most of our contributors participate in their free time.
+Or rather, they're normal administrators that have to deal with puppet at work.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+### Who?
+
+]
+
+.right-column[
+
+* Many git newbies
+
+  * Rebasing a feature branch against upstream master is hard
+
+* Many newcomers to test frameworks
+
+  * Dealing with rspec/rubocop/beaker is hard as well
+
+]
+
+???
+
+We have many contributors who are new to git and github.
+Rebasing a feature branch against upstream master is difficult, if you've never done it.
+
+Many have never written tests, and dealing with rspec/rubocop/beaker is hard as well.
+We don't have to teach them writing good puppet code, but all the related tooling.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+### Who?
+
+]
+
+.right-column[
+
+* Many administrators of legacy infrastructures
+
+  * Puppet3, Ruby191, Ruby2.0
+
+  * November 2016: Puppet2.7, Ruby187
+
+  * Do we already call Puppet4 legacy? (yes pls)
+
+]
+
+???
+
+Many administrators of legacy infrastructures with (Puppet3, Ruby191, Ruby2.0), so we spend a lot of time why we should move on.
+Please remember that Puppet2.7 was declared EOL in November 2016.
+[Extended Support for 2014 ended in 2014](https://www.ruby-lang.org/en/news/2014/07/01/eol-for-1-8-7-and-1-9-2/)
+Can we call Puppet4 legacy already? (bastelfreak: yes pls)
+
+These days, common support cases are:
+
+* There is a strange datatype in my code (puppet4/5 code executed with puppet3)
+* Data-in-modules doesn't work
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### What?
+
+### Who?
+
+### Why?
+
+]
+
+.right-column[
+
+* Maintaining a module on your own is hard
+
+  * Changing best practices, vacations, losing interest
+
+* Proper testing of a module requires a lot of stuff from the ruby ecosystem
+
+  * Ruby ecosystem and related tools are changing too fast for a single person
+
+  * Everything has to work on multiple Ruby/Puppet versions
+
+  * Rubocop
+
+]
+
+???
+
+There are three key motivations to why Vox Pupuli was formed, and we've alluded already to most of them:
+
+* Maintaining a module on your own is hard
+* Proper testing of a module requires constant vigilance of the changes in the ruby ecosystem
+
+---
+
+[![no thanks rubocop](images/prettier-ruby.png)](https://twitter.com/hirojin/status/960152015149125632)
+
+???
+
+But our "hidden" agenda is that we want to push the use of puppet into a modern direction (and mine is to get rid of rubocop)
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## How?
+
+### modulesync
+
+]
+
+.right-column[
+
+* We are managing 92 modules
+
+* We had 75 in november 2016
+
+* modulesync! developed by Morgan Haskell Puppet Inc, moved to Vox Pupuli
+
+* takes config file + templates, throws it into every modules git repo
+
+* Works with GitHub Pull Requests
+
+  * Everybody can start it
+
+  * Every of our Collaborators can approve/merge it
+
+]
+
+???
+
+As the amount of modules grew, we needed a way to manage this.
+We decided that our best approach would be to adopt modulesync, which at that time was developed by Morgan Haskell of Puppet, but eventually moved to us, as she grew tired of it ;)
+
+Keeping generic files like Gemfile/Rakefile in sync is pain, if done by hand, and modulesync saves us sooo much time.
+It takes a config file + templates, throws it into every module's git repo
+It Works with GitHub Pull Requests, so *in theory* everybody can start it, and every of our Collaborators can approve/merge it.
+
+However, it's not very easy to use, and we're looking for ways to make it more comfortable… or a replacement for it.
+
+And this is something we can perhaps look into tomorrow.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## How?
+
+### modulesync
+
+### Travis
+
+]
+.right-column[
+
+![Right-aligned image](images/travis.png)
+
+* Free CI platform
+
+* Puppet Inc. sponsors us unlimited? concurrent travis slots
+
+* rpsec-puppet on common Puppet\*Ruby versions
+
+* beaker acceptance tests
+
+* release modules to the forge
+
+]
+
+???
+
+Travis is a free CI platform.
+Puppet Inc. sponsors us unlimited(?) concurrent travis slots (Thanks to 💜David Schmitt💜), which we really need given all the `rpsec-puppet` tests we test on all common Puppet×Ruby versions.
+These days Travis also runs beaker acceptance tests for us.
+
+And, finally, it handles the release process of modules to the Forge.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## How?
+
+### modulesync
+
+### Travis
+
+### Release task
+
+]
+.right-column[
+
+* Gem called voxpupuli-release
+
+* provides rake task to bump + tag a module
+
+  * Also pushed to the forge
+
+* Upcoming: Also create a github release
+
+]
+
+???
+
+For our release process we use a gem called `voxpupuli-release`. It's essentially a wrapper around `puppet-blacksmith`, and provides rake task to bump + tag a module — after doing the appropriate sanity checks.
+
+The push to the Forge is handled in a `deploy` task on Travis. 
+So, in theory everybody can start it, each collaborator can approve it.
+They do have to `tag && push --tags` however, so Travis can react to it.
+What's still missing is to also create a github release.
+
+So I hope you can see we try hard to encourage users to contribute by providing easy to use tools
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## How?
+
+### modulesync
+
+### travis
+
+### Release task
+
+### Tooling
+
+]
+.right-column[
+
+* https://github.com/underscorgan/community_management
+
+  * Open Issues and PRs sorted in different ways
+
+* https://voxpupuli-open-prs.herokuapp.com/
+
+  * Also open PRs
+
+* https://github.com/voxpupuli/thevoxfox
+
+  * IRC bot, allows us to merge stuff + trigger modulesync (soon, maybe)
+
+* https://github.com/bastelfreak/contributorstats
+
+  * count contributions
+
+]
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## How?
+
+### modulesync
+
+### travis
+
+### Release task
+
+### Tooling
+
+### Docs
+
+]
+.right-column[
+
+* Review Guidelines: https://voxpupuli.org/docs/#reviewing-a-module
+
+* puppet-strings generates html docs
+
+  * https://voxpupuli.org/puppet-selinux
+
+  * https://voxpupuli.org/puppet-autofs
+
+  * https://voxpupuli.org/puppet-mumble
+
+  * https://voxpupuli.org/puppet-cassandra (in the making)
+
+  * https://voxpupuli.org/puppet-rabbitmq (in the making)
+
+]
+
+???
+
+Let's talk docs!
+Our own docs look a little bit lacking for love, but they do contain everything you need to know to get started, or transfer a module, and, as of recently a Review Guidline (I'll get back to this in a bit)
+
+On the other hand, we have automatically (💜`puppet-strings`💜) generated html docs for a bunch of modules, 
+Which are automagically published under our domain.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Governance?
+
+### PMC
+
+]
+.right-column[
+
+* We elected a second Project Management Committee in 2017!
+
+* PMC enforces CoC
+
+* Brings Vox Pupuli into the Software Freedom Conservancy
+
+* Current members:
+
+  * Tim ‘bastelfreak’ Meusel (reelected)
+  * David ‘dhollinger’ Hollinger
+  * Hunter ‘Hunner’ Haugen (works for Puppet Inc., reelected)
+  * Alex ‘afisher’ Fisher
+  * Eric ‘eputnam’ Putnam (works for Puppet Inc.)
+
+* PMC guidelines are created by the community https://tinyurl.com/voxpupuli-governance-md
+
+]
+
+???
+
+We elected a second Project Management Committee in 2017!
+The PMC enforces CoC, and has lately tasked itself to bring bring Vox Pupuli into the Software Freedom Conservancy.
+
+The current members are
+
+  * Tim ‘bastelfreak’ Meusel (reelected)
+  * David ‘dhollinger’ Hollinger
+  * Hunter ‘Hunner’ Haugen (works for Puppet Inc., reelected)
+  * Alex ‘afisher’ Fisher
+  * Eric ‘eputnam’ Putnam (works for Puppet Inc.)
+
+Our PMC guidelines are created by the community https://tinyurl.com/voxpupuli-governance-md
+and given the latest election turnout, we might have to consider amending them…
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Governance?
+
+### PMC
+
+### Collaborators
+
+]
+.right-column[
+
+* Review pull requests
+
+* Explain why we don't support ruby187 anymore
+
+* New: Explain why we don't support Puppet3 anymore
+
+* Help with git
+
+* Trigger the automated release process
+
+]
+
+???
+
+
+All our collaborators are able and encouraged to review pull requests, explain why we don't support ruby 1.8.7 anymore.
+
+As of "recently", explain why we don't support Puppet 3 anymore.
+
+We help people with git, and finally, we trigger the automated release process.
+
+So let's look at some
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Bugfix](images/bugfix.png)
+
+]
+
+???
+
+* people are often scared to contribute
+* They often think they can't write the needed code, but they can!
+* encourage them
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![End Of Life discussion](images/eol.png)
+
+]
+
+???
+
+* TL;DR still people use outdated ruby/puppet versions from time to time :(
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Travis Restart](images/travisrestart.png)
+
+]
+
+???
+
+Travis cheats: closing/reopen a PR will trigger another Travis run.
+A project admin can do this in the travis UI, but outside-contributors can't.
+close/reopen can be triggered by the PR author, however.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Please add Spec Tests](images/spectests.png)
+
+]
+
+???
+
+We try to get at least a unit test for all new features.
+
+On a bugfix we're really happy when someone includes a test that fails without the patch, but works with it.
+
+And always, always say thanks! Be friendly to contributors. We're always happy for a new Issue/PR (We prefer PRs;)
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Happy Maintainers](images/yey.png)
+
+]
+
+???
+
+Everybody is good at blaming others, but we rarely tell people that they did something well.
+
+bastelfreak is happy about all new Datatypes!
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Please look at the failing Spec Tests](images/fail.png)
+
+]
+
+???
+
+* people often don't notice that travis has a failed job
+* Do we need to change the visibility?
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Please use the correct email address for github contributions](images/email.png)
+
+]
+
+???
+
+* for a clean history we want people to use a correct email address
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Please Update the README](images/readme.png)
+
+]
+
+???
+
+* Something that many people very often forget: Is the new feature documented in the README.md?
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+![Please migrate your module to us](images/migrate.png)
+
+]
+
+???
+
+* often people ask us to migrate a dead module into our namespace
+* we head out to the maintainer and ask for that
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+  .width44[
+    ![Puppet Inc people receiving Candy](images/candy.jpg)
+  ]
+]
+
+???
+
+bastelfreak noticed in the Archlinux community that people are happy, if you send them sweets
+
+We tried this in the Puppet community as well. Puppet Inc. received 15pounds of sweets for all their encouragement for the community.
+
+You all keep contributing and bastelfreak will send you sweets as well!
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+]
+.right-column[
+
+  .width44[
+    ![Igor with two Vox puppets on their fingers](images/igor-voxes.jpeg)
+  ]
+
+]
+
+???
+
+Now, my methods are slightly different: Instead of handy, I like to hand out these very cute puppets to anyone who wants one.
+So long as you promise to send back cute selfies!
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business Automation
+
+]
+.right-column[
+
+  .width75[
+    ![Danger JS logo](images/danger-logo-hero@2x-73a8464a.png)
+  ]
+]
+
+???
+
+What if I told you that a lot of this daily business could be automated?
+
+There are a lot of tools out there — and Danger is only one of them, that could help our contributors cut down on the "boilerplate" responses, and instead have a robot do that.
+
+This would leave us humans with more time to take selfies and eat candy.
+
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+### Broken Stuff
+
+]
+.right-column[
+
+* Vox Pupuli is the place to be if something is broken
+
+  * puppetlabs-stdlib
+
+  * puppetlabs-stdlib again
+
+  * puppetlabs-apt
+
+  * puppet-systemd (sorry)
+
+]
+
+???
+
+Inexplicably, every time a popular module is broken, people will join the Vox Pupuli IRC channel to ask for help, fixes or workarounds.
+
+This happend twice for stdlib (we didn't break it, we just noticed it)
+
+bastelfreak once added a breaking change to the systemd module which killed the openstack CI pipelines (happened twice)
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+### Daily Business
+
+### Broken Stuff
+
+### Quotes
+
+]
+.right-column[
+
+* 'Release early - release often' - Igor Galić
+
+* 'Version numbers are cheap - use them' - Igor Galić
+
+* 'DevOps is all about empathy' - Rob Nelson
+
+]
+
+???
+
+> 'Release early - release often' - Igor Galić
+
+People are scared to make releases because it could break things.
+Release as often as possible. Less changes per release → less broken releases.
+
+> 'Version numbers are cheap - use them' - Igor Galić
+
+People are often scared to merge breaking changes. Merging them is totally okay if you do proper versioning.
+We don't delete broken releases and try to fix it, we just do a new release!
+
+> 'DevOps is all about empathy' - Rob Nelson
+
+Working closely together, listening to users, always be constructive, don't blame others for mistakes. we all break stuff from time to time.
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## Summary
+
+]
+.right-column[
+
+* We have great tooling and automation
+
+* We have great people
+
+* You need help with Puppet?
+
+  * Let us know, we help out!
+
+* You have an orphaned module or know one?
+
+  * Ping us, migrate it to us
+
+* You have domain specific knowledge?
+
+  * Ruby, Python, Rspec, Beaker, $software we automate
+
+]
+
+---
+
+## Vox Pupuli
+
+.left-column[
+
+## Summary
+
+]
+.right-column[
+
+* You want to help out?
+
+  * We are always looking for new Collaborators and Maintainer
+
+Contact:
+
+* IRC #voxpupli on freenode
+
+* Slack: #voxpupuli on puppetcommunity.slack.com
+
+* voxpupuli@groups.io
+
+* pmc@voxpupuli.org
+
+* tim@bastelfreak.de
+
+### Thank you for your attention!💜
+
+]
+</textarea>
+    <script src="remark.js"></script>
+    
+    <script>
+      window.slideshow = remark.create({"ratio":"16:9"})
+    </script>
+    <script>
+      
+    </script>
+  </body>
+</html>
