@@ -8,6 +8,12 @@ Igor Galić: Infrastructure & Open Source
 
 # Open Source
 
+Started working on extending [LXD](https://linuxcontainers.org/lxd/introduction/) to comply with [CRI-O](http://cri-o.io/)<label for="lxd-crio" class="margin-toggle">⊕</label><input id="lxd-crio" class="margin-toggle" type="checkbox">
+<span class="marginnote">2018</span>
+
+Started working on [libiocage](https://iocage.github.io/)<label for="libiocage" class="margin-toggle">⊕</label><input id="libiocage" class="margin-toggle" type="checkbox">
+<span class="marginnote">2017</span>
+
 Co-founded [FruitfulJS](https://github.com/fruitfuljs)<label for="co-found-fruitfuljs" class="margin-toggle">⊕</label><input id="co-found-fruitfuljs" class="margin-toggle" type="checkbox">
 <span class="marginnote">2017</span>
    
@@ -65,7 +71,7 @@ Linux (Ubuntu, Debian), Solaris, FreeBSD
 
 Git, Subversion, Mercurial
 
-C (bits of C++), Ruby
+C (bits of C++), Ruby, Python
 
 Ba/z/k/sh, Fish
 
@@ -82,6 +88,9 @@ Distributed Systems theory
 Go, and more JavaScript
 
 # Experience
+
+My most recent (Open Source) experience has been with extending different containers system for different customers. I'm working on two projects in this field right now: [libiocage](https://iocage.github.io) and [LXD](https://linuxcontainers.org/lxd/introduction/). libiocage is written in Python 3 and manages Jails on FreeBSD, while LXD is written in Go and pimarily targets LXC containers on Linux.<label for="floss-containers" class="margin-toggle">⊕</label><input id="floss-containers" class="margin-toggle" type="checkbox">
+<span class="marginnote">Open Source Container Systems</span>
 
 Developing an Infrastructure Provisioning system for Metro (primarily Go)<label for="infra-metro" class="margin-toggle">⊕</label><input id="infra-metro" class="margin-toggle" type="checkbox">
 <span class="marginnote">Metro Systems</span>
