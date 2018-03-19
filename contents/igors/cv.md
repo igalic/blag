@@ -38,8 +38,11 @@ Joined [Apache HTTPD](https://httpd.apache.org/) Project<label for="join-httpd" 
 
 # Dev♥Ops
 
+Brainsware kills of its product [Sealas](https://sealas.at/), and reboots it as [security design focused FLOSS project](https://sealas.at/blog/2017-07/relaunching-sealas-or-how-i-learned-to-stop-worrying-and-kill-our-product/)<label for="bw-reboot-sealas" class="margin-toggle">⊕</label><input id="bw-reboot-sealas" class="margin-toggle" type="checkbox">
+<span class="marginnote">2017—…</span>
+
 DevOps Engineer for [Metro Systems](https://www.metrogroup.de/en/company/service-companies/systems) building a PaaS<label for="devops-msys" class="margin-toggle">⊕</label><input id="devops-msys" class="margin-toggle" type="checkbox">
-<span class="marginnote">2016—…</span>
+<span class="marginnote">2016—2017</span>
 
 Developer of  an Infrastructure Provisioning system for [Metro Systems](https://www.metrogroup.de/en/company/service-companies/systems)<label for="dev-msys" class="margin-toggle">⊕</label><input id="dev-msys" class="margin-toggle" type="checkbox">
 <span class="marginnote">2017—…</span>
