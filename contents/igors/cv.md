@@ -121,6 +121,8 @@ Dozens of applications running on \~60 servers<label for="dozen-prod" class="mar
 
 # Speaker
 
+[DevOps Days London 2017](https://www.devopsdays.org/events/2017-london/program/igor-galic/): [Ops to Dev](https://blag.esotericsystems.at/articles/ops2dev/) - What to bring and what to leave behind
+
 Puppet Contributor Summit 2015: Introduction of [Voxpupuli](https://voxpupuli.org/)
 
 [Puppetconf 2014](http://puppetconf2014.sched.org/event/1kR57MI/absolute-beginners-guide-to-puppet-through-types-igor-galic-brainsware-og): [Puppet Types & Providers](https://brainsware.org/blog/8-types-providers)
