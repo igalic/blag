@@ -8,7 +8,10 @@ Igor Galić: Infrastructure & Open Source
 
 # Open Source
 
-Started working on extending [LXD](https://linuxcontainers.org/lxd/introduction/) to comply with [CRI-O](http://cri-o.io/)<label for="lxd-crio" class="margin-toggle">⊕</label><input id="lxd-crio" class="margin-toggle" type="checkbox">
+Started working on extending [cloud-init](https://cloudinit.readthedocs.io/en/latest/) to properly work on FreeBSD<label for="cloudinit-fbsd" class="margin-toggle">⊕</label><input id="cloudinit-fbsd" class="margin-toggle" type="checkbox">
+<span class="marginnote">2018</span>
+
+Worked on extending [LXD](https://linuxcontainers.org/lxd/introduction/) to comply with [CRI](https://github.com/kubernetes/community/blob/master/contributors/devel/container-runtime-interface.md)<label for="lxd-crio" class="margin-toggle">⊕</label><input id="lxd-crio" class="margin-toggle" type="checkbox">
 <span class="marginnote">2018</span>
 
 Started working on [libiocage](https://iocage.github.io/)<label for="libiocage" class="margin-toggle">⊕</label><input id="libiocage" class="margin-toggle" type="checkbox">
@@ -74,7 +77,7 @@ Linux (Ubuntu, Debian), Solaris, FreeBSD
 
 Git, Subversion, Mercurial
 
-C (bits of C++), Ruby, Python
+C (bits of C++), Ruby
 
 Ba/z/k/sh, Fish
 
@@ -84,15 +87,18 @@ Apache HTTPD, Traffic Server, Tomcat
 
 JVM, BEAM
 
-CoffeeScript (JavaScript), Erlang (Elixir), Lisp (Scheme & Clojure)
-
 Distributed Systems theory
 
-Go, and more JavaScript
+Go, Python
+
+For fun: CoffeeScript (JavaScript), Erlang (Elixir), Lisp (Scheme & Clojure), Rust
 
 # Experience
 
-My most recent (Open Source) experience has been with extending different containers system for different customers. I'm working on two projects in this field right now: [libiocage](https://iocage.github.io) and [LXD](https://linuxcontainers.org/lxd/introduction/). libiocage is written in Python 3 and manages Jails on FreeBSD, while LXD is written in Go and pimarily targets LXC containers on Linux.<label for="floss-containers" class="margin-toggle">⊕</label><input id="floss-containers" class="margin-toggle" type="checkbox">
+Another Python project, this time extending [cloud-init](https://cloudinit.readthedocs.io/en/latest/) to properly work on FreeBSD<label for="floss-cloudinit-fbsd" class="margin-toggle">⊕</label><input id="floss-cloudinit-fbsd" class="margin-toggle" type="checkbox">
+<span class="marginnote">Open Source Cloud Provisioning</span>
+
+Extending different containers system for different customers: I've worked on two projects in this field: [libiocage](https://iocage.github.io) and [LXD](https://linuxcontainers.org/lxd/introduction/). libiocage is written in Python 3 and manages Jails on FreeBSD, while LXD is written in Go and pimarily targets LXC containers on Linux.<label for="floss-containers" class="margin-toggle">⊕</label><input id="floss-containers" class="margin-toggle" type="checkbox">
 <span class="marginnote">Open Source Container Systems</span>
 
 Developing an Infrastructure Provisioning system for Metro (primarily Go)<label for="infra-metro" class="margin-toggle">⊕</label><input id="infra-metro" class="margin-toggle" type="checkbox">
