@@ -2,7 +2,7 @@
 title: george
 date: 2012-03-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # George

@@ -2,7 +2,7 @@
 title: education vs reality
 date: 2011-08-18
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Education vs Reality

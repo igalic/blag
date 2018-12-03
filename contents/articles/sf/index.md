@@ -2,7 +2,7 @@
 title: san francisco
 author: igor
 date: Sep 20 12:59:24 PDT 2014
-template: article.jade
+template: article.pug
 ---
 
 a while ago i wrote some *opionated* stuff about how [sillicon valley "doesn't

@@ -2,7 +2,7 @@
 title: resume 2
 date: 2011-09-13
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Résumé

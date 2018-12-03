@@ -2,7 +2,7 @@
 title: plus one
 date: 2010-02-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Plus One

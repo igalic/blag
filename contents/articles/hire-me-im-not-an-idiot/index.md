@@ -2,7 +2,7 @@
 title: hire me im not an idiot
 date: 2012-06-11
 author: igor
-template: article.jade
+template: article.pug
 ---
 # Hire me, I'm not an idiot.
 

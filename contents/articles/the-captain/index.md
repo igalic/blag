@@ -2,7 +2,7 @@
 title: the captain
 date: 2012-03-24
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # The Captain

@@ -2,7 +2,7 @@
 title: rest for the restless
 date: 2010-12-05
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Rest for the Restless

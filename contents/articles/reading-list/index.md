@@ -2,7 +2,7 @@
 title: reading list
 date: 2013-06-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Reading List

@@ -2,7 +2,7 @@
 title: xy
 date: 2011-10-19
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # XY

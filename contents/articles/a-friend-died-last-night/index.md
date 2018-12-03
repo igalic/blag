@@ -2,7 +2,7 @@
 title: a friend died last night
 date: 2014-11-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 A friend died last night.

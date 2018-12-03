@@ -2,7 +2,7 @@
 title: lessons learned from acna 2013 pdx
 date: 2013-03-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Lessons learned from ACNA 2013 PDX

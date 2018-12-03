@@ -2,7 +2,7 @@
 title: happy anniversary
 date: 2012-04-24
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Happy Aniversary

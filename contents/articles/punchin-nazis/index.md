@@ -2,7 +2,7 @@
 title: When is it okay to punch Nazis?
 date: 2017-05-01
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 I often have discussions with friends whom I'll give the benefit of doubt, and

@@ -1,7 +1,7 @@
 ---
 title: how i use twitter
 author: igor
-template: article.jade
+template: article.pug
 date: 2014-09-06
 ---
 

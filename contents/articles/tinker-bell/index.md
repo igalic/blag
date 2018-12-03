@@ -2,7 +2,7 @@
 title: tinker bell
 date: 2012-03-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Tinker Bell

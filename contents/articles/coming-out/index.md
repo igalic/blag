@@ -2,7 +2,7 @@
 title: coming out
 date: 2011-09-25
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Coming out

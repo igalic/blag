@@ -2,7 +2,7 @@
 title: two books
 date: 2012-07-15
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Two Books

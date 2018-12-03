@@ -2,7 +2,7 @@
 title: auf der suche nach einer neuen online bank
 date: 2012-11-13
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Auf der Suche nach einer neuen Online Bank

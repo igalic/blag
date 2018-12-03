@@ -2,7 +2,7 @@
 title: Letter from the Past
 date: 2015-01-01
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Dear i,

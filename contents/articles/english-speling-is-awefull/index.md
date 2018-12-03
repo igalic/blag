@@ -2,7 +2,7 @@
 title: english speling is awefull
 date: 2011-07-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # English speling is awefull

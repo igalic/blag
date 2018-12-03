@@ -2,7 +2,7 @@
 title: how to hire me
 date: 2013-06-24
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # How to hire me

@@ -2,7 +2,7 @@
 title: from 9 11 to prism
 date: 2013-06-24
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # From 9/11 to PRISM

@@ -2,7 +2,7 @@
 title: growing up
 date: 2014-01-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Growing Up

@@ -2,7 +2,7 @@
 title: Thoughts on Distributed Systems, and segregated Dev and Ops
 date: 2015-05-28
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 I have some WORDS on distributed systems development.

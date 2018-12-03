@@ -2,7 +2,7 @@
 title: socialism under capitalist rule
 author: igor
 date: Sat, 14 Mar 2015 15:10:37 +0100
-template: article.jade
+template: article.pug
 ---
 
 <blockquote class="twitter-tweet" lang="en"><p>feminism, not Marx, has shown me

@@ -2,7 +2,7 @@
 title: silicon valley does not scale
 date: 2014-01-29
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Silicon Valley Does Not Scale

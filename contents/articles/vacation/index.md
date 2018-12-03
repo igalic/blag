@@ -2,7 +2,7 @@
 title: vacation
 date: 2009-08-08
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Vacation

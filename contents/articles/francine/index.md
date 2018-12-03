@@ -2,7 +2,7 @@
 title: francine
 date: 2012-08-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Francine

@@ -2,7 +2,7 @@
 title: basics
 date: 2010-03-14
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Basics

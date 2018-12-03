@@ -2,7 +2,7 @@
 title: notes on the cryptonomicon
 date: 2011-07-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Notes on The Cryptonomicon

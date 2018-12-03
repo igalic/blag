@@ -2,7 +2,7 @@
 title: accomplishments and fantasies
 date: 2014-01-01
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Accomplishments

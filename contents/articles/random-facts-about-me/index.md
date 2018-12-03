@@ -2,7 +2,7 @@
 title: random facts about me
 date: 2012-06-24
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Random Facts About Me

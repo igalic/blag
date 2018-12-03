@@ -2,7 +2,7 @@
 title: closing thoughts on oop
 date: 2014-07-24
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 From time to time I say something semi-interesting on twitter, and then get sucked into *very* interesting discussions:

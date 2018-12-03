@@ -2,7 +2,7 @@
 title: secrets
 date: 2013-09-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 # Secrets
 

@@ -2,7 +2,7 @@
 title: jmcg wisdom
 date: 2011-09-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # jMCg wisdom

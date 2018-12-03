@@ -2,7 +2,7 @@
 title: writing is hard lets go shopping
 date: 2011-10-20
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Writing is hard. Let's go shopping

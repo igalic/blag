@@ -2,7 +2,7 @@
 title: the end of an era
 date: 2009-08-29
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # The End of an Era

@@ -2,7 +2,7 @@
 title: the revolution constant
 date: 2013-08-21
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # The Revolution Constant

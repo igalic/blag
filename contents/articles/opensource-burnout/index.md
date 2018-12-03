@@ -2,7 +2,7 @@
 title: Open Sourcing Mental Illness - On Depression and Addiction
 date: 2014-11-21
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 This talk runs under [Ed Finkler](http://funkatron.com/)'s Banner of [Open Sourcing Mental Illness](http://funkatron.com/osmi.html), who has been running these types of talks for over a year now.

@@ -2,7 +2,7 @@
 title: email to isp
 date: 2013-06-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Email an meinen ISP

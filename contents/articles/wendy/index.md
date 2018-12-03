@@ -2,7 +2,7 @@
 title: wendy
 date: 2012-03-02
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Wendy

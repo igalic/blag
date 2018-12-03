@@ -2,7 +2,7 @@
 title: fosdem 2010
 date: 2010-02-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # FOSDEM 2010

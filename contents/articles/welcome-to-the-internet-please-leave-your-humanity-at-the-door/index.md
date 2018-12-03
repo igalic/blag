@@ -2,7 +2,7 @@
 title: welcome to the internet please leave your humanity at the door
 date: 2012-06-18
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Welcome to The Internet. Please leave your humanity at the door.

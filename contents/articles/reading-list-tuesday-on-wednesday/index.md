@@ -2,7 +2,7 @@
 title: reading list tuesday on wednesday
 date: 2013-06-19
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Reading List Tuesday: On a Wednesday

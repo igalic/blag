@@ -2,7 +2,7 @@
 title: Software vs Automation
 date: 2015-12-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 As always, this started out as a presumptuous tweet:

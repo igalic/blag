@@ -2,7 +2,7 @@
 title: there and back again stockholm
 date: 2012-07-26
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # There and back again: Stockholm

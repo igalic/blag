@@ -2,7 +2,7 @@
 title: the town of bridges
 date: 2011-08-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # The Town of Bridges

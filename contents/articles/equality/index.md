@@ -2,7 +2,7 @@
 title: equality
 date: 2015-01-20
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # equality

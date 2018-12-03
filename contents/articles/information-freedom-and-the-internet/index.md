@@ -2,7 +2,7 @@
 title: information freedom and the internet
 date: 2011-12-23
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Information freedom on The Internet

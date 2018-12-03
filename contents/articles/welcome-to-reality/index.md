@@ -2,7 +2,7 @@
 title: welcome to reality
 date: 2009-08-12
 author: igor
-template: article.jade
+template: article.pug
 ---
 # Welcome to reality
 

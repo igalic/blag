@@ -2,7 +2,7 @@
 title: Read This
 date: 2016-07-11
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 This weekend I was at [Alterconf Paris](https://www.alterconf.com/conferences/paris-france), where I talked to a [fiercely smart young man](https://www.alterconf.com/speakers/xalavier-nelson-jr) about all matter of things. I kept mentioning books and talks and articles he should read and watch. This is a summary of them.

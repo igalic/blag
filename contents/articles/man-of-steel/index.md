@@ -2,7 +2,7 @@
 title: man of steel
 date: 2013-06-20
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Man of Steel

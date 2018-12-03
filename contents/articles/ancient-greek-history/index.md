@@ -2,7 +2,7 @@
 title: ancient greek history
 date: 2009-08-10
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Ancient Greek History

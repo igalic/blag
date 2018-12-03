@@ -2,7 +2,7 @@
 title: ircxchat newbies
 date: 2010-05-13
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # IRC/XChat newbies

@@ -2,7 +2,7 @@
 title: open source is my mmorpg
 date: 2010-12-01
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Open Source is my MMORPG

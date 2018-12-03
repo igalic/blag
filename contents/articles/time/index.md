@@ -2,7 +2,7 @@
 title: time
 date: 2015-10-12
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 Dear $Recruiter,

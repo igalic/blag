@@ -2,7 +2,7 @@
 title: the open source model
 date: 2010-04-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # The Open Source Model

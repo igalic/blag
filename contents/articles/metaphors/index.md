@@ -2,7 +2,7 @@
 title: metaphors
 date: 2013-01-14
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Metaphors

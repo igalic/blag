@@ -2,7 +2,7 @@
 title: reading list everything is horrible
 date: 2013-06-11
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Reading List: Everything is horrible

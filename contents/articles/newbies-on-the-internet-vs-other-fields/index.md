@@ -2,7 +2,7 @@
 title: newbies on the internet vs other fields
 date: 2010-03-20
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Newbies on The Internet vs Other fields

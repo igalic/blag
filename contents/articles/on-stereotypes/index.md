@@ -2,7 +2,7 @@
 title: on stereotypes
 date: 2012-02-18
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # On Stereotypes

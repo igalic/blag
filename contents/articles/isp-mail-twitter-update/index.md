@@ -2,7 +2,7 @@
 title: isp mail twitter update
 date: 2013-07-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 # Meanwhile on twitter
 

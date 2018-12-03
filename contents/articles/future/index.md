@@ -2,7 +2,7 @@
 title: future
 date: 2014-11-02
 author: igor
-template: article.jade
+template: article.pug
 ---
 sometimes when i picture our dystopian apocalyptic future, i picture a world in
 which workers *don't* unite.

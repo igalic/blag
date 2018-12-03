@@ -2,7 +2,7 @@
 title: is that a threat
 date: 2012-04-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Is that a Threat?

@@ -2,7 +2,7 @@
 title: things websites need to stop doing
 date: 2012-06-17
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Things websites need to stop doing

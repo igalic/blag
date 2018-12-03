@@ -2,7 +2,7 @@
 title: not quite meritocracy
 date: 2014-05-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Not quite Meritocracy

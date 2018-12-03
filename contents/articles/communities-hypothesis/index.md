@@ -2,7 +2,7 @@
 title: communities hypothesis
 author: igor
 date: 2014-10-01
-template: article.jade
+template: article.pug
 ---
 
 following [@\_danillo](https://twitter.com/_danillo)'s recent article on [Y

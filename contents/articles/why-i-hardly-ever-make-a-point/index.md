@@ -2,7 +2,7 @@
 title: why i hardly ever make a point
 date: 2011-05-01
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Why I hardly ever make a point

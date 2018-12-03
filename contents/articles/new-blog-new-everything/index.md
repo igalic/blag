@@ -2,7 +2,7 @@
 title: new blog new everything
 date: 2013-06-03
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # New blog, new everything

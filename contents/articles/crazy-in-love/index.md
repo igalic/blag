@@ -2,7 +2,7 @@
 title: crazy in love
 date: 2011-12-30
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Crazy in Love

@@ -2,7 +2,7 @@
 title: why i feel stupid
 date: 2012-09-10
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Why I feel stupid

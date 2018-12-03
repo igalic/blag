@@ -1,7 +1,7 @@
 ---
 author: igor
 title: late night thoughts on foss
-template: article.jade
+template: article.pug
 date: 2014-09-29
 ---
 

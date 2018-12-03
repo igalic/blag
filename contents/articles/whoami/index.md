@@ -2,7 +2,7 @@
 title: whoami
 date: 2011-06-09
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # whoami

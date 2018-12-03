@@ -2,7 +2,7 @@
 title: alphabet soup
 date: 2014-06-18
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 Can you believe that there are people out there who complain about LGBT being

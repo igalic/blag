@@ -2,7 +2,7 @@
 title: three books
 date: 2012-06-11
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Three Books

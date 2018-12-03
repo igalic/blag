@@ -2,7 +2,7 @@
 title: bad pharma
 date: 2013-05-04
 author: igor
-template: article.jade
+template: article.pug
 ---
 
 # Bad Pharma
