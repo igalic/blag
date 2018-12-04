@@ -73,10 +73,10 @@ Here's a couple of tools I learned in my Ops jobs (and _how_ I learned them).
   - How to debug the runtime, a.k.a. `strace(1)`
 
 - [How to install software](http://users.owt.com/lazrchet/humor/install.htm)
-    - "Documentation"
-    - Debugging (when all you want is sleep)
-    - risk assessment
-    - reading code of literally any language
+  - "Documentation"
+  - Debugging (when all you want is sleep)
+  - risk assessment
+  - reading code of literally any language
 
 - [Automation](https://blag.esotericsystems.at/articles/automation/)
   - make (I'm friggin serious)
